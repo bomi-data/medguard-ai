@@ -1,0 +1,1 @@
+{"n": 1, "ts": 1792759339.8, "model": "gpt-5.4-mini", "usage": {}, "latency_s": 10.8, "stop_reason": null, "error": "APIConnectionError: Connection error.", "user_prompt_sha256": "fd4109408460d4344aa68abc81bc8a757dbba45c49408f4f056a6f5c6d5cf1cb", "output_text": null}

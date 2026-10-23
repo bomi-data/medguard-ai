@@ -1,0 +1,2 @@
+﻿path(배포 폴더 기준),reason,size_bytes,원본 보존
+tests/test_ui_adapter.py,UNRESOLVED: 민감정보 의심 — 복사하지 않음,40856,예(복사하지 않았을 뿐 원본은 그대로)

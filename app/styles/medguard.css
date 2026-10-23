@@ -1,0 +1,302 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ============================================================================================
+   MEDGUARD AI — design tokens (palette from the design brief)
+   ============================================================================================ */
+:root {
+  --mg-bg: #081426;
+  --mg-sidebar: #0C1B32;
+  --mg-card: #101F35;
+  --mg-card2: #13243B;
+  --mg-border: #263B55;
+  --mg-line: rgba(140, 170, 210, 0.16);
+  --mg-text: #F1F5FF;
+  --mg-text2: #9BAFCB;
+  --mg-muted: #7085A3;
+  --mg-blue: #3687FF;
+  --mg-cyan: #22C7F2;
+  --mg-purple: #8457FF;
+  --mg-green: #24D99B;
+  --mg-amber: #FFBC55;
+  --mg-red: #FF647C;
+  --mg-radius: 14px;
+  --mg-radius-sm: 9px;
+  --mg-shadow: 0 6px 18px rgba(2, 8, 20, 0.35);
+  --mg-font: "Pretendard", "Inter", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mg-num: "Inter", "Pretendard", system-ui, sans-serif;
+  --mg-t: 180ms ease;
+}
+
+/* ============================================================================================
+   Global
+   ============================================================================================ */
+html, body, .stApp, [data-testid="stAppViewContainer"] { background: var(--mg-bg) !important; color: var(--mg-text); font-family: var(--mg-font); }
+[data-testid="stHeader"] { background: transparent !important; }
+[data-testid="stToolbar"], [data-testid="stDecoration"], #MainMenu, footer { visibility: hidden; height: 0; }
+.block-container { padding: 26px 30px 36px 30px !important; max-width: 100% !important; }
+h1, h2, h3, h4, h5, p, span, label, li, div { font-family: var(--mg-font); }
+.stApp p, .stApp li, .stApp label, .stApp span { color: inherit; }
+.stApp a { color: var(--mg-cyan); }
+[data-testid="stVerticalBlock"] { gap: 14px; }
+[data-testid="stHorizontalBlock"] { gap: 14px; align-items: stretch; }
+hr { border-color: var(--mg-line) !important; }
+
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: #2a4263; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ============================================================================================
+   Cards
+   ============================================================================================ */
+.mg-card, [data-testid="stVerticalBlockBorderWrapper"] {
+  background: var(--mg-card); border: 1px solid var(--mg-line); border-radius: var(--mg-radius);
+  box-shadow: var(--mg-shadow); transition: border-color var(--mg-t), background var(--mg-t);
+}
+[data-testid="stVerticalBlockBorderWrapper"] { padding: 4px 6px; }
+.mg-card { padding: 16px 18px; }
+.mg-card:hover, [data-testid="stVerticalBlockBorderWrapper"]:hover { border-color: rgba(54, 135, 255, 0.38); }
+[data-testid="stVerticalBlockBorderWrapper"] [data-testid="stVerticalBlockBorderWrapper"] { box-shadow: none; background: var(--mg-card2); }
+.mg-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.mg-card-title { font-size: 16px; font-weight: 650; color: var(--mg-text); letter-spacing: -0.01em; margin: 0; }
+.mg-sub { font-size: 12px; color: var(--mg-muted); line-height: 1.5; }
+.mg-sub b { color: var(--mg-text2); }
+.mg-note { font-size: 12px; color: var(--mg-text2); background: rgba(54,135,255,0.07); border: 1px solid rgba(54,135,255,0.18);
+           border-radius: var(--mg-radius-sm); padding: 8px 10px; line-height: 1.55; margin-top: 8px; }
+.mg-note.warn { background: rgba(255,188,85,0.08); border-color: rgba(255,188,85,0.28); }
+.mg-note.purple { background: rgba(132,87,255,0.09); border-color: rgba(132,87,255,0.28); }
+.mg-empty { color: var(--mg-muted); font-size: 13px; padding: 18px 6px; text-align: center; line-height: 1.6; }
+
+/* ============================================================================================
+   Sidebar
+   ============================================================================================ */
+section[data-testid="stSidebar"] { background: var(--mg-sidebar) !important; border-right: 1px solid var(--mg-line); width: 224px !important; min-width: 224px !important; }
+section[data-testid="stSidebar"] > div { padding-top: 6px; }
+section[data-testid="stSidebar"] [data-testid="stSidebarContent"] { padding: 14px 12px 16px 12px; }
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"] { gap: 6px; }
+.mg-brand { display: flex; align-items: center; gap: 10px; padding: 4px 6px 14px 6px; }
+.mg-logo { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+           background: linear-gradient(135deg, var(--mg-cyan), var(--mg-blue) 55%, var(--mg-purple)); color: #fff; }
+.mg-brand-name { font-family: var(--mg-num); font-weight: 700; font-size: 17px; letter-spacing: 0.02em; color: #fff; line-height: 1.1; }
+.mg-brand-name b { color: var(--mg-blue); font-weight: 700; }
+.mg-brand-sub { font-size: 11px; color: var(--mg-muted); margin-top: 3px; }
+
+/* nav buttons: stable class st-key-<key> (Streamlit >= 1.39); falls back to plain buttons otherwise */
+section[data-testid="stSidebar"] .stButton > button {
+  width: 100%; justify-content: flex-start; text-align: left; gap: 8px; border-radius: 10px; padding: 9px 12px; min-height: 40px;
+  background: transparent; border: 1px solid transparent; color: var(--mg-text2); font-size: 14px; font-weight: 500;
+  transition: background var(--mg-t), color var(--mg-t), border-color var(--mg-t); box-shadow: none;
+}
+section[data-testid="stSidebar"] .stButton > button:hover { background: rgba(54,135,255,0.10); color: var(--mg-text); border-color: rgba(54,135,255,0.18); }
+section[data-testid="stSidebar"] .stButton > button[kind="primary"],
+section[data-testid="stSidebar"] .stButton > button[data-testid="stBaseButton-primary"] {
+  background: linear-gradient(90deg, rgba(31,78,160,0.75), rgba(21,52,100,0.55)); color: #fff; border: 1px solid rgba(54,135,255,0.35);
+  box-shadow: inset 3px 0 0 var(--mg-cyan);
+}
+section[data-testid="stSidebar"] .stButton > button p { font-size: 14px; margin: 0; }
+
+.mg-proj { margin-top: 18px; padding: 12px 12px; border-radius: 12px; background: var(--mg-card); border: 1px solid var(--mg-line); }
+.mg-proj-title { font-size: 10.5px; letter-spacing: 0.1em; color: var(--mg-muted); font-weight: 650; margin-bottom: 8px; }
+.mg-proj-row { display: flex; justify-content: space-between; gap: 8px; font-size: 11.5px; padding: 3px 0; color: var(--mg-text2); }
+.mg-proj-row span:first-child { color: var(--mg-muted); }
+.mg-proj-row span:last-child { text-align: right; color: var(--mg-text); word-break: break-all; }
+
+/* ============================================================================================
+   Page header
+   ============================================================================================ */
+.mg-title { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; color: var(--mg-text); margin: 0; line-height: 1.2; }
+.mg-subtitle { font-size: 13.5px; color: var(--mg-text2); margin-top: 6px; line-height: 1.6; max-width: 760px; }
+.mg-hmeta { font-size: 11px; color: var(--mg-muted); margin-bottom: 4px; letter-spacing: 0.02em; }
+.mg-hval { font-size: 13.5px; color: var(--mg-text); font-family: var(--mg-num); }
+
+/* ============================================================================================
+   Badges / tags
+   ============================================================================================ */
+.mg-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
+            border: 1px solid transparent; white-space: nowrap; line-height: 1.5; font-family: var(--mg-font); }
+.mg-ok { color: var(--mg-green); background: rgba(36,217,155,0.10); border-color: rgba(36,217,155,0.32); }
+.mg-warn, .mg-amber { color: var(--mg-amber); background: rgba(255,188,85,0.11); border-color: rgba(255,188,85,0.34); }
+.mg-danger { color: var(--mg-red); background: rgba(255,100,124,0.11); border-color: rgba(255,100,124,0.34); }
+.mg-info, .mg-blue { color: var(--mg-blue); background: rgba(54,135,255,0.12); border-color: rgba(54,135,255,0.36); }
+.mg-cyan { color: var(--mg-cyan); background: rgba(34,199,242,0.10); border-color: rgba(34,199,242,0.32); }
+.mg-purple { color: #A98BFF; background: rgba(132,87,255,0.14); border-color: rgba(132,87,255,0.40); }
+.mg-gray, .mg-neutral, .mg-muted { color: var(--mg-text2); background: rgba(112,133,163,0.14); border-color: rgba(112,133,163,0.32); }
+.mg-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; display: inline-block; }
+
+.mg-tag { display: inline-block; font-size: 9.5px; letter-spacing: 0.07em; font-weight: 650; padding: 2px 7px; border-radius: 5px; color: var(--mg-muted);
+          border: 1px solid var(--mg-line); background: rgba(255,255,255,0.02); font-family: var(--mg-num); }
+.mg-tag-rule { color: #7FB4FF; border-color: rgba(54,135,255,0.30); }
+.mg-tag-evidence { color: var(--mg-cyan); border-color: rgba(34,199,242,0.30); }
+.mg-tag-llm { color: #B7A0FF; border-color: rgba(132,87,255,0.35); }
+.mg-tag-audit { color: var(--mg-amber); border-color: rgba(255,188,85,0.32); }
+.mg-tag-unknown { color: var(--mg-text2); }
+
+/* ============================================================================================
+   Buttons / inputs (main area)
+   ============================================================================================ */
+.stApp .stButton > button, .stApp .stDownloadButton > button, .stApp [data-testid="stPopover"] > div > button {
+  border-radius: 9px; border: 1px solid var(--mg-line); background: var(--mg-card2); color: var(--mg-text);
+  font-size: 13px; font-weight: 550; min-height: 36px; transition: filter var(--mg-t), border-color var(--mg-t), background var(--mg-t);
+}
+.stApp .stButton > button:hover, .stApp .stDownloadButton > button:hover { border-color: rgba(54,135,255,0.55); filter: brightness(1.12); }
+.stApp .stButton > button:disabled { opacity: 0.45; }
+.st-key-search_btn button, .st-key-search_btn_p button {
+  background: linear-gradient(135deg, #2f7bff, #3687ff 60%, #22a8f2) !important; border: 0 !important; color: #fff !important;
+}
+.st-key-run_check button, .st-key-run_check_p button, .st-key-run_check_r button {
+  background: linear-gradient(90deg, var(--mg-cyan), var(--mg-blue) 52%, var(--mg-purple)) !important; border: 0 !important; color: #fff !important;
+  font-size: 14.5px !important; font-weight: 650 !important; min-height: 44px !important; border-radius: 10px !important;
+}
+.st-key-run_check button:hover, .st-key-run_check_p button:hover, .st-key-run_check_r button:hover { filter: brightness(1.1); box-shadow: 0 6px 18px rgba(54,135,255,0.28); }
+.stApp [data-baseweb="input"], .stApp [data-baseweb="select"] > div, .stApp [data-baseweb="base-input"] {
+  background: #0B1A30 !important; border-color: var(--mg-line) !important; border-radius: 9px !important; color: var(--mg-text) !important;
+}
+.stApp input, .stApp textarea { color: var(--mg-text) !important; -webkit-text-fill-color: var(--mg-text); }
+.stApp input::placeholder { color: var(--mg-muted) !important; -webkit-text-fill-color: var(--mg-muted); }
+.stApp [data-baseweb="input"]:focus-within, .stApp [data-baseweb="select"] > div:focus-within { border-color: var(--mg-blue) !important; }
+.stApp [data-testid="stCheckbox"] label span { color: var(--mg-text2); font-size: 13px; }
+.stApp [data-testid="stCaptionContainer"], .stApp .stCaption { color: var(--mg-muted); }
+.stApp [data-testid="stExpander"] { border: 1px solid var(--mg-line); border-radius: 10px; background: var(--mg-card2); }
+.stApp [data-testid="stExpander"] summary { color: var(--mg-text2); }
+.stApp [data-testid="stAlert"] { border-radius: 10px; }
+
+/* ============================================================================================
+   Selected medication cards / candidates
+   ============================================================================================ */
+.mg-med { display: flex; gap: 10px; align-items: flex-start; padding: 9px 11px; border-radius: 10px; background: var(--mg-card2); border: 1px solid var(--mg-line); }
+.mg-med-n { min-width: 22px; height: 22px; border-radius: 6px; background: rgba(54,135,255,0.16); color: #7FB4FF; font-weight: 700; font-size: 12px;
+            display: grid; place-items: center; font-family: var(--mg-num); }
+.mg-med-name { font-size: 13.5px; font-weight: 600; color: var(--mg-text); line-height: 1.35; }
+.mg-med-meta { font-size: 11.5px; color: var(--mg-muted); margin-top: 2px; line-height: 1.5; }
+.mg-cand { padding: 8px 2px; border-bottom: 1px solid var(--mg-line); }
+.mg-cand-name { font-size: 13px; font-weight: 600; }
+.mg-cand-meta { font-size: 11.5px; color: var(--mg-muted); margin-top: 2px; }
+
+/* ============================================================================================
+   Donut + legend
+   ============================================================================================ */
+.mg-donut-wrap { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; padding: 6px 0 2px 0; }
+.mg-donut { position: relative; width: 190px; height: 190px; }
+.mg-donut svg { width: 190px; height: 190px; transform: rotate(-90deg); }
+.mg-donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.mg-kpi-num { font-family: var(--mg-num); font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: var(--mg-text); line-height: 1.1; }
+.mg-kpi-cap { font-size: 11px; color: var(--mg-muted); margin-top: 3px; max-width: 120px; line-height: 1.35; }
+.mg-legend { display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; color: var(--mg-text2); min-width: 190px; }
+.mg-legend-row { display: flex; align-items: center; gap: 8px; }
+.mg-legend-row b { color: var(--mg-text); font-family: var(--mg-num); margin-left: auto; padding-left: 12px; font-weight: 600; }
+.mg-sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* ============================================================================================
+   KPI cards
+   ============================================================================================ */
+.mg-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.mg-kpi { position: relative; padding: 14px 16px; border-radius: var(--mg-radius); background: var(--mg-card); border: 1px solid var(--mg-line); box-shadow: var(--mg-shadow);
+          transition: border-color var(--mg-t), background var(--mg-t); overflow: hidden; }
+.mg-kpi:hover { border-color: rgba(54,135,255,0.4); background: #12233b; }
+.mg-kpi::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--kc, var(--mg-blue)); opacity: 0.9; }
+.mg-kpi-top { display: flex; align-items: center; gap: 9px; color: var(--kc, var(--mg-blue)); }
+.mg-kpi-top .mg-ico { background: color-mix(in srgb, var(--kc, var(--mg-blue)) 14%, transparent); border-radius: 8px; padding: 5px; box-sizing: content-box; }
+.mg-kpi-label { font-size: 13.5px; font-weight: 600; color: var(--mg-text); }
+.mg-kpi-value { font-family: var(--mg-num); font-size: 32px; font-weight: 700; color: var(--mg-text); margin-top: 8px; letter-spacing: -0.02em; line-height: 1.1; }
+.mg-kpi-desc { font-size: 12px; color: var(--mg-text2); margin-top: 4px; }
+.mg-kpi-sub { font-size: 11px; color: var(--mg-muted); margin-top: 3px; line-height: 1.45; }
+.mg-kpi.danger { --kc: var(--mg-red); } .mg-kpi.amber { --kc: var(--mg-amber); } .mg-kpi.blue { --kc: var(--mg-blue); } .mg-kpi.purple { --kc: var(--mg-purple); }
+
+/* ============================================================================================
+   Final result card
+   ============================================================================================ */
+.mg-final { border-color: rgba(255,188,85,0.34) !important; background: linear-gradient(180deg, rgba(255,188,85,0.07), rgba(16,31,53,1) 46%); }
+.mg-final.muted, .mg-final.neutral, .mg-final.info { border-color: var(--mg-line) !important; background: var(--mg-card); }
+.mg-final.danger { border-color: rgba(255,100,124,0.4) !important; background: linear-gradient(180deg, rgba(255,100,124,0.07), rgba(16,31,53,1) 46%); }
+.mg-final-label { font-size: 11px; color: var(--mg-muted); letter-spacing: 0.06em; margin-bottom: 5px; }
+.mg-final-main { font-size: 24px; font-weight: 700; color: var(--mg-text); letter-spacing: -0.01em; line-height: 1.25; }
+.mg-final.warn .mg-final-main { color: var(--mg-amber); }
+.mg-final.danger .mg-final-main { color: var(--mg-red); }
+.mg-final-sep { height: 1px; background: var(--mg-line); margin: 14px 0; }
+.mg-audit-box { padding: 10px 12px; border-radius: 10px; background: rgba(255,255,255,0.025); border: 1px dashed rgba(255,188,85,0.35); }
+.mg-audit-main { font-size: 15px; font-weight: 650; color: var(--mg-amber); margin: 4px 0 2px 0; }
+
+/* ============================================================================================
+   Gate timeline
+   ============================================================================================ */
+.mg-gates { display: flex; align-items: flex-start; gap: 0; padding: 8px 4px 2px 4px; overflow-x: auto; }
+.mg-gate { flex: 1 1 0; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; padding: 0 6px; }
+.mg-gate::before { content: ""; position: absolute; top: 21px; left: -50%; width: 100%; height: 2px; background: var(--mg-border); z-index: 0; }
+.mg-gate:first-child::before { display: none; }
+.mg-gate-circle { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; z-index: 1; background: var(--mg-card);
+                  border: 2px solid var(--gc, var(--mg-muted)); color: var(--gc, var(--mg-muted)); font-family: var(--mg-num); font-weight: 700; font-size: 15px; }
+.mg-gate-name { font-size: 13px; font-weight: 600; margin-top: 9px; color: var(--mg-text); }
+.mg-gate-desc { font-size: 11px; color: var(--mg-muted); margin: 3px 0 8px 0; line-height: 1.4; }
+.mg-gate.pass { --gc: var(--mg-green); } .mg-gate.warn { --gc: var(--mg-amber); } .mg-gate.fail { --gc: var(--mg-red); } .mg-gate.notrun { --gc: var(--mg-muted); }
+
+/* ============================================================================================
+   Findings / evidence rows
+   ============================================================================================ */
+.mg-row { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--mg-line); }
+.mg-row-n { min-width: 22px; height: 22px; border-radius: 50%; background: rgba(155,175,203,0.14); color: var(--mg-text2); font-size: 11.5px; font-weight: 700;
+            display: grid; place-items: center; font-family: var(--mg-num); margin-top: 1px; }
+.mg-row-body { flex: 1; min-width: 0; }
+.mg-row-title { font-size: 13.5px; font-weight: 600; color: var(--mg-text); line-height: 1.4; word-break: break-word; }
+.mg-row-desc { font-size: 12px; color: var(--mg-text2); margin-top: 2px; line-height: 1.5; word-break: break-word; }
+.mg-doc-ico { color: var(--mg-cyan); margin-top: 2px; }
+.mg-doc-meta { font-size: 11.5px; color: var(--mg-muted); margin-top: 3px; line-height: 1.5; }
+
+/* ============================================================================================
+   Matrix
+   ============================================================================================ */
+.mg-matrix-scroll { overflow-x: auto; }
+.mg-matrix { width: 100%; border-collapse: separate; border-spacing: 6px; font-size: 12px; }
+.mg-matrix th { color: var(--mg-text2); font-weight: 600; font-size: 12px; padding: 4px 6px; text-align: center; }
+.mg-matrix th.rowh, .mg-matrix td.rowh { text-align: left; color: var(--mg-text); font-size: 12.5px; max-width: 190px; word-break: break-word; font-weight: 550; }
+.mg-cell { text-align: center; border-radius: 9px; padding: 9px 4px; font-size: 11.5px; font-weight: 600; line-height: 1.35; min-width: 84px; border: 1px solid transparent;
+           transition: filter var(--mg-t); cursor: default; }
+.mg-cell:hover { filter: brightness(1.2); }
+.mg-cell.found { background: rgba(34,199,242,0.20); color: var(--mg-cyan); border-color: rgba(34,199,242,0.55); }
+.mg-cell.none { background: #162a45; color: var(--mg-text2); border-color: #2a4263; }
+.mg-cell.nodata { background: repeating-linear-gradient(135deg, #1a2638, #1a2638 6px, #1f2d42 6px, #1f2d42 12px); color: var(--mg-muted); border-color: #34475f; }
+.mg-cell.undet { background: rgba(132,87,255,0.10); color: #A98BFF; border: 1px dashed rgba(132,87,255,0.55); }
+.mg-cell.fail { background: rgba(255,100,124,0.10); color: var(--mg-red); border: 1px dashed rgba(255,100,124,0.6); }
+.mg-mlegend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 8px; font-size: 11px; color: var(--mg-muted); }
+.mg-mlegend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+/* ============================================================================================
+   Coverage table
+   ============================================================================================ */
+.mg-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--mg-line); }
+.mg-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.mg-table th { background: #17304e; color: var(--mg-text2); text-align: left; font-weight: 600; padding: 9px 11px; white-space: nowrap; }
+.mg-table td { padding: 8px 11px; border-top: 1px solid var(--mg-line); color: var(--mg-text); vertical-align: top; }
+.mg-table tr:hover td { background: rgba(54,135,255,0.06); }
+.mg-num { font-family: var(--mg-num); text-align: right; white-space: nowrap; }
+
+/* ============================================================================================
+   Responsive
+   ============================================================================================ */
+@media (max-width: 1100px) {
+  .block-container { padding: 18px 14px 28px 14px !important; }
+  .mg-title { font-size: 26px; }
+  .mg-donut-wrap { gap: 14px; }
+}
+@media (max-width: 640px) {
+  .mg-title { font-size: 22px; }
+  .mg-gates { flex-direction: column; align-items: stretch; }
+  .mg-gate { flex-direction: row; text-align: left; gap: 12px; padding: 8px 0; }
+  .mg-gate::before { display: none; }
+}
+
+/* ---- overrides for Streamlit's own heading styles inside markdown blocks ---- */
+.stApp h1.mg-title { font-size: 32px !important; font-weight: 700 !important; padding: 0 !important; margin: 0 !important; line-height: 1.2 !important; }
+.stApp h3.mg-card-title { font-size: 16px !important; font-weight: 650 !important; padding: 0 !important; margin: 0 !important; line-height: 1.35 !important; color: var(--mg-text) !important; }
+.mg-subtitle { margin-bottom: 12px; }
+.mg-card-head { flex-wrap: wrap; row-gap: 6px; }
+.mg-tag { white-space: nowrap; }
+.mg-proj-row span:first-child { white-space: nowrap; }
+.mg-kpis + .mg-sub { margin: 2px 0 6px 0; }
+.stApp [data-testid="stTextInput"] input { font-size: 13px; }
+.stApp [data-testid="stCaptionContainer"] p { font-size: 11.5px; line-height: 1.5; }
+.stApp [data-testid="stRadio"] label p { font-size: 12.5px; color: var(--mg-text2); }
+
+/* ---- compact buttons in narrow columns, matrix readability ---- */
+.stApp .stButton > button, .stApp [data-testid="stPopover"] > div > button { padding: 4px 10px; white-space: nowrap; }
+.mg-cell { min-width: 70px; }
+.mg-matrix th.rowh, .mg-matrix td.rowh { min-width: 96px; word-break: keep-all; overflow-wrap: anywhere; }

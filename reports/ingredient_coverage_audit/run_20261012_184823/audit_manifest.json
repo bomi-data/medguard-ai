@@ -1,0 +1,167 @@
+{
+ "run_ts": "20261012_184823",
+ "project_root": "/content/drive/MyDrive/medical-ai-project",
+ "baseline_run": "run_20261011_152938",
+ "option": "C",
+ "gates": {
+  "1": "WARN",
+  "2": "WARN",
+  "3": "WARN"
+ },
+ "status": {
+  "0": "PASS",
+  "A": "PASS",
+  "B1": "WARN",
+  "B2": "WARN",
+  "C1": "WARN",
+  "C2": "WARN",
+  "GATE2": "WARN",
+  "D1": "WARN",
+  "D2": "WARN",
+  "D3": "WARN",
+  "D4": "PASS",
+  "E": "WARN",
+  "GATE3": "WARN",
+  "G": "PASS",
+  "H": "PASS"
+ },
+ "inputs": {
+  "data:contraindication_pairs": {
+   "path": "data/processed/screening/contraindication_pairs.parquet",
+   "size": 2904233,
+   "sha256": "e3aa3424117d106e275fa5f0a683fc8a0837f2c6f05feb496e13499d173893d2"
+  },
+  "data:contraindication_evidence": {
+   "path": "data/processed/screening/contraindication_evidence.parquet",
+   "size": 26197751,
+   "sha256": "90be95ee82434252759c579d058f7bc1700c839ee8b35ca47f9aa8b3df5b80d9"
+  },
+  "data:elderly_caution_rules": {
+   "path": "data/processed/screening/elderly_caution_rules.parquet",
+   "size": 191905,
+   "sha256": "154ae23408263e2f2d0dda5e82ca5b2d95fcede217e720439474146815a39f25"
+  },
+  "data:therapeutic_group_mapping": {
+   "path": "data/processed/screening/therapeutic_group_mapping.parquet",
+   "size": 512860,
+   "sha256": "71815ad30f80e572b5bbc04bd3ac015403b92528f5d73d6e90ccfa6da984b9ef"
+  },
+  "data:easy_drug_canonical": {
+   "path": "data/processed/evidence/easy_drug_canonical.parquet",
+   "size": 2183302,
+   "sha256": "c1ffb5fc30ccd1900b17ab0c35c3f8603865d14bcc48f75a61c3571e0d74aa4b"
+  },
+  "data:approval_chunks": {
+   "path": "data/processed/rag/approval_chunks.parquet",
+   "size": 129622541,
+   "sha256": "ff393095be71ff9b22dcde8caabbbd6b94534e2a5284c4f589cc89186ba9ca74"
+  },
+  "data:unique_text_index": {
+   "path": "data/processed/retrieval/unique_text_index.parquet",
+   "size": 1808837,
+   "sha256": "962e0dea1c23726007d68c0311dec6f39c53c44dd1fd46dbda11c6a3c42f8c90"
+  },
+  "data:text_hash_mapping": {
+   "path": "data/processed/retrieval/text_hash_mapping.parquet",
+   "size": 6387237,
+   "sha256": "a194bad1560cdb983d9bef77b2c6f19f1a2cce7d894b478192a278462d607a31"
+  },
+  "data:dense_embeddings": {
+   "path": "data/processed/retrieval/dense/BAAI__bge-m3/unique_text_embeddings.npy",
+   "size": 75751552,
+   "sha256": "1eefb9de468d7c4df4b04d57ff03b66d32df3e91ac1b3cb126db48f4dcfe825d"
+  },
+  "data:dense_embedding_meta": {
+   "path": "data/processed/retrieval/dense/BAAI__bge-m3/embedding_meta.json",
+   "size": 842,
+   "sha256": "735487be6fe60914894b33f5c8e42377195ac0327c9c440f121f578e5a19c204"
+  },
+  "data:retrieval_config": {
+   "path": "data/processed/retrieval/retrieval_config.json",
+   "size": 8178,
+   "sha256": "50a81e99649867139fc284b9780d564b6428e71bbdb4f845ee542fb40a7d5759"
+  },
+  "data:generation_config": {
+   "path": "data/processed/generation/generation_config.json",
+   "size": 11738,
+   "sha256": "5a3e5e3bea92c06af13915bafadde180f6ffbf5040f97b0ffb816558cf62746a"
+  },
+  "data:drug_approval_items": {
+   "path": "data/processed/evidence/drug_approval_items.parquet",
+   "size": 392547232,
+   "sha256": "4530ed08292fe929574c09be17eea8a93b49ad0a5b73bef660624d6e11ff1032"
+  }
+ },
+ "analysis_conditions": {
+  "tiers": [
+   "BASELINE_LISTED",
+   "T1_INFERRED_EXPANSION",
+   "T2_CONDITIONAL",
+   "T3_CANDIDATE",
+   "NONE"
+  ],
+  "inferred_rule": "D→M 1:1, 지원 제품 ≥2, 성분명(염 제거) 일치, 단일성분 공식 레코드",
+  "t1_rule": "단일성분 + 정보 완전 + 모든 성분 INFERRED + 제형군 일치(이름 기반 추정)",
+  "loo_fail_below_pct": 95,
+  "loo_warn_below_pct": 99,
+  "elderly_age_threshold": 65
+ },
+ "key_metrics": {
+  "U": 16441,
+  "baseline_linked": 12736,
+  "inferred_additional": 0,
+  "candidate_upper": 768,
+  "candidate_only": 768,
+  "inferred_pairs": 241,
+  "candidate_pairs": 309,
+  "loo_accuracy_pct": 100.0,
+  "ci_pair": {
+   "baseline_listed_pairs": 322816,
+   "ingredient_pairs": 356,
+   "new_verified_upper": 344,
+   "new_conditional_upper": 1100,
+   "new_candidate_upper": 3009,
+   "all_upper": 348764,
+   "ingredient_pair_listed_sum": 327214
+  }
+ },
+ "protected_files_unchanged": true,
+ "regression_hash_equal": true,
+ "files": [
+  "01_dataset_inventory.csv",
+  "01a_dur_rule_types.csv",
+  "01b_mix_columns.csv",
+  "01c_baseline_8_1_5_files.csv",
+  "02_identifier_compatibility.csv",
+  "02a_identifier_profile.csv",
+  "02b_code_systems.csv",
+  "03_ingredient_mapping_summary.csv",
+  "04_combination_drug_analysis.csv",
+  "05_contraindication_linkage.csv",
+  "06_elderly_linkage.csv",
+  "07_therapeutic_linkage.csv",
+  "08_coverage_comparison.csv",
+  "08a_reconciliation_8_1_5.csv",
+  "09_medical_safety_validation.csv",
+  "10_root_cause_analysis.csv",
+  "10a_primary_partition.csv",
+  "10b_overlap_matrix.csv",
+  "11_feasibility_decision.json",
+  "12_ingredient_coverage_report.md",
+  "candidate_quarantine/02d_dm_bridge_candidate_NOT_FOR_OPERATION.csv",
+  "candidate_quarantine/02e_leave_one_out_validation.csv",
+  "candidate_quarantine/03a_product_ingredient_map_CANDIDATE_INCLUDED.csv",
+  "candidate_quarantine/04a_case_examples.csv",
+  "candidate_quarantine/04b_user_example_products.csv",
+  "candidate_quarantine/05_contraindication_linkage_products_CANDIDATE_NOT_FOR_OPERATION.csv",
+  "candidate_quarantine/06_elderly_linkage_products_CANDIDATE_NOT_FOR_OPERATION.csv",
+  "candidate_quarantine/07_therapeutic_linkage_products_CANDIDATE_NOT_FOR_OPERATION.csv",
+  "candidate_quarantine/08c_candidate_expansion_NOT_FOR_OPERATION.csv",
+  "internal_inferred/02c_dm_bridge_inferred.csv",
+  "internal_inferred/03b_product_mapping_inferred_only.csv",
+  "internal_inferred/05_contraindication_linkage_products_inferred_only.csv",
+  "internal_inferred/06_elderly_linkage_products_inferred_only.csv",
+  "internal_inferred/07_therapeutic_linkage_products_inferred_only.csv",
+  "internal_inferred/08b_inferred_expansion_T1_requires_source_check.csv"
+ ]
+}

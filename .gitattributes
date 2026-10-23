@@ -1,0 +1,6 @@
+# STEP 9-2: 줄바꿈 자동 변환 금지 — 파일을 바이트 그대로 저장·체크아웃합니다.
+# 이유: Frozen Core(src/dur_safety/*.py)와 FROZEN_SHA256SUMS.txt 는 LF 기준입니다. Git for Windows 기본값
+#       (core.autocrlf=true)으로 Windows 에 clone 하면 LF 가 CRLF 로 바뀌어 SHA256 검증(tests)이 실패합니다.
+#       '-text' 로 두면 어떤 OS·설정에서 받아도 원본 바이트가 유지됩니다.
+* -text
+# Git LFS 를 쓰기로 결정하면 .gitattributes.lfs.example 의 줄을 이 파일 아래에 추가하세요.

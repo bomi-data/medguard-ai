@@ -1,0 +1,33 @@
+case_id,field,index,cited,verdict,category,note
+TD004,statement,0,E1,SUPPORTED,medical,E1 "혈당강하작용을 증가시키는 약물: 인슐린제제 및 기타 경구용 혈당강하제"
+TD004,statement,1,E5,SUPPORTED,medical,E5 저혈당 처치·설포닐우레아 저혈당 재발·세심 관찰
+TD004,statement,2,E4,SUPPORTED,medical,E4 FPG·HbA1C 정기 측정
+TD004,statement,3,E4,SUPPORTED,medical,E4 인슐린/경구 혈당강하제 병용 시 저혈당 위험 설명
+CE001,statement,0,E1,SUPPORTED,medical,E1 아졸계 항진균제(플루코나졸) 병용 시 대사 저해·병용 투여해서는 안 된다
+CE001,statement,1,E5,SUPPORTED,medical,E5 금기 4) 아졸계 항진균제(플루코나졸) 병용투여 금기
+CE001,statement,2,E2;E4,PARTIAL_MISLEADING,evidence_meta,"'트리아졸람을 직접 언급한 병용금기 문구는 확인되지 않음'은 좁게는 맞지만, E4에 트리아졸람 AUC 약 50% 증가·용량조절 문구가 있어 오해 소지"
+CE001,limitations,0,-,CONTRADICTED,evidence_meta,"'플루코나졸 쪽 허가정보에는 트리아졸람 직접 언급이 확인되지 않습니다' — E4(플루코나졸)에 트리아졸람 직접 언급 있음. 06-D 저장 출력(CE001-C09)과 같은 오류 재현. Screening 결과는 유지(위험 축소 방향 아님)"
+EC008,statement,0,(none),SUPPORTED_UNCITED,evidence_meta,"E1–E5에 고령/노인 문구 없음(확인). 내용은 맞으나 인용 없음 → Core STATEMENT_WITHOUT_CITATION → 설명 전체 보류"
+EC008,statement,1,E1;E3,SUPPORTED,medical,E1/E3 임부·수유·소아·천식 주의
+TD005,statement,0,E1,SUPPORTED,medical,E1 간염·간질성 폐질환·근육병증/횡문근융해·시클로스포린·강력한 CYP3A4 저해제
+TD005,statement,1,E5,SUPPORTED,medical,E5 P-gp·CYP3A4·OATP1B1·BCRP·용량 제한
+TD005,statement,2,E2,SUPPORTED,medical,E2 콜키신·답토마이신 근육병증
+TD005,statement,3,E2,SUPPORTED,medical,E2 간기능 이상 시 투여 중지(원문 서술)
+TD005,statement,4,E4,SUPPORTED,medical,"E4 '임신 확인 시 이 약 사용을 중단해야 한다' 원문 서술 → Core DIRECTIVE_PATTERNS '중단해야' 플래그 → 설명 전체 보류(과잉 차단, 기존 R3)"
+EC010,statement,0,E1..E5 (list only),SUPPORTED_FORMAT_ERROR,evidence_meta,"E1–E5에 고령/노인 문구 없음(확인). 본문에 '(E1~E5)'로 표기해 [E#] 형식 불일치 → FIELD_INLINE_MISMATCH → 보류"
+EC001,statement,0,E1,SUPPORTED,medical,E1 고령자 운동실조·과진정·소량부터 신중 투여
+EC001,statement,1,E3,SUPPORTED,medical,E3 14) 고령자 및 쇠약한 환자 저용량
+EC001,statement,2,E4,SUPPORTED,medical,E4 혼수 고령자 지속시간 연장
+EC001,limitations,0,-,SUPPORTED,evidence_meta,"'장기지속형' 표현이 근거에 없다는 한계 진술 — 확인"
+TD007,statement,0,E1,SUPPORTED,medical,E1 심혈관·위장관·알레르기·감염 진단 지연
+TD007,statement,1,E3,SUPPORTED,medical,E3 다른 소염진통제 병용 피하는 것이 바람직·위장 출혈·소화성궤양
+TD007,statement,2,E2;E4,SUPPORTED,medical,E2/E4 메토트렉세이트·이뇨제·항고혈압제·시클로스포린·타크로리무스·아나필락시스·피부·천식
+TD007,statement,3,E4,SUPPORTED,medical,"E4 19) 최대용량 초과·다른 NSAID 추가 복용 금지 원문 서술(지시 아님, 표시됨)"
+CE008,statement,0,E5,SUPPORTED,medical,"E5 14) 다른 PDE5저해제 병용 시험 미수행·권장되지 않음 (인용이 일부 생략됨, MINOR)"
+CE008,statement,1,E2,SUPPORTED,medical,E2 protease inhibitors·CYP3A4 inhibitors
+CE008,statement,2,E2,SUPPORTED,medical,E2 10mg/20mg 상호작용 연구
+CE003,statement,0,E1,SUPPORTED,medical,E1 표: 아토르바스타틴 주의하여 사용·용량 감량 필요할 수 있음
+CE003,statement,1,E4,SUPPORTED,medical,E4 표4 이트라코나졸 → 1일 10/20mg 초과하지 않는다
+CE003,statement,2,E4,SUPPORTED,medical,E4 표4 제목 '근육병증/횡문근융해 위험 증가 관련 상호작용'
+TD010,statement,0,E1,SUPPORTED,medical,E1 다른 NSAID 병용투여하지 않는다
+TD010,statement,1,E2,SUPPORTED,medical,E2 다른 NSAID 병용 효과 자료 불충분·이상반응 위험

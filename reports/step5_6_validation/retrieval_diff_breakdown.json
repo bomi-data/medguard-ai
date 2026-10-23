@@ -1,0 +1,48 @@
+{
+ "status": "FAIL",
+ "n_items": 33,
+ "n_pass": 3,
+ "methods": {
+  "bm25": {
+   "n": 33,
+   "ok_strict": 33,
+   "top5_equal": 33,
+   "top10_equal": 33,
+   "ranking_equal(score-only diffs)": 33,
+   "non_score_field_diffs": [],
+   "max_abs_score_diff": 0.0,
+   "status_equal": 33
+  },
+  "dense": {
+   "n": 33,
+   "ok_strict": 3,
+   "top5_equal": 33,
+   "top10_equal": 33,
+   "ranking_equal(score-only diffs)": 33,
+   "non_score_field_diffs": [],
+   "max_abs_score_diff": 0.0007000000000000339,
+   "status_equal": 33
+  },
+  "hybrid": {
+   "n": 33,
+   "ok_strict": 3,
+   "top5_equal": 33,
+   "top10_equal": 33,
+   "ranking_equal(score-only diffs)": 33,
+   "non_score_field_diffs": [],
+   "max_abs_score_diff": 0.0007000000000000339,
+   "status_equal": 33
+  }
+ },
+ "other_checks_all_true": true,
+ "device_comparison": {
+  "device": "cpu",
+  "baseline": "06-A frozen hybrid Top-5 (Colab GPU, fp16 query encoding)",
+  "exact_top5_match": "30/30",
+  "mean_top5_overlap": 1.0,
+  "affected_cases": [],
+  "cases_losing_relevant_evidence": [],
+  "cases_losing_direct_evidence": [],
+  "downstream": "any Top-5 change changes E1..E5 and therefore the generation prompt (sha256)"
+ }
+}

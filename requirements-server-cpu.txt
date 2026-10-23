@@ -1,0 +1,9 @@
+# MEDGUARD AI — Linux CPU 서버용 설치 파일 (STEP 9-1)
+#   pip install -r requirements-server-cpu.txt
+# requirements.txt 와 패키지·버전이 같습니다. 차이는 torch 를 PyTorch CPU 인덱스에서 받는다는 점뿐입니다.
+# PyPI 의 Linux torch 2.11.0 wheel 은 CUDA 13 패키지(cuda-toolkit, nvidia-cudnn-cu13 등 7개 의존성)를 함께 설치합니다.
+# CPU 인덱스의 torch 2.11.0+cpu 는 'torch==2.11.0' 고정을 그대로 만족하고 CUDA 의존성이 없습니다(STEP 9-1 pip dry-run 으로 확인).
+# 검색 모델(bge-m3)·Hybrid 검색·계산 정밀도(CPU fp32)는 STEP 6/8 로컬 Windows CPU 실행과 같습니다.
+# Windows 개발 환경에서는 기존대로 requirements.txt 를 사용하세요.
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r requirements.txt

@@ -1,0 +1,30 @@
+﻿Test Case,Product,Mapping Method,Rule Type,Evidence,Expected Result,Actual Result,PASS/WARN/FAIL,Explanation
+F-1 서로 다른 성분이 잘못 연결되지 않았는가,(전체),DUR 레코드 동시 출현 + 1:1 + 2제품 이상 + 성분명 일치,공통,02e_leave_one_out_validation.csv,leave-one-out 오답 0건,"오답 0건 / 예측 9,920건 (정확도 100.0%), 모호 72건",PASS,"오답이 1% 초과면 FAIL, 0 초과면 WARN"
+F-2 서로 다른 염 형태를 무조건 동일 처리하지 않았는가,(전체),성분명은 연결에 쓰지 않고 검증 보조로만 사용,공통,02c_dm_bridge_inferred.csv(salt_variant),T1 중 염 표기가 다른 연결 의존 0건,0건 (INFERRED 쌍 중 염/수화물 표기를 제거해야 이름이 같아지는 쌍 11개),PASS,해당 쌍에 의존하는 T1은 약사 검토 대상
+F-3 복합제의 일부 성분만 확인했는데 전체를 확인한 것으로 처리하지 않았는가,(전체),단일성분 + 정보 완전 + 모든 성분 INFERRED만 T1,공통,"03a/03b, D1~D3",T1 중 복합/부분 매핑 0건,위반 0건 · 복합제 T2 1412건은 조건부로 분리됨,PASS,복합제는 T1이 될 수 없음
+F-4 제형 차이를 무시하지 않았는가,(전체),등재 제품의 제형군과 비교,공통,D1~D3 form_check,T1은 모두 제형군 일치,T1 7건 중 제형 PASS 7건 · MISMATCH→T3 400건 · UNKNOWN→T2 558건,PASS,"제형 불일치는 T3, 제형 미확인은 T2로 격하"
+F-4b 제형 판단의 근거 수준,(전체),이름 기반 추정,공통,family_from_name,구조화된 제형 컬럼 사용,제형군은 제품명 접미사/제형명 기반 추정 — T1도 원천 대조 필요,WARN,허가정보에 제형 코드 컬럼이 없음
+F-5 투여 경로 차이를 무시하지 않았는가,(전체),-,공통,스키마 확인,경로 컬럼으로 비교,허가정보에 투여경로 컬럼 없음 → UNKNOWN (외용/점안 등은 제형군으로만 간접 구분),WARN,조건 미확인 상태를 보고서에 명시
+F-6 함량·용량 조건을 무시하지 않았는가,(전체),-,공통,스키마 확인,함량 컬럼으로 비교,구조화 컬럼 없음 → UNKNOWN (prohbt_content 텍스트만 존재),WARN,조건 미확인 상태를 보고서에 명시
+F-7 제품 규칙과 성분 규칙이 충돌하지 않는가,(전체),등재 제품에 성분 연결을 역적용,공통,D1~D3 conflict,충돌 0건,0건 (등재된 단일성분 제품의 INFERRED D가 등재 D와 불일치),PASS,충돌은 연결 오류의 직접 증거
+F-8 노인주의 연령 조건을 유지하는가,(전체),엔진 함수 직접 호출,노인주의,screening.elderly_check_status,엔진: None 미평가 / 64 비해당 / 65 평가,"{None: 'not_evaluated_age_missing', 64: 'not_applicable_age_below_threshold', 65: 'evaluated'}",PASS,"확장 결과에도 age_condition 컬럼 포함, 연령 미입력은 매핑 실패로 세지 않음"
+F-9 효능군 중복을 실제 금기와 혼동하지 않는가,(전체),유형별 분리,공통,"05/06/07, 08",유형별로 분리된 표·지표,rule_type 단일값 · 유형별 지표 행 분리,PASS,효능군 중복은 '동일 군 선택' 신호이며 금기가 아님
+F-10 근거 없는 규칙을 LLM이 생성하지 않는가,(전체),코드 경로에 LLM 호출 없음,공통,sys.modules 비교,"LLM·생성 모듈 미로딩, 규칙 텍스트 생성 없음",새로 로딩된 LLM 관련 모듈: 없음,PASS,이 구간은 데이터 집계만 수행
+F-11 기존 Screening 결과가 분석 때문에 변경되지 않았는가,(전체),분석 전/후 sha256·screen_patient 결과 비교,공통,SNAP0 vs SNAP1,보호 파일 해시 불변 + 회귀 해시 동일,변경된 파일 없음 · 회귀 동일 (25건),PASS,데이터·엔진·UI·기준선 파일 모두 대상
+F-12 성분 매핑 실패를 안전한 약물로 잘못 해석하지 않는가,(전체),상태 어휘 검사,공통,tier/state,"상태 어휘에 '안전' 없음, UNMAPPED/NONE = 근거 없음",허용 어휘 외 값 없음 · '안전' 포함 라벨 0건,PASS,NONE·UNMAPPED는 '판정 근거 없음'으로만 사용
+F-13 공식 근거와 프로젝트 내부 추정 규칙을 구분하는가,(전체),evidence_basis 컬럼,공통,D1~D3,"확장 행은 모두 PROJECT_INFERENCE, 기존 행만 OFFICIAL_DUR_RECORD","기존 17,244 / 확장 4,431",PASS,확장 행은 requires_source_check=True
+F-14 동일 규칙이 제품 기반과 성분 기반으로 중복 탐지되지 않는가,(전체),"유형별 (item_seq, rule_type) 집합 교집합",공통,D1~D3,기존 등재 제품이 확장에 다시 나오지 않음,중복 0건,PASS,기존 등재는 BASELINE_LISTED로만 존재
+F-15 내부 추론·후보 연결이 실제 Screening 결과/코드에 반영되지 않는가,(전체),격리 폴더 파일 검사 + src/·app/ 정적 스캔 + 엔진 입력 파일 불변(F-11),공통,internal_inferred/*,"격리 폴더에 T2/T3·후보 컬럼·auto_apply=True 없음, src/·app/가 산출물을 참조하지 않음",누출 없음 ,PASS,운영 엔진은 이 분석 결과를 읽지 않음
+정확하게 연결된 단일성분제,페니라민주사(클로르페니라민말레산염) (196000010),"INFERRED (D,M) + leave-one-out 일치",해당 유형,M M223211 → D D000893,예측 D == 등재 D,leave-one-out MATCH,PASS,자기 행을 제외하고 예측해도 일치
+정확하게 연결된 복합제,페리나정 (197600345),성분별 INFERRED,3유형,M M203364|M223211 → D D000448|D000893,복합제는 T1이 되지 않음(조건부),"{'CI': 'NONE', 'E': 'T2_CONDITIONAL', 'T': 'T2_CONDITIONAL'}",PASS,성분 규칙을 복합제 전체에 확정 적용하지 않음
+일부 성분만 연결된 복합제,하트만용액 (196400020),INFERRED 1/4 성분,3유형,M M217500|M040438|M040426|M086824,완전 매핑으로 처리되지 않음,"state=PARTIAL_INFERRED, tiers={'CI': 'BASELINE_LISTED', 'E': 'NONE', 'T': 'NONE'}",PASS,일부만 연결되면 PARTIAL
+식별자 연결이 불가능한 제품,활명수 (195700020),연결 근거 없음,3유형,state=UNMAPPED,"tier=NONE ('근거 없음', 안전 아님)","{'CI': 'NONE', 'E': 'NONE', 'T': 'NONE'}",PASS,UI에서는 '판정 근거 없음'으로 표시해야 함
+성분명은 같지만 적용 조건이 다른 제품(제형),판콜에이내복액 (196800036),INFERRED 성분 + 제형군 불일치,효능군,제형군 경구액상 vs 등재 제품 제형군,T1이 아님 (후보로 격하),"tier=T3_CANDIDATE, reasons=COMBO_OR_PARTIAL_OR_INCOMPLETE|FORM_MISMATCH",PASS,제형 불일치는 연결하지 않음
+기존 제품 규칙과 성분 규칙이 중복되는 사례,페니라민주사(클로르페니라민말레산염) (196000010),등재 제품에 성분 연결 역적용,3유형,D D000893,"기존 등재는 BASELINE_LISTED, 확장으로 다시 세지 않음","{'CI': 'NONE', 'E': 'BASELINE_LISTED', 'T': 'BASELINE_LISTED'}",PASS,중복 제거 확인
+[사용자 확인 제품] 실제 상태,타이레놀콜드-에스정 (202106954),"state=PARTIAL_INFERRED, class=COMBO",3유형,M M223211|M202983|M203364|M040353 → D(INFERRED) D000448|D000893,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'T2_CONDITIONAL', 'T': 'T2_CONDITIONAL'}",WARN,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,우먼스타이레놀정 (202200658),"state=CANDIDATE_ONLY, class=COMBO",3유형,M M040353|M082487 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'T3_CANDIDATE'}",WARN,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,어린이타이레놀현탁액(아세트아미노펜) (202200525),"state=UNMAPPED, class=SINGLE",3유형,M M281939 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'NONE'}",PASS,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,타이레놀8시간이알서방정(아세트아미노펜) (202200407),"state=CANDIDATE_ONLY, class=INCONSISTENT",3유형,M M040353 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'BASELINE_LISTED'}",PASS,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,타이레놀정500밀리그람(아세트아미노펜) (202106092),"state=CANDIDATE_ONLY, class=SINGLE",3유형,M M040353 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'BASELINE_LISTED'}",PASS,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,어린이타이레놀산160밀리그램(아세트아미노펜) (202005623),"state=UNMAPPED, class=SINGLE",3유형,M M279100 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'NONE'}",PASS,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)
+[사용자 확인 제품] 실제 상태,타이레놀산500밀리그램(아세트아미노펜) (202201300),"state=CANDIDATE_ONLY, class=SINGLE",3유형,M M262287 → D(INFERRED) -,규칙 근거 없음을 '안전'으로 표시하지 않음,"tiers={'CI': 'NONE', 'E': 'NONE', 'T': 'BASELINE_LISTED'}",PASS,T2/T3가 있으면 조건 미확인 연결 존재(운영 적용 불가)

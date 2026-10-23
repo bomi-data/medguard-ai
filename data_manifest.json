@@ -1,0 +1,215 @@
+{
+ "note": "sha256 은 19번 노트북이 계산한 값. url 은 비어 있음(배포 전략 확정 후 사용)",
+ "files": [
+  {
+   "path": "data/processed/evidence/drug_approval_items.parquet",
+   "size_mb": 374.362,
+   "sha256": "4530ed08292fe929574c09be17eea8a93b49ad0a5b73bef660624d6e11ff1032",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/evidence/easy_drug_canonical.parquet",
+   "size_mb": 2.082,
+   "sha256": "c1ffb5fc30ccd1900b17ab0c35c3f8603865d14bcc48f75a61c3571e0d74aa4b",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/evidence/easy_drug_coverage_by_category.parquet",
+   "size_mb": 0.004,
+   "sha256": "67fef39cf1945a2ea2f15613485fafdd11d13b5c560ef4fc206a613edccf813f",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/evidence/easy_drug_duplicates_dropped.parquet",
+   "size_mb": 0.038,
+   "sha256": "4aab1c377ae0b1c85c4a8b95b1ef289eb4dd7f0bb68b0b044b706a611577166c",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/evidence/evidence_candidates.parquet",
+   "size_mb": 15.215,
+   "sha256": "53754e46efab1f2782037116ca05b9657d0f04be913d4c95a7cbed8c95abf649",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/generation/generation_config.json",
+   "size_mb": 0.011,
+   "sha256": "5a3e5e3bea92c06af13915bafadde180f6ffbf5040f97b0ffb816558cf62746a",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/generation/generation_evidence.parquet",
+   "size_mb": 0.035,
+   "sha256": "e41a30accd87fa20ecd95c7620290dbab35e50f917704f886d8aefaeaa8a155e",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/generation/generation_failure_tests.json",
+   "size_mb": 0.003,
+   "sha256": "bbbe5e478cf68a55fba72318db53f7456317c1af60e7a35b752c89ddaa2151f7",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/generation/generation_results.parquet",
+   "size_mb": 0.068,
+   "sha256": "a3b0503575b0e330bf0c7c4d216a87184c71b90a40ea9cf3800fd246efc7804e",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/approval_chunks.parquet",
+   "size_mb": 123.618,
+   "sha256": "ff393095be71ff9b22dcde8caabbbd6b94534e2a5284c4f589cc89186ba9ca74",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/document_flags.parquet",
+   "size_mb": 0.048,
+   "sha256": "89b017fb9a6ecd9daa745a97550b8f56c441094a3d725448a2befe0cb7aa439d",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/evidence_coverage_elderly.parquet",
+   "size_mb": 0.091,
+   "sha256": "b75e0a6024e695e140fcc58aaba7a511d6a0875ecb8bc57a29853c2aeea0c5ce",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/evidence_coverage_pairs.parquet",
+   "size_mb": 3.015,
+   "sha256": "c24216e7031fffb590c10d77b072f3a3b8506a73dbb2f8fba1507f9cc4cdcda6",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/evidence_coverage_therapeutic.parquet",
+   "size_mb": 0.272,
+   "sha256": "12c3c340cdfa9b35de54d09f9c4c859201519e5baa9a7eff181c4c4de6c95833",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/rag_preparation_report.json",
+   "size_mb": 0.019,
+   "sha256": "5c9e7bff699f766e607026fd0c160274d371decd2727e4b3664ef1004d047a56",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/screening_itemseq_mapping.parquet",
+   "size_mb": 0.752,
+   "sha256": "c893430e3a6e946bdfbb3bdba4ad3cf4d7037c83146ce7f46ee253f322593122",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/rag/unmatched_identifiers.parquet",
+   "size_mb": 0.004,
+   "sha256": "8696e8ad8939ab7bb98de029f58559f3339c5bb0ca709183df0412322ba3d832",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/dense/BAAI__bge-m3/embedding_meta.json",
+   "size_mb": 0.001,
+   "sha256": "735487be6fe60914894b33f5c8e42377195ac0327c9c440f121f578e5a19c204",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/dense/BAAI__bge-m3/unique_text_embeddings.npy",
+   "size_mb": 72.242,
+   "sha256": "1eefb9de468d7c4df4b04d57ff03b66d32df3e91ac1b3cb126db48f4dcfe825d",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/retrieval_config.json",
+   "size_mb": 0.008,
+   "sha256": "50a81e99649867139fc284b9780d564b6428e71bbdb4f845ee542fb40a7d5759",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/smoke_test_queries.json",
+   "size_mb": 0.003,
+   "sha256": "040a8267ccb6824eb6ca4f2605673004e62d963589b04157d88abf1097b8529a",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/smoke_test_results.parquet",
+   "size_mb": 0.041,
+   "sha256": "4d9d11a9b755ab92e7823b9c793b36a1aa8dd96bafb6a6ecb41fd81aa94b1f8d",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/text_hash_mapping.parquet",
+   "size_mb": 6.091,
+   "sha256": "a194bad1560cdb983d9bef77b2c6f19f1a2cce7d894b478192a278462d607a31",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/retrieval/unique_text_index.parquet",
+   "size_mb": 1.725,
+   "sha256": "962e0dea1c23726007d68c0311dec6f39c53c44dd1fd46dbda11c6a3c42f8c90",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/screening/contraindication_evidence.parquet",
+   "size_mb": 24.984,
+   "sha256": "90be95ee82434252759c579d058f7bc1700c839ee8b35ca47f9aa8b3df5b80d9",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/screening/contraindication_pairs.parquet",
+   "size_mb": 2.77,
+   "sha256": "e3aa3424117d106e275fa5f0a683fc8a0837f2c6f05feb496e13499d173893d2",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/screening/elderly_caution_rules.parquet",
+   "size_mb": 0.183,
+   "sha256": "154ae23408263e2f2d0dda5e82ca5b2d95fcede217e720439474146815a39f25",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/screening/therapeutic_group_mapping.parquet",
+   "size_mb": 0.489,
+   "sha256": "71815ad30f80e572b5bbc04bd3ac015403b92528f5d73d6e90ccfa6da984b9ef",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "data/processed/screening/therapeutic_group_summary.parquet",
+   "size_mb": 0.003,
+   "sha256": "42231c27957e2698c1f8696eb2e3d81ef2631b5c23144f3e4d3339527b919184",
+   "class": "B_OPTIONAL_RUNTIME"
+  },
+  {
+   "path": "reports/ingredient_coverage_audit/run_20261012_184823/09_medical_safety_validation.csv",
+   "size_mb": 0.009,
+   "sha256": "235c88d2b16378da04975516746f29caa5f55ae0e282526f6b1ff31faff345a3",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "reports/ingredient_coverage_audit/run_20261012_184823/11_feasibility_decision.json",
+   "size_mb": 0.005,
+   "sha256": "a1358db1b6d10998fc9314e1d24f6bd08a70f635bb3114c23ed998ee717eb741",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "reports/ingredient_coverage_audit/run_20261012_184823/12_ingredient_coverage_report.md",
+   "size_mb": 0.031,
+   "sha256": "9e83332847eebbed5f6b2dd62805918806516aeac2542b9ce84aaf5c07dce636",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "reports/ingredient_coverage_audit/run_20261012_184823/audit_manifest.json",
+   "size_mb": 0.006,
+   "sha256": "3e7ebd2f41eab68e3ff5cefe701766f1d52414ed6991673f05a681d97fe4fb98",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "reports/ui_coverage_audit/run_20261011_152938/03_coverage_metrics.csv",
+   "size_mb": 0.005,
+   "sha256": "07e98455f92c5512c77569211d0afeef42fc7352748f3114d7a88fd76982203d",
+   "class": "A_REQUIRED_RUNTIME"
+  },
+  {
+   "path": "reports/ui_coverage_audit/run_20261011_152938/audit_manifest.json",
+   "size_mb": 0.002,
+   "sha256": "e06632f3d4663b258fa41d59eabac7b35039eee3e285aa73cb76663d9cf1925b",
+   "class": "B_OPTIONAL_RUNTIME"
+  }
+ ]
+}

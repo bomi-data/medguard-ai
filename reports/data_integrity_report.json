@@ -1,0 +1,24 @@
+{
+ "generated": "2026-10-19 10:51:05",
+ "files_planned": 97,
+ "files_copied_ok": 97,
+ "required_files_read_failed": [],
+ "sha256_mismatch_or_unverified": [],
+ "missing_after_copy": [],
+ "data_manifest_entries": 35,
+ "data_manifest_read_ok": true,
+ "data_manifest_entries_missing_in_deployment": [],
+ "data_manifest_sha256_checked": 35,
+ "read_failures_by_category": {
+  "GOOGLE_NATIVE_OR_SHORTCUT_OBJECT": 3
+ },
+ "read_failures_total": 3,
+ "recovered_after_retry": 0,
+ "secret_scan_unreadable": [],
+ "result": "PASS",
+ "original_project_changed": [
+  "Untitled0.ipynb"
+ ],
+ "original_project_removed": [],
+ "original_project_added": []
+}

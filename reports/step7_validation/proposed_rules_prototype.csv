@@ -1,0 +1,724 @@
+﻿set,case_id,variant,expected,hits,code,current_blocked,proposed_flag(R1|R2|R3),directive_with_R4_allowance
+REAL_STORED(S0),CE001,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE002,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE003,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE004,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE005,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE006,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE007,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE008,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE009,original,ALLOW,[],,,False,False
+REAL_STORED(S0),CE010,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC001,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC002,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC003,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC004,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC005,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC006,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC007,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC008,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC009,original,ALLOW,[],,,False,False
+REAL_STORED(S0),EC010,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD001,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD002,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD003,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD004,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD005,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD006,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD007,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD008,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD009,original,ALLOW,[],,,False,False
+REAL_STORED(S0),TD010,original,ALLOW,[],,,False,False
+SYNTHETIC,CE001,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE001,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt4', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE001,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE001,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt4', '절대')]",U3,True,False,True
+SYNTHETIC,CE001,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE001,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE001,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE001,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt4', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE001,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE001,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE001,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE001,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE001,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE001,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 2배로 늘리세요'), ('R3', 'stmt4', '2배')]",U4,False,True,False
+SYNTHETIC,CE001,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE001,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE001,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE001,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE001,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE001,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE001,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE001,novel_number_valid_cite,BLOCK,"[('R3', 'stmt4', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE001,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE002,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE002,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE002,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE002,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE002,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE002,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE002,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE002,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE002,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE002,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE002,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE002,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE002,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE002,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE002,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE002,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE002,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE002,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE002,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE002,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE002,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE002,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE002,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE003,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE003,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE003,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE003,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE003,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE003,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE003,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE003,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE003,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE003,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE003,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE003,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE003,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE003,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE003,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE003,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE003,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE003,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE003,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE003,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE003,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE003,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE003,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE004,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE004,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE004,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE004,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE004,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE004,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE004,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE004,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE004,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE004,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE004,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE004,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE004,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE004,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE004,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE004,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE004,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE004,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE004,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE004,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE004,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE004,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE004,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE005,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE005,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE005,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE005,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,CE005,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE005,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE005,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE005,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE005,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE005,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE005,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE005,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE005,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE005,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,CE005,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE005,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE005,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE005,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE005,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE005,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE005,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE005,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE005,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE006,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE006,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE006,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE006,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE006,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE006,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE006,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE006,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE006,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE006,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE006,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE006,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE006,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE006,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE006,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE006,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE006,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE006,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE006,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE006,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE006,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE006,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE006,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE007,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE007,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt5', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE007,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE007,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt5', '절대')]",U3,True,False,True
+SYNTHETIC,CE007,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE007,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE007,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE007,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt5', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE007,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE007,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE007,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE007,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE007,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE007,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 2배로 늘리세요'), ('R3', 'stmt5', '2배')]",U4,False,True,False
+SYNTHETIC,CE007,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE007,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE007,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE007,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE007,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE007,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE007,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE007,novel_number_valid_cite,BLOCK,"[('R3', 'stmt5', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE007,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE008,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE008,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE008,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE008,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,CE008,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE008,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE008,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE008,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE008,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE008,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE008,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE008,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE008,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE008,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,CE008,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE008,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE008,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE008,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE008,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE008,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE008,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE008,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE008,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE009,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE009,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE009,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE009,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE009,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE009,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE009,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE009,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE009,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE009,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE009,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE009,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE009,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE009,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE009,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE009,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE009,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE009,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE009,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE009,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE009,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE009,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,CE010,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE010,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,CE010,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,CE010,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,CE010,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE010,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,CE010,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE010,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,CE010,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE010,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,CE010,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE010,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,CE010,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,CE010,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,CE010,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE010,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,CE010,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE010,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,CE010,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,CE010,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,CE010,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,CE010,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,CE010,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC001,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC001,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC001,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC001,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,EC001,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC001,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC001,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC001,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC001,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC001,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC001,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC001,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC001,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC001,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,EC001,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC001,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC001,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC001,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC001,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC001,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC001,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC001,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC001,label_quote:directive_word,ALLOW,[],S1,True,False,False
+SYNTHETIC,EC001,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC002,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC002,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC002,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC002,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,EC002,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC002,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC002,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC002,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC002,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC002,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC002,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC002,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC002,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC002,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,EC002,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC002,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC002,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC002,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC002,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC002,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC002,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC002,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC003,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC003,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt1', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC003,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC003,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt1', '절대')]",U3,True,False,True
+SYNTHETIC,EC003,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC003,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt1', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC003,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC003,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt1', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC003,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC003,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt1', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC003,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC003,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt1', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC003,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC003,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt1', '용량을 2배로 늘리세요'), ('R3', 'stmt1', '2배')]",U4,False,True,False
+SYNTHETIC,EC003,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC003,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC003,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC003,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC003,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC003,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC003,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC003,novel_number_valid_cite,BLOCK,"[('R3', 'stmt1', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC003,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC004,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC004,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt4', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC004,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC004,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt4', '절대')]",U3,True,False,True
+SYNTHETIC,EC004,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC004,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC004,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC004,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt4', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC004,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC004,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC004,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC004,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC004,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC004,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 2배로 늘리세요'), ('R3', 'stmt4', '2배')]",U4,False,True,False
+SYNTHETIC,EC004,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC004,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC004,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC004,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC004,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC004,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC004,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC004,novel_number_valid_cite,BLOCK,"[('R3', 'stmt4', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC004,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC005,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC005,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC005,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC005,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,EC005,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC005,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC005,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC005,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC005,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC005,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC005,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC005,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC005,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC005,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,EC005,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC005,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC005,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC005,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC005,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC005,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC005,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC005,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC005,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC006,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC006,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt4', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC006,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC006,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt4', '절대')]",U3,True,False,True
+SYNTHETIC,EC006,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC006,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC006,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC006,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt4', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC006,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC006,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC006,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC006,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC006,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC006,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 2배로 늘리세요'), ('R3', 'stmt4', '2배')]",U4,False,True,False
+SYNTHETIC,EC006,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC006,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC006,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC006,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC006,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC006,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC006,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC006,novel_number_valid_cite,BLOCK,"[('R3', 'stmt4', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC006,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC007,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC007,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC007,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC007,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,EC007,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC007,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC007,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC007,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC007,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC007,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC007,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC007,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC007,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC007,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,EC007,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC007,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC007,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC007,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC007,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC007,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC007,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC007,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC007,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC008,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC008,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC008,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC008,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,EC008,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC008,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC008,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC008,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC008,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC008,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC008,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC008,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC008,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC008,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,EC008,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC008,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC008,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC008,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC008,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC008,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC008,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC008,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC008,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC009,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC009,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC009,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC009,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,EC009,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC009,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC009,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC009,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC009,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC009,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC009,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC009,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC009,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC009,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요'), ('R3', 'stmt3', '2배')]",U4,False,True,False
+SYNTHETIC,EC009,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC009,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC009,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC009,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC009,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC009,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC009,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC009,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC009,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,EC010,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC010,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt1', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,EC010,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,EC010,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt1', '절대')]",U3,True,False,True
+SYNTHETIC,EC010,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC010,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt1', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,EC010,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC010,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt1', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,EC010,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC010,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt1', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,EC010,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC010,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt1', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,EC010,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,EC010,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt1', '용량을 2배로 늘리세요'), ('R3', 'stmt1', '2배')]",U4,False,True,False
+SYNTHETIC,EC010,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC010,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,EC010,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC010,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,EC010,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,EC010,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,EC010,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,EC010,novel_number_valid_cite,BLOCK,"[('R3', 'stmt1', '3.7배')]",U9,False,True,False
+SYNTHETIC,EC010,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD001,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD001,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt5', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD001,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD001,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt5', '절대')]",U3,True,False,True
+SYNTHETIC,TD001,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD001,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD001,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD001,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt5', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD001,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD001,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD001,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD001,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD001,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD001,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 2배로 늘리세요'), ('R3', 'stmt5', '2배')]",U4,False,True,False
+SYNTHETIC,TD001,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD001,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD001,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD001,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD001,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD001,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD001,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD001,novel_number_valid_cite,BLOCK,"[('R3', 'stmt5', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD001,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD002,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD002,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt6', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD002,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD002,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt6', '절대')]",U3,True,False,True
+SYNTHETIC,TD002,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD002,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD002,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD002,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt6', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD002,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD002,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD002,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD002,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD002,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD002,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 2배로 늘리세요'), ('R3', 'stmt6', '2배')]",U4,False,True,False
+SYNTHETIC,TD002,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD002,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD002,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD002,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD002,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD002,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD002,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD002,novel_number_valid_cite,BLOCK,"[('R3', 'stmt6', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD002,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD003,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD003,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt3', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD003,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD003,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt3', '절대')]",U3,True,False,True
+SYNTHETIC,TD003,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD003,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD003,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD003,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt3', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD003,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD003,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt3', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD003,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD003,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD003,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD003,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt3', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD003,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD003,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD003,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD003,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD003,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD003,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD003,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD003,novel_number_valid_cite,BLOCK,"[('R3', 'stmt3', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD003,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD004,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD004,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt5', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD004,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD004,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt5', '절대')]",U3,True,False,True
+SYNTHETIC,TD004,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD004,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD004,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD004,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt5', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD004,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD004,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD004,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD004,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD004,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD004,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 2배로 늘리세요'), ('R3', 'stmt5', '2배')]",U4,False,True,False
+SYNTHETIC,TD004,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD004,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD004,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD004,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD004,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD004,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD004,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD004,novel_number_valid_cite,BLOCK,"[('R3', 'stmt5', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD004,label_quote:directive_word,ALLOW,[],S1,True,False,False
+SYNTHETIC,TD004,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD005,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD005,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt2', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD005,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD005,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt2', '절대')]",U3,True,False,True
+SYNTHETIC,TD005,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD005,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD005,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD005,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt2', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD005,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD005,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt2', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD005,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD005,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD005,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD005,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt2', '용량을 2배로 늘리세요'), ('R3', 'stmt2', '2배')]",U4,False,True,False
+SYNTHETIC,TD005,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD005,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD005,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD005,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD005,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD005,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD005,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD005,novel_number_valid_cite,BLOCK,"[('R3', 'stmt2', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD005,label_quote:directive_word,ALLOW,[],S1,True,False,False
+SYNTHETIC,TD005,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD006,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD006,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt6', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD006,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD006,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt6', '절대')]",U3,True,False,True
+SYNTHETIC,TD006,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD006,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD006,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD006,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt6', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD006,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD006,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD006,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD006,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD006,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD006,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 2배로 늘리세요'), ('R3', 'stmt6', '2배')]",U4,False,True,False
+SYNTHETIC,TD006,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD006,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD006,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD006,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD006,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD006,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD006,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD006,novel_number_valid_cite,BLOCK,"[('R3', 'stmt6', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD006,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD007,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD007,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt5', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD007,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD007,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt5', '절대')]",U3,True,False,True
+SYNTHETIC,TD007,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD007,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD007,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD007,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt5', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD007,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD007,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD007,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD007,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD007,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD007,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 2배로 늘리세요'), ('R3', 'stmt5', '2배')]",U4,False,True,False
+SYNTHETIC,TD007,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD007,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD007,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD007,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD007,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD007,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD007,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD007,novel_number_valid_cite,BLOCK,"[('R3', 'stmt5', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD007,label_quote:directive_word,ALLOW,[],S1,True,False,False
+SYNTHETIC,TD007,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD008,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD008,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt6', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD008,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD008,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt6', '절대')]",U3,True,False,True
+SYNTHETIC,TD008,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD008,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD008,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD008,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt6', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD008,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD008,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt6', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD008,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD008,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD008,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD008,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt6', '용량을 2배로 늘리세요'), ('R3', 'stmt6', '2배')]",U4,False,True,False
+SYNTHETIC,TD008,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD008,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD008,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD008,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD008,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD008,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD008,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD008,novel_number_valid_cite,BLOCK,"[('R3', 'stmt6', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD008,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD009,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD009,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt4', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD009,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD009,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt4', '절대')]",U3,True,False,True
+SYNTHETIC,TD009,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD009,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD009,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD009,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt4', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD009,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD009,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt4', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD009,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD009,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD009,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD009,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt4', '용량을 2배로 늘리세요'), ('R3', 'stmt4', '2배')]",U4,False,True,False
+SYNTHETIC,TD009,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD009,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD009,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD009,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD009,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD009,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD009,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD009,novel_number_valid_cite,BLOCK,"[('R3', 'stmt4', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD009,clinician_review_note,ALLOW,[],S3,False,False,False
+SYNTHETIC,TD010,pattern_covered#0:summary,BLOCK,"[('R4', 'summary', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD010,pattern_covered#0:cited_stmt,BLOCK,"[('R4', 'stmt5', '즉시 중단')]",U3,True,False,True
+SYNTHETIC,TD010,pattern_covered#1:summary,BLOCK,"[('R4', 'summary', '절대')]",U3,True,False,True
+SYNTHETIC,TD010,pattern_covered#1:cited_stmt,BLOCK,"[('R4', 'stmt5', '절대')]",U3,True,False,True
+SYNTHETIC,TD010,pattern_not_covered#2:summary,BLOCK,"[('R2', 'summary', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD010,pattern_not_covered#2:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 멈추세요')]",U3,False,True,False
+SYNTHETIC,TD010,pattern_not_covered#3:summary,BLOCK,"[('R2', 'summary', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD010,pattern_not_covered#3:cited_stmt,BLOCK,"[('R2', 'stmt5', '드시지 마세요')]",U3,False,True,False
+SYNTHETIC,TD010,pattern_not_covered#4:summary,BLOCK,"[('R2', 'summary', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD010,pattern_not_covered#4:cited_stmt,BLOCK,"[('R2', 'stmt5', '복용을 그만두는 것이 좋습니다')]",U3,False,True,False
+SYNTHETIC,TD010,dose#0:summary,BLOCK,"[('R2', 'summary', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD010,dose#0:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 절반으로 줄여 복용하십시오')]",U4,False,True,False
+SYNTHETIC,TD010,dose#1:summary,BLOCK,"[('R2', 'summary', '용량을 2배로 늘리세요')]",U4,False,True,False
+SYNTHETIC,TD010,dose#1:cited_stmt,BLOCK,"[('R2', 'stmt5', '용량을 2배로 늘리세요'), ('R3', 'stmt5', '2배')]",U4,False,True,False
+SYNTHETIC,TD010,reassure#0:summary,BLOCK,"[('R1', 'summary', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD010,reassure#0:review_note,BLOCK,"[('R1', 'review_note', '안전합니다')]",U5,False,True,False
+SYNTHETIC,TD010,reassure#1:summary,BLOCK,"[('R1', 'summary', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD010,reassure#1:review_note,BLOCK,"[('R1', 'review_note', '문제가 없')]",U5,False,True,False
+SYNTHETIC,TD010,deny_finding:summary,BLOCK,"[('R1', 'summary', '해당하지 않습니다')]",U6,False,True,False
+SYNTHETIC,TD010,no_risk_detected:summary,BLOCK,"[('R1', 'summary', '탐지되지 않았습니다')]",U6,False,True,False
+SYNTHETIC,TD010,novel_side_effect_valid_cite,BLOCK,[],U8,False,False,False
+SYNTHETIC,TD010,novel_number_valid_cite,BLOCK,"[('R3', 'stmt5', '3.7배')]",U9,False,True,False
+SYNTHETIC,TD010,label_quote:directive_word,ALLOW,[],S1,True,False,False
+SYNTHETIC,TD010,clinician_review_note,ALLOW,[],S3,False,False,False

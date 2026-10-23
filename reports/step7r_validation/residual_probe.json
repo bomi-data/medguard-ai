@@ -1,0 +1,77 @@
+{
+ "note": "post-hoc residual probe, written AFTER the rule; NOT used to tune the rule",
+ "results": [
+  {
+   "expected": "BLOCK",
+   "text": "중단하지 말고 용량을 절반으로 줄이세요.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "이 약은 이제 안 드셔도 됩니다.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "복용을 잠시 쉬세요.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "둘 중 하나만 드세요.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "이 약은 위험하지 않습니다.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "병용금기 판정은 잘못된 것입니다.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "BLOCK",
+   "text": "함께 드셔도 됩니다.",
+   "reasons": [],
+   "correct": false
+  },
+  {
+   "expected": "ALLOW",
+   "text": "허가정보에는 \"투여를 중단하십시오\"라는 표현은 없습니다.",
+   "reasons": [],
+   "correct": true
+  },
+  {
+   "expected": "ALLOW",
+   "text": "고령자는 소량부터 시작한다고 기재되어 있으니 의료진과 상의하세요.",
+   "reasons": [],
+   "correct": true
+  },
+  {
+   "expected": "ALLOW",
+   "text": "이상반응이 나타나면 의사·약사에게 알리세요.",
+   "reasons": [],
+   "correct": true
+  },
+  {
+   "expected": "ALLOW",
+   "text": "근거 원문에는 용량을 줄여야 한다는 내용이 있습니다 [E1].",
+   "reasons": [],
+   "correct": true
+  },
+  {
+   "expected": "ALLOW",
+   "text": "노인주의는 65세 이상에 적용되는 기준입니다.",
+   "reasons": [],
+   "correct": true
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+[server]
+headless = true
+# STEP 8: the source watcher probes every loaded module; on transformers' lazy image modules this imports the
+# optional torchvision (not installed) and logs hundreds of tracebacks. Not needed for serving the app.
+# For auto-reload while editing: streamlit run app.py --server.fileWatcherType auto
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

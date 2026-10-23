@@ -1,0 +1,79 @@
+{
+ "real_product_not_in_dur": {
+  "items": [
+   {
+    "ITEM_SEQ": "195500005",
+    "ITEM_NAME": "중외5%포도당생리식염액(수출명:5%DextroseinnormalsalineInj.)"
+   },
+   {
+    "ITEM_SEQ": "195500006",
+    "ITEM_NAME": "중외5%포도당주사액"
+   }
+  ],
+  "n_findings": 0,
+  "warnings": [
+   {
+    "code": "NOT_FOUND_IN_DUR_TABLES",
+    "detail": [
+     "195500005",
+     "195500006"
+    ]
+   }
+  ],
+  "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+  "ui_no_finding_text": "현재 시스템이 검토하는 병용금기·노인주의·효능군 중복 범위에서는 탐지된 항목이 없습니다.",
+  "ui_notice": "다음 약물은 이 시스템의 DUR 규칙 데이터에 포함되어 있지 않아 규칙 검사 대상이 되지 않았습니다.",
+  "contains_forbidden_phrase": false
+ },
+ "no_evidence_synthetic_retrieval": {
+  "gen_status": "NO_EVIDENCE",
+  "llm_called": false,
+  "output": {
+   "finding_id": "elderly_caution:197000079",
+   "risk_type": "elderly_caution",
+   "summary": "Structured Screening에서 노인주의 신호가 탐지되었습니다.",
+   "evidence_statements": [],
+   "evidence_status": "INSUFFICIENT",
+   "limitations": "현재 검색된 공식 허가정보 근거만으로는 설명을 생성할 수 없습니다 (사유: NO_BM25_MATCH).",
+   "review_note": "DUR 기준과 허가정보 원문을 의료진이 직접 확인해야 합니다."
+  },
+  "display_mode": "NO_EVIDENCE",
+  "ui_message": "공식 허가정보에서 이 항목을 설명할 근거를 찾지 못했습니다. DUR 기준 문구와 허가정보 원문을 의료진이 직접 확인해야 합니다.",
+  "dur_rule_texts_still_available": [
+   "노인에서의 삼환계 항우울제 사용은 기립성 저혈압, 비틀거림, 항콜린작용에 의한 구갈, 배뇨곤란, 변비, 안내압항진 등이 나타나기 쉬움으로 소량으로 신중투여"
+  ]
+ },
+ "s1_blocked_quotes_note": "quotes regenerated with the same deterministic rule as step7_eval.quote_from_evidence from the frozen 06-D evidence (identical to live evidence: Top-5 30/30, STEP 6)",
+ "s1_blocked_quotes": {
+  "EC001": {
+   "evidence_id": "E3",
+   "chunk_id": "200700501_NB_01_005_01",
+   "quote": "이러한 증상이 발생한 경우에는 약물 복용을 중단해야 한다.",
+   "section": "5. 일반적 주의"
+  },
+  "TD004": {
+   "evidence_id": "E4",
+   "chunk_id": "200703229_NB_01_005_05",
+   "quote": "만약 하루에 1회 복용량을 걸렀을 경우에는 다음 날 2배를 복용하면 안 된다.",
+   "section": "5. 일반적 주의"
+  },
+  "TD005": {
+   "evidence_id": "E4",
+   "chunk_id": "200803246_NB_01_007_01",
+   "quote": "임신 확인 시 이 약 사용을 중단해야 한다.",
+   "section": "7. 임부 및 수유부에 대한 투여"
+  },
+  "TD007": {
+   "evidence_id": "E4",
+   "chunk_id": "201603488_NB_01_005_04",
+   "quote": "멜록시캄 관련 FDE 병력이 있는 환자에는 멜록시캄을 재투여하면 안되며, 여타 옥시캄 계열 제제(oxicams)와 교차반응이 발생할 가능성이 있다.",
+   "section": "5. 일반적주의"
+  },
+  "TD010": {
+   "evidence_id": "E3",
+   "chunk_id": "200600821_NB_01_005_04",
+   "quote": "환자는 중대한 피부 발현 증상 및 증후에 대해 알고 있어야 하며 피부 발진 또는 다른 과민반응의 최초 증상 및 징후가 나타날 때 약물 투여를 중단해야 한다.",
+   "section": "5. 일반적 주의"
+  }
+ }
+}

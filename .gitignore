@@ -1,0 +1,48 @@
+# ── 인증정보/환경 ──
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+credentials*.json
+service_account*.json
+
+# ── 가상환경 / IDE (STEP 9-1 추가: 기존 파일에 없어 .venv 전체와 사용자 경로가 담긴 .idea 가 추적될 수 있었음) ──
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+
+# ── 파이썬/테스트/노트북 캐시 ──
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+*.log
+*.part
+
+# ── 연구용 백업/임시 ──
+_backup_*/
+_incoming_*/
+.playwright-mcp/
+reports/*/playwright_artifacts/
+
+# ── 개인정보가 남은 개발 전용 파일 (STEP 9-2) ──
+# 노트북 02/04/05: Colab 셀 메타데이터에 개발자 Google 표시 이름·userId. 서비스 실행에 불필요(source parity 테스트 기준)이고
+#   production_baseline.json 에 SHA256 이 고정돼 있어 메타데이터를 지우면 테스트 기준이 깨지므로, 수정하지 않고 Git 에서 제외.
+#   (런타임에 필요한 노트북 15 는 메타데이터의 user 블록만 제거해 포함 — reports/STEP9_2_GITHUB_PREPARATION.md)
+notebooks/02_structured_screening.ipynb
+notebooks/04_retrieval.ipynb
+notebooks/05_rag_generation.ipynb
+# pytest JUnit XML·실행 추적 JSON: 로컬 절대경로(Windows 사용자 이름) 포함. 결과 요약은 STEP 보고서에 있음.
+reports/**/*.xml
+reports/step5_6_validation/rag_probe_result.json
+reports/**/*runtime_trace*.json
+
+# ── 데이터 (STEP 9-1: 기본값을 '제외'로 변경) ──
+# 이유: (1) drug_approval_items.parquet(392.5MB), approval_chunks.parquet(129.6MB)는 GitHub 일반 파일 한도(100MB)를 넘어
+#       push 가 거부됩니다. (2) 공공데이터 재배포 조건이 아직 NOT_VERIFIED 입니다(reports/STEP9_1_DEPLOYMENT_READINESS.md §6).
+# 데이터는 DEPLOYMENT.md 의 '데이터 준비' 절차로 배치하고 `python tools/fetch_runtime_data.py --verify` 로 SHA256 을 확인합니다.
+# 이용 조건 확인 후 저장소에 포함하기로 결정하면, 이 줄을 지우고 .gitattributes.lfs.example 로 큰 파일만 Git LFS 처리하세요.
+data/

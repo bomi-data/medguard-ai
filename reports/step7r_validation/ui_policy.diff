@@ -1,0 +1,96 @@
+--- _backup_step7r_20261023/app/ui_policy.py	2026-10-19 20:13:27.860632100 +0900
++++ app/ui_policy.py	2026-10-23 19:10:12.171802200 +0900
+@@ -9,6 +9,8 @@
+ """
+ from __future__ import annotations
+ 
++import re
++
+ ADAPTER_NAME = "dur_safety_ui_adapter"
+ ADAPTER_VERSION = "0.1.0"
+ CONTRACT_VERSION = "core-interface-contract-v1"
+@@ -205,6 +207,60 @@
+ OUTPUT_KEYS = frozenset({"finding_id", "risk_type", "summary", "evidence_statements", "evidence_status",
+                          "limitations", "review_note"})
+ 
++# ---------------------------------------------------------------------------------------------------
++# LLM-text checks added in STEP 7-R (reports/STEP7_R_GUARDRAIL_REVALIDATION.md).
++# The Core DIRECTIVE_PATTERNS only match fixed strings, and nothing checked LLM text for reassurance or
++# for a sentence denying the screening result. These checks judge one sentence at a time, ignore quoted
++# label text ('...'), and never relabel risk: a match only withholds the LLM explanation (fail closed).
++# Kept deliberately narrow — consult advice ("…중단하지 마세요", "의료진과 상의하세요") and statements about
++# what the evidence does or does not say must stay visible.
++# ---------------------------------------------------------------------------------------------------
++_QUOTED = re.compile(r"'[^']*'|\"[^\"]*\"|‘[^’]*’|“[^”]*”")
++_SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+|\n+")
++# Advice / imperative addressed to the reader (label text uses "-한다", so it does not match).
++_ADVICE_END = re.compile(r"(세요|십시오|시기\s*바랍니다|기\s*바랍니다|셔야\s*합니다|셔도\s*됩니다|시면\s*됩니다"
++                         r"|는\s*것이\s*(좋|바람직))")
++# Stopping, skipping or changing the dose of a medicine.
++_CHANGE_ACTION = re.compile(r"중단|중지|끊|멈추|멈춰|그만|빼고|줄이|줄여|늘리|늘려|쪼개|반으로|절반|용량을?\s*(바꾸|변경|조절)")
++# "중단하지 마세요", "바꾸지 말고" — telling the reader NOT to change on their own is protective, not a directive.
++_CHANGE_NEGATED = re.compile(r"(중단|중지|끊|멈추|줄이|늘리|바꾸|변경|조절)(하)?지\s*(마|말)")
++# "복용하지 마십시오" — telling the reader not to take a medicine is a stop directive.
++_TAKE_NEGATED = re.compile(r"(복용|투여|드시|먹)(하)?지\s*(마|말)")
++_REASSURANCE = re.compile(r"안전합니다|안전해요|안전함|괜찮습니다|괜찮아요|걱정(하지\s*않으셔도|할\s*필요가?\s*없)"
++                          r"|문제(가|는)?\s*(없습니다|되지\s*않습니다)|이상\s*없습니다|위험(이|은)?\s*없습니다")
++_SCREENING_TERM = re.compile(r"병용금기|병용\s*금기|노인주의|노인\s*주의|효능군|중복\s*처방|DUR|Screening|스크리닝")
++_DENIAL_END = re.compile(r"(이|가)?\s*아닙니다|해당하지\s*않습니다|해당되지\s*않습니다|탐지되지\s*않았습니다|대상이\s*아닙")
++# Sentences about the evidence / label / scope are allowed even when they contain a screening term.
++_META_TERM = re.compile(r"근거|허가정보|문구|언급|원문|의미|판단|단정|대체")
++
++
++def _llm_sentences(output):
++    fields = [output.get(k) for k in ("summary", "limitations", "review_note")]
++    fields += [s.get("statement") for s in output.get("evidence_statements") or [] if isinstance(s, dict)]
++    for text in fields:
++        if isinstance(text, str):
++            for sent in _SENTENCE_SPLIT.split(_QUOTED.sub("", text)):
++                if sent.strip():
++                    yield sent
++
++
++def unsafe_text_reasons(output):
++    """Reasons to withhold LLM text for reader-directed medication changes, reassurance or screening denial."""
++    reasons = set()
++    if not isinstance(output, dict):
++        return []
++    for sent in _llm_sentences(output):
++        if _TAKE_NEGATED.search(sent) and _ADVICE_END.search(sent):
++            reasons.add("DIRECTIVE_TEXT")
++        elif (_CHANGE_ACTION.search(sent) and _ADVICE_END.search(sent)
++              and not _CHANGE_NEGATED.search(sent)):
++            reasons.add("DIRECTIVE_TEXT")
++        if _REASSURANCE.search(sent):
++            reasons.add("REASSURANCE_TEXT")
++        if _SCREENING_TERM.search(sent) and _DENIAL_END.search(sent) and not _META_TERM.search(sent):
++            reasons.add("SCREENING_DENIAL_TEXT")
++    return sorted(reasons)
++
+ 
+ def decide_display_mode(generation, evidence_ids, finding_id=None, risk_type=None):
+     """Return (display_mode, reasons) for one finding. Fail closed.
+@@ -212,8 +268,9 @@
+     EXPLANATION only when ALL hold (contract §0 + defensive allowlist checks that never relabel risk):
+       status == GENERATED, no schema/citation errors, no directive flags, output is a dict with exactly
+       the 7 OUTPUT_KEYS, string fields are strings, statements are well-formed, evidence_status is in the
+-      enum and equals generation.evidence_status, finding_id/risk_type match the card, and every cited /
+-      listed E-id exists in this finding's evidence.
++      enum and equals generation.evidence_status, finding_id/risk_type match the card, every cited /
++      listed E-id exists in this finding's evidence, and unsafe_text_reasons() finds no reader-directed
++      medication change (→ WITHHELD_DIRECTIVE), reassurance or screening denial (→ WITHHELD_INVALID).
+     `reasons` lists the failed checks (developer log only).
+     """
+     if not isinstance(generation, dict):
+@@ -224,7 +281,10 @@
+                                                               else [f"UNKNOWN_STATUS:{status!r}"])
+     if generation.get("directive_flags"):
+         return WITHHELD_DIRECTIVE, ["DIRECTIVE_FLAGS"]
+-    reasons = []
++    text_reasons = unsafe_text_reasons(generation.get("output"))
++    if "DIRECTIVE_TEXT" in text_reasons:
++        return WITHHELD_DIRECTIVE, text_reasons
++    reasons = list(text_reasons)
+     if generation.get("schema_errors"):
+         reasons.append("SCHEMA_ERRORS")
+     if generation.get("citation_errors"):

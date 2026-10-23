@@ -1,0 +1,393 @@
+{
+  "baseline_name": "dur_safety production core (Korean DUR polypharmacy safety RAG)",
+  "baseline_version": "production-baseline-v1",
+  "freeze_timestamp": "2026-10-05T18:52:02+09:00",
+  "status": "READY_WITH_DOCUMENTED_LIMITATIONS",
+  "status_note": "Software regression/equivalence of the extracted module against the evaluated notebooks (02/04/05) and 06-A..06-E baselines. This is NOT clinical safety validation and NOT external/expert clinical validation.",
+  "package": {
+    "name": "dur_safety",
+    "package_version": "0.1.0",
+    "pipeline_version": "0.1.0",
+    "screening_engine": "structured_dur_screening 0.1.0"
+  },
+  "checksum_file": "src/dur_safety/FROZEN_SHA256SUMS.txt",
+  "verify_command": "sha256sum -c src/dur_safety/FROZEN_SHA256SUMS.txt",
+  "modules": [
+    {
+      "path": "src/dur_safety/__init__.py",
+      "sha256": "1ec9aba9446e7b8a37cdc7cd0f5b5a632bab754f4928743cb4e89d9b1691f31e",
+      "bytes": 1008,
+      "role": "package metadata",
+      "source": "hand-written",
+      "core_production_logic": false,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/config.py",
+      "sha256": "feca86cdf48aa2b02eab965e6a4374584126484ef8d17def8c57e783939217df",
+      "bytes": 5124,
+      "role": "paths, pinned dense revision / prompt identifiers (environment only)",
+      "source": "hand-written",
+      "core_production_logic": false,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/resources.py",
+      "sha256": "bedbce743aa2fc98cccd695ca3e8e1758ae249958916aabc3cddcf09135987d1",
+      "bytes": 7518,
+      "role": "one-time artifact loading + sha256/config verification",
+      "source": "hand-written",
+      "core_production_logic": false,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/screening.py",
+      "sha256": "4cf33c72025c44427287120237ad2c206beff59efc6b2a6a0e13aa1454e061e1",
+      "bytes": 37216,
+      "role": "02 structured DUR screening engine",
+      "source": "generated verbatim from 02_structured_screening.ipynb",
+      "core_production_logic": true,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/findings.py",
+      "sha256": "dde589972625373a6460990eeab454112da5cdf12aa050473eeddbb3f60c30ee",
+      "bytes": 6601,
+      "role": "02 record -> ScreeningFinding transformation",
+      "source": "generated verbatim from 05_rag_generation.ipynb",
+      "core_production_logic": true,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/retrieval.py",
+      "sha256": "fa693d18852589952430a3b133dcf10fe589f5acc0581d4ccbaa6db8b0c0a8f5",
+      "bytes": 27361,
+      "role": "04 screening-aware hybrid retrieval (BM25 + bge-m3 + prior, RRF)",
+      "source": "generated verbatim from 04_retrieval.ipynb / 05_rag_generation.ipynb",
+      "core_production_logic": true,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/generation.py",
+      "sha256": "9ed9560b7f1d225bb55fd8812b912d1aedaf00d9c8fe127f652fad1690c5600c",
+      "bytes": 26633,
+      "role": "05 evidence context, prompt, LLM call, output validation",
+      "source": "generated verbatim from 05_rag_generation.ipynb",
+      "core_production_logic": true,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/pipeline.py",
+      "sha256": "e78fb36edf499752e3c8a788b0177059711b76a956fddb60f78d98e4d633cb83",
+      "bytes": 7368,
+      "role": "run_safety_check orchestration",
+      "source": "hand-written",
+      "core_production_logic": true,
+      "in_evaluated_scope": true
+    },
+    {
+      "path": "src/dur_safety/drug_lookup.py",
+      "sha256": "655c173f9cd1e8b7e847480bef436107e13543352f4c971322ca35bc7e4b65d2",
+      "bytes": 4310,
+      "role": "drug name -> candidate item_seq list (UI/input adapter)",
+      "source": "hand-written",
+      "core_production_logic": false,
+      "in_evaluated_scope": false
+    }
+  ],
+  "excluded_from_hash": [
+    "src/dur_safety/__pycache__/ (bytecode cache, not source)",
+    "src/dur_safety/FROZEN_SHA256SUMS.txt"
+  ],
+  "source_notebooks_sha256": {
+    "notebooks/02_structured_screening.ipynb": "dc8ac42bd5e1ecdf2b5d4a8a6ced72e948e4c8d3e7f0436556f9b17b012d6419",
+    "notebooks/04_retrieval.ipynb": "c604e46d132a84b9cc01dc07a22f5af3c7d9c92b592ff376fc09d07c5f12ab8f",
+    "notebooks/05_rag_generation.ipynb": "bf73407fb3c56a43e47f0ad804f71441c67f661754ab1d0b667a8915e74aa4d4"
+  },
+  "dense_model": {
+    "model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "revision_source": "data/processed/retrieval/retrieval_config.json dense.resolved_revision == data/processed/generation/generation_config.json retrieval_reference.dense_revision",
+    "query_encoding": "fp16 on CUDA (dense_model.half(), as in 04/05), fp32 on CPU",
+    "corpus_embeddings": "precomputed, float16 storage (data/processed/retrieval/dense/BAAI__bge-m3/unique_text_embeddings.npy)"
+  },
+  "retrieval_config": {
+    "path": "data/processed/retrieval/retrieval_config.json",
+    "sha256": "50a81e99649867139fc284b9780d564b6428e71bbdb4f845ee542fb40a7d5759",
+    "verified": "MATCH against generation_config.inputs_sha256 in both regression runs",
+    "unique_text_hash_order_sha256": "5c922f8998d384478ce496261fcb373d9cb0272db60b868bb6b18b160e706132",
+    "bm25": {
+      "tokenizer": "char_wb bigram",
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "hybrid": {
+      "rrf_k": 60,
+      "weights": {
+        "bm25": 1.0,
+        "dense": 1.0,
+        "prior": 0.5
+      },
+      "dense_depth": 100,
+      "bm25_depth": 100,
+      "item_balance_for_multi_item": true,
+      "default_top_k": 5
+    }
+  },
+  "generation_config": {
+    "path": "data/processed/generation/generation_config.json",
+    "sha256": "5a3e5e3bea92c06af13915bafadde180f6ffbf5040f97b0ffb816558cf62746a",
+    "verified": "field-by-field (20 runtime checks) in both regression runs; file unchanged since 2026-09-28",
+    "provider": "OpenAI",
+    "model": "gpt-5.4-mini",
+    "prompt_version": "05-explain-v1",
+    "output_schema_version": "05-output-v1",
+    "system_prompt_sha256": "ec6be76bcdc825379354938e5b97f84d0706f3a06ac7f4e36073dc1ac4af796b",
+    "store": false,
+    "max_output_tokens": 2000
+  },
+  "regression_evidence": {
+    "runner": "run_module_regression.ipynb -> tests/run_regression.py",
+    "reports": {
+      "gpu": {
+        "file": "tests/_reports/regression_gpu_20261004T072815Z.json",
+        "sha256": "d9cacfcf4b5aec5d24706204b72fcfc804325941ada540121660706b838aebbc"
+      },
+      "cpu": {
+        "file": "tests/_reports/regression_cpu_20261004T074218Z.json",
+        "sha256": "994ff58b7049a11fadebb7101cc2b80ea53835beac1dc2151d4b825be6838757"
+      },
+      "device_comparison": {
+        "file": "tests/_reports/device_comparison.json",
+        "sha256": "4e95223316ea4ff1bd41daaa1d27b11a7fc2cfdd7aa998b908917d1a18267fec"
+      }
+    },
+    "environment": {
+      "python": "3.13.15",
+      "pandas": "2.2.3",
+      "numpy": "2.1.3",
+      "pyarrow": "23.0.1",
+      "scipy": "1.16.3",
+      "sklearn": "1.6.1",
+      "sentence_transformers": "5.7.0",
+      "torch_gpu": "2.11.0+cu130",
+      "torch_cpu": "2.11.0+cpu"
+    },
+    "source_parity": {
+      "result": "240/240 PASS (AST, function by function, GPU and CPU runs)",
+      "negative_control": "PASS (65->64 mutation detected)"
+    },
+    "gpu": {
+      "overall": "ALL PASS",
+      "device": "cuda",
+      "results": {
+        "A. source parity": {
+          "status": "PASS",
+          "pass": 240,
+          "total": 240
+        },
+        "A0. parity negative control (mutated copy must be detected)": {
+          "status": "PASS",
+          "pass": 1,
+          "total": 1
+        },
+        "B. screening regression": {
+          "status": "PASS",
+          "pass": 32,
+          "total": 32
+        },
+        "C. finding parity (real 02 output vs evaluated reconstructed finding)": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "D. retrieval regression": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "E. generation-input parity [evaluated_finding+frozen_evidence]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "E. generation-input parity [production_finding+frozen_evidence]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "E. generation-input parity [production_live]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "F. output-validation regression": {
+          "status": "PASS",
+          "pass": 46,
+          "total": 46
+        },
+        "G. pipeline integration [replay]": {
+          "status": "PASS",
+          "pass": 37,
+          "total": 37
+        },
+        "G. pipeline integration [live]": {
+          "status": "PASS",
+          "pass": 37,
+          "total": 37
+        },
+        "drug_lookup adapter behaviour (not evaluated scope)": {
+          "status": "PASS",
+          "pass": 5,
+          "total": 5
+        },
+        "Z. existing notebooks/artifacts unchanged (sha256 before == after)": {
+          "status": "PASS",
+          "pass": 1,
+          "total": 1
+        }
+      }
+    },
+    "cpu": {
+      "overall_raw": "FAIL",
+      "classification": "NUMERICAL_DIFFERENCE_WITH_FUNCTIONAL_PARITY",
+      "results": {
+        "A. source parity": {
+          "status": "PASS",
+          "pass": 240,
+          "total": 240
+        },
+        "A0. parity negative control (mutated copy must be detected)": {
+          "status": "PASS",
+          "pass": 1,
+          "total": 1
+        },
+        "B. screening regression": {
+          "status": "PASS",
+          "pass": 32,
+          "total": 32
+        },
+        "C. finding parity (real 02 output vs evaluated reconstructed finding)": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "D. retrieval regression": {
+          "status": "FAIL",
+          "pass": 3,
+          "total": 33
+        },
+        "E. generation-input parity [evaluated_finding+frozen_evidence]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "E. generation-input parity [production_finding+frozen_evidence]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "E. generation-input parity [production_live]": {
+          "status": "PASS",
+          "pass": 33,
+          "total": 33
+        },
+        "F. output-validation regression": {
+          "status": "PASS",
+          "pass": 46,
+          "total": 46
+        },
+        "G. pipeline integration [replay]": {
+          "status": "PASS",
+          "pass": 37,
+          "total": 37
+        },
+        "G. pipeline integration [live]": {
+          "status": "PASS",
+          "pass": 37,
+          "total": 37
+        },
+        "drug_lookup adapter behaviour (not evaluated scope)": {
+          "status": "PASS",
+          "pass": 5,
+          "total": 5
+        },
+        "Z. existing notebooks/artifacts unchanged (sha256 before == after)": {
+          "status": "PASS",
+          "pass": 1,
+          "total": 1
+        }
+      },
+      "retrieval_regression_detail": {
+        "raw": "3/33 under strict exact-equality comparison (30 eval cases compare scores; 3 smoke cases compare chunk_id order only)",
+        "only_differing_field": "dense_score (dense method and the dense_score column of hybrid results)",
+        "abs_diff_range": [
+          0.0001,
+          0.0007
+        ],
+        "max_rel_diff": 0.00101,
+        "n_differing_values": {
+          "dense_method": 204,
+          "hybrid_rows_dense_score": 199
+        },
+        "identical": [
+          "query string",
+          "candidate set / candidate info",
+          "chunk_id",
+          "Top-5 set",
+          "Top-5 order",
+          "Top-10 order (bm25, dense, hybrid)",
+          "bm25_score",
+          "dense_rank",
+          "prior_score",
+          "hybrid_score (RRF)",
+          "rank",
+          "item balancing (ITEM_SEQ, shared_item_seqs)",
+          "text_hash",
+          "n_shared_chunks",
+          "retrieval status"
+        ],
+        "cause": "04/05 code applies dense_model.half() only on CUDA; on CPU the query is encoded in fp32. Scores are rounded to 4 decimals and compared with ==. BM25 and RRF are unaffected (RRF uses ranks)."
+      }
+    },
+    "cpu_gpu_functional_parity": {
+      "gpu_vs_cpu_exact_top5": "33/33 (hybrid; 30 eval + 3 smoke)",
+      "different_cases": [],
+      "cpu_vs_06A_baseline_exact_top5": "30/30",
+      "mean_top5_overlap": 1.0,
+      "ordering_equal": true,
+      "relevant_evidence_loss": 0,
+      "direct_evidence_loss": 0,
+      "evidence_loss_scope": "30 evaluation cases with 06-A labels",
+      "evidence_E1_E5_equal": "33/33",
+      "user_prompt_sha256_equal": "33/33 (production_live on CPU)",
+      "pipeline_live_prompt_sha_equal": "37/37"
+    },
+    "openai_api": {
+      "real_api_calls": 0,
+      "gpu_run_attempts": 0,
+      "cpu_run_attempts": 0,
+      "method": "mock LLM; OPENAI_API_KEY removed; openai.OpenAI blocked and counted"
+    },
+    "protected_files": {
+      "hashed_per_run": 292,
+      "changed": [],
+      "scope": "notebooks/*.ipynb and data/processed/** sha256 before/after each run"
+    }
+  },
+  "known_limitations": [
+    "CPU (fp32 query encoding) and GPU (fp16) produce dense_score values that differ by 0.0001-0.0007 (max relative ~0.1%). In the 33 evaluated cases Top-5 evidence, ordering, evidence content and generation input were identical.",
+    "For unseen inputs, when adjacent dense scores are very close, CPU could change evidence ranking. In the 06-A baseline 12 of 30 cases have an adjacent Top-10 dense-score gap <= 0.0007 (rounded). GPU fp16 is the evaluated configuration.",
+    "drug_lookup.py is a new UI/input adapter outside the 06-A..06-E evaluated scope (evaluation used item_seq input directly). It returns candidates only and never auto-selects.",
+    "easy_drug_canonical.parquet has no recorded sha256 in the evaluation configs; it is covered indirectly by the screening regression (32/32).",
+    "This baseline is a software regression/equivalence result. It is not clinical safety validation, not expert validation, and not external clinical validation.",
+    "Drive file modifiedTime of the .py files shows the zip archive time (2026-10-04T14:4xZ); content equality is established by sha256, not by timestamps."
+  ],
+  "change_policy": "See docs/PRODUCTION_BASELINE.md. UI imports dur_safety (e.g. from dur_safety.pipeline import run_safety_check) and does not modify screening/findings/retrieval/generation/validation. Any production change: record reason, record files, diff against this baseline, rerun regression (GPU + CPU), review results, issue a new baseline version.",
+  "git": {
+    "repository": "none found in the project (no .git in Drive or in this workspace)",
+    "suggested_commit_message": "Freeze validated DUR safety production baseline",
+    "suggested_tag": "production-baseline-v1",
+    "pushed": false
+  }
+}

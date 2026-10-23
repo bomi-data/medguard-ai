@@ -1,0 +1,14 @@
+{
+ "TRANSFER_STATUS": "COMPLETE",
+ "CHECK1_python_runtime": "PASS",
+ "CHECK2_streamlit_entry": "PASS",
+ "CHECK3_screening": "PASS",
+ "CHECK4_rag_llm": "PASS",
+ "CHECK5_guardrail": "NOT_VERIFIED",
+ "CHECK6_tests": "PASS",
+ "CHECK7_data": "PASS",
+ "CHECK8_sha256": "PASS",
+ "CHECK9_original_unchanged": "FAIL",
+ "CHECK10_secrets": "FAIL(검토 필요)",
+ "PYCHARM_EXECUTION_VERIFIED": "NO"
+}

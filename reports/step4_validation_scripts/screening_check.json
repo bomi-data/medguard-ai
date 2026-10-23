@@ -1,0 +1,107 @@
+{
+ "init_seconds": 12.1,
+ "data_snapshot": {
+  "contraindication_pairs": 322816,
+  "contraindication_evidence_rows": 796668,
+  "elderly_caution_rules_dedup": 1980,
+  "therapeutic_lookup_rows": 7056
+ },
+ "integrity_flags": {
+  "PAIRS_NORMALIZATION_OK": true,
+  "ELDERLY_DEDUP_OK": true,
+  "THERAPEUTIC_CANONICAL_OK": true,
+  "CONTRAINDICATION_LOOKUP_OK": true,
+  "EVIDENCE_LINKAGE_OK": true
+ },
+ "modules_loaded_after_init": {
+  "openai": false,
+  "torch": false,
+  "sentence_transformers": false,
+  "dur_safety.generation": false,
+  "dur_safety.retrieval": false
+ },
+ "baseline_compare": [
+  {
+   "query_id": "Q1_elderly",
+   "risk_type": "elderly_caution",
+   "input": [
+    "197000079"
+   ],
+   "found": true,
+   "fields_compared": 10,
+   "field_diffs": [],
+   "status": "PASS",
+   "summary": {
+    "total_signals": 1,
+    "contraindication_count": 0,
+    "elderly_caution_count": 1,
+    "therapeutic_duplication_count": 0,
+    "elderly_check_status": "evaluated"
+   }
+  },
+  {
+   "query_id": "Q2_contra",
+   "risk_type": "contraindication",
+   "input": [
+    "195700013",
+    "196900031"
+   ],
+   "found": true,
+   "fields_compared": 13,
+   "field_diffs": [],
+   "status": "PASS",
+   "summary": {
+    "total_signals": 1,
+    "contraindication_count": 1,
+    "elderly_caution_count": 0,
+    "therapeutic_duplication_count": 0,
+    "elderly_check_status": "evaluated"
+   }
+  },
+  {
+   "query_id": "Q3_thera",
+   "risk_type": "therapeutic_duplication",
+   "input": [
+    "197000068",
+    "197700114"
+   ],
+   "found": true,
+   "fields_compared": 9,
+   "field_diffs": [],
+   "status": "PASS",
+   "summary": {
+    "total_signals": 1,
+    "contraindication_count": 0,
+    "elderly_caution_count": 0,
+    "therapeutic_duplication_count": 1,
+    "elderly_check_status": "evaluated"
+   }
+  }
+ ],
+ "unknown_drug": {
+  "not_found_in_dur_tables": [
+   "999999999"
+  ],
+  "total_signals": 0,
+  "scope_note_present": true
+ },
+ "invalid_and_duplicate": {
+  "invalid_inputs": [
+   "None"
+  ],
+  "duplicate_inputs": [
+   "197000079"
+  ],
+  "elderly_check_status": "not_evaluated_age_missing",
+  "elderly_count": 0
+ },
+ "age_40": "not_applicable_age_below_threshold",
+ "input_errors": {
+  "'195700013'": "TypeError",
+  "-1": "ValueError",
+  "151": "ValueError",
+  "True": "TypeError"
+ },
+ "pair_order_invariant_count": 1,
+ "missing_data": "FileNotFoundError: 필수 파일이 없습니다:"
+}

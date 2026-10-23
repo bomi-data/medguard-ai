@@ -1,0 +1,10 @@
+{"n": 1, "phase": "B", "case_id": "TD004", "model": "gpt-5.4-mini", "usage": {"input_tokens": 5135, "output_tokens": 570, "total_tokens": 5705}, "latency_s": 8.99, "stop_reason": "completed", "error": null}
+{"n": 2, "phase": "B", "case_id": "CE001", "model": "gpt-5.4-mini", "usage": {"input_tokens": 4613, "output_tokens": 454, "total_tokens": 5067}, "latency_s": 5.5, "stop_reason": "completed", "error": null}
+{"n": 3, "phase": "B", "case_id": "EC008", "model": "gpt-5.4-mini", "usage": {"input_tokens": 2421, "output_tokens": 303, "total_tokens": 2724}, "latency_s": 3.45, "stop_reason": "completed", "error": null}
+{"n": 4, "phase": "C", "case_id": "EC001", "model": "gpt-5.4-mini", "usage": {"input_tokens": 4297, "output_tokens": 362, "total_tokens": 4659}, "latency_s": 7.12, "stop_reason": "completed", "error": null}
+{"n": 5, "phase": "C", "case_id": "TD005", "model": "gpt-5.4-mini", "usage": {"input_tokens": 4667, "output_tokens": 756, "total_tokens": 5423}, "latency_s": 6.69, "stop_reason": "completed", "error": null}
+{"n": 6, "phase": "C", "case_id": "TD007", "model": "gpt-5.4-mini", "usage": {"input_tokens": 5338, "output_tokens": 670, "total_tokens": 6008}, "latency_s": 6.17, "stop_reason": "completed", "error": null}
+{"n": 7, "phase": "C", "case_id": "TD010", "model": "gpt-5.4-mini", "usage": {"input_tokens": 4833, "output_tokens": 379, "total_tokens": 5212}, "latency_s": 4.71, "stop_reason": "completed", "error": null}
+{"n": 8, "phase": "C", "case_id": "EC010", "model": "gpt-5.4-mini", "usage": {"input_tokens": 4116, "output_tokens": 257, "total_tokens": 4373}, "latency_s": 3.76, "stop_reason": "completed", "error": null}
+{"n": 9, "phase": "C", "case_id": "CE008", "model": "gpt-5.4-mini", "usage": {"input_tokens": 3954, "output_tokens": 526, "total_tokens": 4480}, "latency_s": 5.42, "stop_reason": "completed", "error": null}
+{"n": 10, "phase": "C", "case_id": "CE003", "model": "gpt-5.4-mini", "usage": {"input_tokens": 5419, "output_tokens": 536, "total_tokens": 5955}, "latency_s": 5.2, "stop_reason": "completed", "error": null}

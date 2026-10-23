@@ -1,0 +1,89 @@
+{
+ "run_ts": "20261011_152938",
+ "project_root": "/content/drive/MyDrive/medical-ai-project",
+ "status": {
+  "A": "WARN",
+  "B": "PASS",
+  "C": "PASS",
+  "D-1": "PASS",
+  "D-2": "WARN",
+  "D-3": "PASS",
+  "E-0": "PASS",
+  "E-1": "PASS",
+  "E-2": "PASS",
+  "E-3": "PASS",
+  "E-4": "PASS",
+  "F": "PASS"
+ },
+ "values": {
+  "approval_mcode_parse_pct": 99.87,
+  "dur_m_codes": 720,
+  "appr_m_codes": 5623,
+  "dur_m_in_appr_pct": 100.0,
+  "dur_d_codes": 414,
+  "approval_ingr_cnt_agree_pct": 95.29,
+  "approval_combo_products": 13566,
+  "approval_no_mcode": 57,
+  "U_search": 16441,
+  "known": 12736,
+  "search_not_known": 3705,
+  "known_unsearchable": 0
+ },
+ "verdict": "보류 — P0 해결 또는 사용자 고지 방안 확정 후 STEP 8-2 진행",
+ "U": 16441,
+ "bridge_coverage_pct": {
+  "CI": 94.52,
+  "E": 100.0,
+  "T": 99.22
+ },
+ "inputs": [
+  {
+   "Dataset": "drug_approval_items",
+   "Path": "data/processed/evidence/drug_approval_items.parquet",
+   "Rows": 42977,
+   "sha256 vs evaluated": "-"
+  },
+  {
+   "Dataset": "screening_itemseq_mapping",
+   "Path": "data/processed/rag/screening_itemseq_mapping.parquet",
+   "Rows": 17244,
+   "sha256 vs evaluated": "-"
+  },
+  {
+   "Dataset": "contraindication_pairs",
+   "Path": "data/processed/screening/contraindication_pairs.parquet",
+   "Rows": 322816,
+   "sha256 vs evaluated": "MATCH"
+  },
+  {
+   "Dataset": "elderly_caution_rules",
+   "Path": "data/processed/screening/elderly_caution_rules.parquet",
+   "Rows": 1982,
+   "sha256 vs evaluated": "MATCH"
+  },
+  {
+   "Dataset": "therapeutic_group_mapping",
+   "Path": "data/processed/screening/therapeutic_group_mapping.parquet",
+   "Rows": 7064,
+   "sha256 vs evaluated": "MATCH"
+  },
+  {
+   "Dataset": "therapeutic_group_summary",
+   "Path": "data/processed/screening/therapeutic_group_summary.parquet",
+   "Rows": 9,
+   "sha256 vs evaluated": "-"
+  },
+  {
+   "Dataset": "contraindication_evidence",
+   "Path": "data/processed/screening/contraindication_evidence.parquet",
+   "Rows": 796668,
+   "sha256 vs evaluated": "MATCH"
+  },
+  {
+   "Dataset": "easy_drug_canonical",
+   "Path": "data/processed/evidence/easy_drug_canonical.parquet",
+   "Rows": 4757,
+   "sha256 vs evaluated": "NO_RECORDED_HASH"
+  }
+ ]
+}

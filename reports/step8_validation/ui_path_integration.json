@@ -1,0 +1,1898 @@
+{
+ "summary": {
+  "t_import_s": 7.1,
+  "t_load_resources_s": 112.1,
+  "mem_after_load_gb": {
+   "ws": 0.0,
+   "peak_ws": 0.0,
+   "commit": 0.0,
+   "peak_commit": 0.0
+  },
+  "mem_end_gb": {
+   "ws": 0.0,
+   "peak_ws": 0.0,
+   "commit": 0.0,
+   "peak_commit": 0.0
+  },
+  "n_cases": 30,
+  "all_completed": true,
+  "tiles_match": 30,
+  "finding_ids_match": 30,
+  "risk_types_match": 30,
+  "dur_rule_lines_match": 30,
+  "total_signals_match": 30,
+  "top5_equal_06A_hybrid": 30,
+  "evidence_ids_sequential": 30,
+  "evidence_errors_zero": 30,
+  "ui_evidence_verbatim": 30,
+  "retrieval_ok_hybrid": 30,
+  "display_modes": {
+   "LLM_UNAVAILABLE": 30
+  },
+  "explanation_shown_without_llm": 0,
+  "repeat_3x_identical_vm": true,
+  "timing_median_s": {
+   "screen_s": 0.0,
+   "retrieval_s": 0.621,
+   "ui_path_total_s": 0.595
+  },
+  "timing_max_s": {
+   "screen_s": 0.247,
+   "retrieval_s": 1.402,
+   "ui_path_total_s": 1.215
+  }
+ },
+ "no_evidence_probe": null,
+ "cases": [
+  {
+   "case_id": "CE001",
+   "risk_type": "contraindication",
+   "items": [
+    "198902802",
+    "201907819"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "198902802_NB_01_006_01",
+    "201907819_NB_01_005_02",
+    "198902802_NB_01_001_03",
+    "201907819_NB_01_005_03",
+    "198902802_NB_01_002_01"
+   ],
+   "base_top5": [
+    "198902802_NB_01_006_01",
+    "201907819_NB_01_005_02",
+    "198902802_NB_01_001_03",
+    "201907819_NB_01_005_03",
+    "198902802_NB_01_002_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.117,
+    "retrieval_s": 1.402,
+    "ui_path_total_s": 1.215
+   }
+  },
+  {
+   "case_id": "CE002",
+   "risk_type": "contraindication",
+   "items": [
+    "200901621",
+    "201601716"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200901621_NB_01_006_01",
+    "201601716_NB_01_006_01",
+    "200901621_NB_01_002_01",
+    "201601716_NB_01_006_03",
+    "200901621_NB_01_006_02"
+   ],
+   "base_top5": [
+    "200901621_NB_01_006_01",
+    "201601716_NB_01_006_01",
+    "200901621_NB_01_002_01",
+    "201601716_NB_01_006_03",
+    "200901621_NB_01_006_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.12,
+    "retrieval_s": 0.804,
+    "ui_path_total_s": 1.103
+   }
+  },
+  {
+   "case_id": "CE003",
+   "risk_type": "contraindication",
+   "items": [
+    "200400354",
+    "202100226"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200400354_NB_01_006_10",
+    "202100226_NB_01_006_05",
+    "200400354_NB_01_006_05",
+    "202100226_NB_01_005_03",
+    "200400354_NB_01_005_02"
+   ],
+   "base_top5": [
+    "200400354_NB_01_006_10",
+    "202100226_NB_01_006_05",
+    "200400354_NB_01_006_05",
+    "202100226_NB_01_005_03",
+    "200400354_NB_01_005_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.247,
+    "retrieval_s": 0.893,
+    "ui_path_total_s": 1.132
+   }
+  },
+  {
+   "case_id": "CE004",
+   "risk_type": "contraindication",
+   "items": [
+    "200102945",
+    "201107276"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200102945_NB_01_005_04",
+    "201107276_NB_01_006_03",
+    "200102945_NB_01_006_01",
+    "201107276_NB_01_006_05",
+    "200102945_NB_01_003_01"
+   ],
+   "base_top5": [
+    "200102945_NB_01_005_04",
+    "201107276_NB_01_006_03",
+    "200102945_NB_01_006_01",
+    "201107276_NB_01_006_05",
+    "200102945_NB_01_003_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.238,
+    "retrieval_s": 0.675,
+    "ui_path_total_s": 0.922
+   }
+  },
+  {
+   "case_id": "CE005",
+   "risk_type": "contraindication",
+   "items": [
+    "201007770",
+    "202103993"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201007770_NB_01_006_02",
+    "202103993_NB_01_006_01",
+    "201007770_NB_01_004_06",
+    "202103993_NB_01_004_01",
+    "201007770_NB_01_004_04"
+   ],
+   "base_top5": [
+    "201007770_NB_01_006_02",
+    "202103993_NB_01_006_01",
+    "201007770_NB_01_004_06",
+    "202103993_NB_01_004_01",
+    "201007770_NB_01_004_04"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.098,
+    "retrieval_s": 0.828,
+    "ui_path_total_s": 0.965
+   }
+  },
+  {
+   "case_id": "CE006",
+   "risk_type": "contraindication",
+   "items": [
+    "201404056",
+    "202101732"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201404056_NB_01_006_10",
+    "202101732_NB_01_006_05",
+    "201404056_NB_01_006_05",
+    "202101732_NB_01_005_03",
+    "201404056_NB_01_006_09"
+   ],
+   "base_top5": [
+    "201404056_NB_01_006_10",
+    "202101732_NB_01_006_05",
+    "201404056_NB_01_006_05",
+    "202101732_NB_01_005_03",
+    "201404056_NB_01_006_09"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.154,
+    "retrieval_s": 1.127,
+    "ui_path_total_s": 1.185
+   }
+  },
+  {
+   "case_id": "CE007",
+   "risk_type": "contraindication",
+   "items": [
+    "200804563",
+    "202003581"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200804563_NB_01_006_01",
+    "202003581_NB_01_004_01",
+    "200804563_NB_01_006_02",
+    "202003581_NB_01_004_02",
+    "200804563_NB_01_005_02"
+   ],
+   "base_top5": [
+    "200804563_NB_01_006_01",
+    "202003581_NB_01_004_01",
+    "200804563_NB_01_006_02",
+    "202003581_NB_01_004_02",
+    "200804563_NB_01_005_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.168,
+    "retrieval_s": 0.921,
+    "ui_path_total_s": 0.994
+   }
+  },
+  {
+   "case_id": "CE008",
+   "risk_type": "contraindication",
+   "items": [
+    "201204544",
+    "201603989"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201204544_NB_01_006_02",
+    "201603989_NB_01_006_01",
+    "201204544_NB_01_006_03",
+    "201603989_NB_01_006_05",
+    "201204544_NB_01_005_03"
+   ],
+   "base_top5": [
+    "201204544_NB_01_006_02",
+    "201603989_NB_01_006_01",
+    "201204544_NB_01_006_03",
+    "201603989_NB_01_006_05",
+    "201204544_NB_01_005_03"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.095,
+    "retrieval_s": 0.843,
+    "ui_path_total_s": 1.019
+   }
+  },
+  {
+   "case_id": "CE009",
+   "risk_type": "contraindication",
+   "items": [
+    "199504168",
+    "200410457"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "199504168_NB_01_004_01",
+    "200410457_NB_01_002_01",
+    "199504168_NB_01_005_01",
+    "200410457_NB_01_001_01",
+    "199504168_NB_01_002_01"
+   ],
+   "base_top5": [
+    "199504168_NB_01_004_01",
+    "200410457_NB_01_002_01",
+    "199504168_NB_01_005_01",
+    "200410457_NB_01_001_01",
+    "199504168_NB_01_002_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.107,
+    "retrieval_s": 0.728,
+    "ui_path_total_s": 0.914
+   }
+  },
+  {
+   "case_id": "CE010",
+   "risk_type": "contraindication",
+   "items": [
+    "200100710",
+    "200905162"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 1,
+    "elderly_caution": null,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200100710_NB_01_001_02",
+    "200905162_NB_01_001_01",
+    "200100710_NB_01_006_02",
+    "200905162_NB_01_005_03",
+    "200100710_NB_01_001_01"
+   ],
+   "base_top5": [
+    "200100710_NB_01_001_02",
+    "200905162_NB_01_001_01",
+    "200100710_NB_01_006_02",
+    "200905162_NB_01_005_03",
+    "200100710_NB_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.18,
+    "retrieval_s": 0.741,
+    "ui_path_total_s": 1.067
+   }
+  },
+  {
+   "case_id": "EC001",
+   "risk_type": "elderly_caution",
+   "items": [
+    "200700501"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200700501_NB_01_008_01",
+    "200700501_NB_01_001_01",
+    "200700501_NB_01_005_01",
+    "200700501_NB_01_010_01",
+    "200700501_NB_01_004_01"
+   ],
+   "base_top5": [
+    "200700501_NB_01_008_01",
+    "200700501_NB_01_001_01",
+    "200700501_NB_01_005_01",
+    "200700501_NB_01_010_01",
+    "200700501_NB_01_004_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.485,
+    "ui_path_total_s": 0.445
+   }
+  },
+  {
+   "case_id": "EC002",
+   "risk_type": "elderly_caution",
+   "items": [
+    "198500628"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "198500628_NB_01_009_01",
+    "198500628_NB_01_003_01",
+    "198500628_NB_01_005_02",
+    "198500628_NB_01_006_01",
+    "198500628_NB_01_004_02"
+   ],
+   "base_top5": [
+    "198500628_NB_01_009_01",
+    "198500628_NB_01_003_01",
+    "198500628_NB_01_005_02",
+    "198500628_NB_01_006_01",
+    "198500628_NB_01_004_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.481,
+    "ui_path_total_s": 0.673
+   }
+  },
+  {
+   "case_id": "EC003",
+   "risk_type": "elderly_caution",
+   "items": [
+    "201200277"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201200277_NB_01_005_03",
+    "201200277_NB_01_009_01",
+    "201200277_NB_01_002_01",
+    "201200277_NB_01_006_03",
+    "201200277_NB_01_006_02"
+   ],
+   "base_top5": [
+    "201200277_NB_01_005_03",
+    "201200277_NB_01_009_01",
+    "201200277_NB_01_002_01",
+    "201200277_NB_01_006_03",
+    "201200277_NB_01_006_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.001,
+    "retrieval_s": 0.489,
+    "ui_path_total_s": 0.468
+   }
+  },
+  {
+   "case_id": "EC004",
+   "risk_type": "elderly_caution",
+   "items": [
+    "201905300"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201905300_NB_01_009_01",
+    "201905300_NB_01_003_01",
+    "201905300_PN_01_001_01",
+    "201905300_NB_01_005_02",
+    "201905300_NB_01_005_01"
+   ],
+   "base_top5": [
+    "201905300_NB_01_009_01",
+    "201905300_NB_01_003_01",
+    "201905300_PN_01_001_01",
+    "201905300_NB_01_005_02",
+    "201905300_NB_01_005_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.436,
+    "ui_path_total_s": 0.582
+   }
+  },
+  {
+   "case_id": "EC005",
+   "risk_type": "elderly_caution",
+   "items": [
+    "201801829"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201801829_NB_01_008_01",
+    "201801829_NB_01_001_01",
+    "201801829_NB_01_002_01",
+    "201801829_NB_01_005_01",
+    "201801829_PN_01_001_01"
+   ],
+   "base_top5": [
+    "201801829_NB_01_008_01",
+    "201801829_NB_01_001_01",
+    "201801829_NB_01_002_01",
+    "201801829_NB_01_005_01",
+    "201801829_PN_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.639,
+    "ui_path_total_s": 0.467
+   }
+  },
+  {
+   "case_id": "EC006",
+   "risk_type": "elderly_caution",
+   "items": [
+    "199703357"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "199703357_NB_01_001_01",
+    "199703357_NB_01_004_01",
+    "199703357_NB_01_006_01",
+    "199703357_NB_01_006_02",
+    "199703357_NB_01_002_01"
+   ],
+   "base_top5": [
+    "199703357_NB_01_001_01",
+    "199703357_NB_01_004_01",
+    "199703357_NB_01_006_01",
+    "199703357_NB_01_006_02",
+    "199703357_NB_01_002_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.001,
+    "retrieval_s": 0.581,
+    "ui_path_total_s": 0.397
+   }
+  },
+  {
+   "case_id": "EC007",
+   "risk_type": "elderly_caution",
+   "items": [
+    "201606264"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201606264_NB_01_007_01",
+    "201606264_NB_01_004_01",
+    "201606264_NB_01_007_02",
+    "201606264_NB_01_002_01",
+    "201606264_NB_01_001_01"
+   ],
+   "base_top5": [
+    "201606264_NB_01_007_01",
+    "201606264_NB_01_004_01",
+    "201606264_NB_01_007_02",
+    "201606264_NB_01_002_01",
+    "201606264_NB_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.595,
+    "ui_path_total_s": 0.776
+   }
+  },
+  {
+   "case_id": "EC008",
+   "risk_type": "elderly_caution",
+   "items": [
+    "200402711"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200402711_NB_01_001_01",
+    "200402711_NB_01_004_01",
+    "200402711_NB_01_002_01",
+    "200402711_NB_01_003_01",
+    "200402711_NB_01_005_01"
+   ],
+   "base_top5": [
+    "200402711_NB_01_001_01",
+    "200402711_NB_01_004_01",
+    "200402711_NB_01_002_01",
+    "200402711_NB_01_003_01",
+    "200402711_NB_01_005_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.577,
+    "ui_path_total_s": 0.431
+   }
+  },
+  {
+   "case_id": "EC009",
+   "risk_type": "elderly_caution",
+   "items": [
+    "199102275"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "199102275_NB_01_003_01",
+    "199102275_NB_01_002_01",
+    "199102275_NB_01_001_01",
+    "199102275_NB_01_005_01",
+    "199102275_NB_01_006_01"
+   ],
+   "base_top5": [
+    "199102275_NB_01_003_01",
+    "199102275_NB_01_002_01",
+    "199102275_NB_01_001_01",
+    "199102275_NB_01_005_01",
+    "199102275_NB_01_006_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.494,
+    "ui_path_total_s": 0.402
+   }
+  },
+  {
+   "case_id": "EC010",
+   "risk_type": "elderly_caution",
+   "items": [
+    "201700622"
+   ],
+   "age": 70,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": 1,
+    "therapeutic_duplication": 0
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201700622_NB_01_003_02",
+    "201700622_NB_01_003_01",
+    "201700622_NB_01_001_01",
+    "201700622_NB_01_009_01",
+    "201700622_NB_01_002_01"
+   ],
+   "base_top5": [
+    "201700622_NB_01_003_02",
+    "201700622_NB_01_003_01",
+    "201700622_NB_01_001_01",
+    "201700622_NB_01_009_01",
+    "201700622_NB_01_002_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.416,
+    "ui_path_total_s": 0.548
+   }
+  },
+  {
+   "case_id": "TD001",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "201701834",
+    "201902533"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201701834_NB_01_003_01",
+    "201902533_NB_01_005_01",
+    "201701834_EE_01_001_01",
+    "201902533_NB_01_006_01",
+    "201701834_NB_01_001_01"
+   ],
+   "base_top5": [
+    "201701834_NB_01_003_01",
+    "201902533_NB_01_005_01",
+    "201701834_EE_01_001_01",
+    "201902533_NB_01_006_01",
+    "201701834_NB_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.496,
+    "ui_path_total_s": 0.607
+   }
+  },
+  {
+   "case_id": "TD002",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200808340",
+    "201404016"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200808340_NB_01_005_01",
+    "201404016_NB_01_009_01",
+    "200808340_NB_01_005_02",
+    "201404016_EE_01_001_01",
+    "200808340_NB_01_004_01"
+   ],
+   "base_top5": [
+    "200808340_NB_01_005_01",
+    "201404016_NB_01_009_01",
+    "200808340_NB_01_005_02",
+    "201404016_EE_01_001_01",
+    "200808340_NB_01_004_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.581,
+    "ui_path_total_s": 0.477
+   }
+  },
+  {
+   "case_id": "TD003",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "202002179",
+    "202008747"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "202002179_NB_01_002_03",
+    "202008747_NB_01_004_01",
+    "202002179_NB_01_005_01",
+    "202008747_NB_01_004_02",
+    "202002179_NB_01_004_01"
+   ],
+   "base_top5": [
+    "202002179_NB_01_002_03",
+    "202008747_NB_01_004_01",
+    "202002179_NB_01_005_01",
+    "202008747_NB_01_004_02",
+    "202002179_NB_01_004_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.57,
+    "ui_path_total_s": 0.41
+   }
+  },
+  {
+   "case_id": "TD004",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200303280",
+    "200703229"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200303280_NB_01_005_01",
+    "200703229_NB_01_006_01",
+    "200303280_NB_01_011_01",
+    "200703229_NB_01_005_05",
+    "200303280_NB_01_004_01"
+   ],
+   "base_top5": [
+    "200303280_NB_01_005_01",
+    "200703229_NB_01_006_01",
+    "200303280_NB_01_011_01",
+    "200703229_NB_01_005_05",
+    "200303280_NB_01_004_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.622,
+    "ui_path_total_s": 0.515
+   }
+  },
+  {
+   "case_id": "TD005",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200706536",
+    "200803246"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200706536_NB_01_005_01",
+    "200803246_NB_01_005_03",
+    "200706536_NB_01_005_03",
+    "200803246_NB_01_007_01",
+    "200706536_NB_01_006_02"
+   ],
+   "base_top5": [
+    "200706536_NB_01_005_01",
+    "200803246_NB_01_005_03",
+    "200706536_NB_01_005_03",
+    "200803246_NB_01_007_01",
+    "200706536_NB_01_006_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.623,
+    "ui_path_total_s": 0.474
+   }
+  },
+  {
+   "case_id": "TD006",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "201400641",
+    "201604156"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201400641_NB_01_003_01",
+    "201604156_NB_01_006_01",
+    "201400641_NB_01_006_01",
+    "201604156_NB_01_006_02",
+    "201400641_NB_01_001_01"
+   ],
+   "base_top5": [
+    "201400641_NB_01_003_01",
+    "201604156_NB_01_006_01",
+    "201400641_NB_01_006_01",
+    "201604156_NB_01_006_02",
+    "201400641_NB_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.615,
+    "ui_path_total_s": 0.736
+   }
+  },
+  {
+   "case_id": "TD007",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200900196",
+    "201603488"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200900196_NB_01_001_01",
+    "201603488_NB_01_006_02",
+    "200900196_NB_01_006_01",
+    "201603488_NB_01_005_04",
+    "200900196_NB_01_005_04"
+   ],
+   "base_top5": [
+    "200900196_NB_01_001_01",
+    "201603488_NB_01_006_02",
+    "200900196_NB_01_006_01",
+    "201603488_NB_01_005_04",
+    "200900196_NB_01_005_04"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 1.154,
+    "ui_path_total_s": 0.559
+   }
+  },
+  {
+   "case_id": "TD008",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200009027",
+    "201506737"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200009027_NB_01_004_03",
+    "201506737_NB_01_003_02",
+    "200009027_NB_01_004_04",
+    "201506737_NB_01_003_01",
+    "200009027_NB_01_004_02"
+   ],
+   "base_top5": [
+    "200009027_NB_01_004_03",
+    "201506737_NB_01_003_02",
+    "200009027_NB_01_004_04",
+    "201506737_NB_01_003_01",
+    "200009027_NB_01_004_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.471,
+    "ui_path_total_s": 0.657
+   }
+  },
+  {
+   "case_id": "TD009",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "201402238",
+    "201907842"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "201402238_NB_01_013_03",
+    "201907842_NB_01_005_01",
+    "201402238_NB_01_006_01",
+    "201907842_PN_01_001_01",
+    "201402238_NB_01_006_02"
+   ],
+   "base_top5": [
+    "201402238_NB_01_013_03",
+    "201907842_NB_01_005_01",
+    "201402238_NB_01_006_01",
+    "201907842_PN_01_001_01",
+    "201402238_NB_01_006_02"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.619,
+    "ui_path_total_s": 0.537
+   }
+  },
+  {
+   "case_id": "TD010",
+   "risk_type": "therapeutic_duplication",
+   "items": [
+    "200600821",
+    "201201017"
+   ],
+   "age": null,
+   "vm_state": "COMPLETED",
+   "tiles_match_core": true,
+   "tiles": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "core_counts": {
+    "contraindication": 0,
+    "elderly_caution": null,
+    "therapeutic_duplication": 1
+   },
+   "total_signals_match": true,
+   "finding_ids_match": true,
+   "risk_types_match": true,
+   "dur_rule_lines_match": true,
+   "target_finding_present": true,
+   "display_mode": "LLM_UNAVAILABLE",
+   "status_message": "설명 생성 서비스를 사용할 수 없습니다. 탐지 결과와 허가정보 원문은 아래에서 확인할 수 있습니다.",
+   "explanation_shown": false,
+   "retrieval_status": "OK",
+   "retrieval_method": "hybrid",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ],
+   "evidence_ids_sequential": true,
+   "evidence_errors": [],
+   "top5_equal_06A_hybrid": true,
+   "ui_top5": [
+    "200600821_NB_01_006_01",
+    "201201017_NB_01_006_01",
+    "200600821_NB_01_005_04",
+    "201201017_NB_01_001_02",
+    "200600821_NB_01_001_01"
+   ],
+   "base_top5": [
+    "200600821_NB_01_006_01",
+    "201201017_NB_01_006_01",
+    "200600821_NB_01_005_04",
+    "201201017_NB_01_001_02",
+    "200600821_NB_01_001_01"
+   ],
+   "ui_evidence_verbatim": true,
+   "direct_retrieval_equal": true,
+   "timing": {
+    "screen_s": 0.0,
+    "retrieval_s": 0.831,
+    "ui_path_total_s": 0.53
+   }
+  }
+ ]
+}

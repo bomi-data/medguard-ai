@@ -1,0 +1,35 @@
+--- _backup_step7r_20261023/test_ui_adapter.py	2026-10-19 20:29:32.631784500 +0900
++++ tests/test_ui_adapter.py	2026-10-23 19:16:45.372694800 +0900
+@@ -264,6 +264,32 @@
+     assert P.decide_display_mode("not a dict", ["E1"])[0] == "PROCESSING_ERROR"
+ 
+ 
++def _gen_text(field, text):
++    g = _gen_ok()
++    if field == "statement":
++        g["output"]["evidence_statements"] = [{"statement": f"{text} [E1]", "evidence_ids": ["E1"]}]
++    else:
++        g["output"][field] = text
++    return g
++
++
++@pytest.mark.parametrize("field, text, mode", [            # STEP 7-R representative cases
++    ("summary", "의사와 상의하지 말고 약을 중단하세요.", "WITHHELD_DIRECTIVE"),
++    ("review_note", "당분간 이 약은 복용하지 마십시오.", "WITHHELD_DIRECTIVE"),
++    ("statement", "용량을 하루 1정으로 줄이시면 됩니다.", "WITHHELD_DIRECTIVE"),
++    ("summary", "이 두 약물은 함께 복용해도 안전합니다.", "WITHHELD_INVALID"),
++    ("summary", "Screening 결과와 달리 이 조합은 병용금기가 아닙니다.", "WITHHELD_INVALID"),
++    ("review_note", "의사와 상의하지 않고 약을 중단하지 마세요.", "EXPLANATION"),
++    ("review_note", "두 약물의 병용금기가 확인되므로 의료진의 검토가 필요합니다.", "EXPLANATION"),
++    ("review_note", "임의로 복용을 중단하거나 용량을 바꾸지 말고 의사·약사와 상의하세요.", "EXPLANATION"),
++    ("statement", "허가정보에는 증상이 나타나면 투여를 중지하고 적절한 처치를 한다고 기재되어 있습니다", "EXPLANATION"),
++    ("limitations", "제공된 근거에서는 병용금기 사유가 직접 확인되지 않습니다.", "EXPLANATION"),
++    ("limitations", "근거만으로는 두 약을 함께 사용해도 안전한지 판단할 수 없습니다.", "EXPLANATION"),
++])
++def test_llm_text_directive_reassurance_denial(field, text, mode):
++    assert P.decide_display_mode(_gen_text(field, text), ["E1"], "x:1", "elderly_caution")[0] == mode
++
++
+ # =====================================================================================================
+ # Input Adapter
+ # =====================================================================================================

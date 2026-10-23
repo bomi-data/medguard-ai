@@ -1,0 +1,152 @@
+{
+ "NOTE": "analysis only; rules NOT deployed",
+ "real_outputs_flagged_by_R1|R2|R3": "0/30",
+ "real_outputs_flag_detail": [],
+ "real_outputs_flagged_by_R4": "0/30",
+ "synthetic_by_variant": {
+  "clinician_review_note": {
+   "expected": "ALLOW",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 0
+  },
+  "deny_finding:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "dose#0:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "dose#0:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "dose#1:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "dose#1:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "label_quote:directive_word": {
+   "expected": "ALLOW",
+   "n": 5,
+   "currently_blocked": 5,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 0
+  },
+  "no_risk_detected:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "novel_number_valid_cite": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "novel_side_effect_valid_cite": {
+   "expected": "BLOCK",
+   "n": 28,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 0
+  },
+  "pattern_covered#0:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 30,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_covered#0:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 30,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_covered#1:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 30,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_covered#1:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 30,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#2:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#2:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#3:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#3:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#4:cited_stmt": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "pattern_not_covered#4:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "reassure#0:review_note": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "reassure#0:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "reassure#1:review_note": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  },
+  "reassure#1:summary": {
+   "expected": "BLOCK",
+   "n": 30,
+   "currently_blocked": 0,
+   "would_block(current OR R1|R2|R3, with R4 replacing exact-pattern rule)": 30
+  }
+ }
+}

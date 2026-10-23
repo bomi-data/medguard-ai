@@ -1,0 +1,822 @@
+[
+ {
+  "case_id": "CE001",
+  "risk_type": "contraindication",
+  "items": [
+   "198902802",
+   "201907819"
+  ],
+  "names": {
+   "198902802": "졸민정0.25밀리그램(트리아졸람)",
+   "201907819": "대원바이오텍플루코나졸캡슐50mg(플루코나졸)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:198902802|201907819",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:198902802|201907819"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE002",
+  "risk_type": "contraindication",
+  "items": [
+   "200901621",
+   "201601716"
+  ],
+  "names": {
+   "200901621": "이트라녹스캡슐(이트라코나졸)(수출용)",
+   "201601716": "심바티브정10/10"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:200901621|201601716",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:200901621|201601716"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE003",
+  "risk_type": "contraindication",
+  "items": [
+   "200400354",
+   "202100226"
+  ],
+  "names": {
+   "200400354": "한올이트라코나졸정",
+   "202100226": "아토반듀오정10/20밀리그램"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:200400354|202100226",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:200400354|202100226"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE004",
+  "risk_type": "contraindication",
+  "items": [
+   "200102945",
+   "201107276"
+  ],
+  "names": {
+   "200102945": "아이오브릭스주350(이오헥솔)",
+   "201107276": "포디엠정1/250밀리그램"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:200102945|201107276",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:200102945|201107276"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE005",
+  "risk_type": "contraindication",
+  "items": [
+   "201007770",
+   "202103993"
+  ],
+  "names": {
+   "201007770": "자이자핀정5밀리그램(올란자핀)",
+   "202103993": "제일약품에피네프린주(수출용)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:201007770|202103993",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:201007770|202103993"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE006",
+  "risk_type": "contraindication",
+  "items": [
+   "201404056",
+   "202101732"
+  ],
+  "names": {
+   "201404056": "이토졸정(이트라코나졸고체분산체)",
+   "202101732": "제뉴원아제브정10/20밀리그램"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:201404056|202101732",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:201404056|202101732"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE007",
+  "risk_type": "contraindication",
+  "items": [
+   "200804563",
+   "202003581"
+  ],
+  "names": {
+   "200804563": "트라마펜정",
+   "202003581": "라시렉트정1.0밀리그램(라사길린메실산염)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:200804563|202003581",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:200804563|202003581"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE008",
+  "risk_type": "contraindication",
+  "items": [
+   "201204544",
+   "201603989"
+  ],
+  "names": {
+   "201204544": "맥시그라정100밀리그램(실데나필시트르산염)",
+   "201603989": "시알정20밀리그램(타다라필)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:201204544|201603989",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:201204544|201603989"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE009",
+  "risk_type": "contraindication",
+  "items": [
+   "199504168",
+   "200410457"
+  ],
+  "names": {
+   "199504168": "베사노이드연질캡슐10밀리그램(트레티노인)",
+   "200410457": "페리오클린치과용연고(미노사이클린염산염)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:199504168|200410457",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:199504168|200410457"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "CE010",
+  "risk_type": "contraindication",
+  "items": [
+   "200100710",
+   "200905162"
+  ],
+  "names": {
+   "200100710": "케토락주(케토롤락트로메타민염)(수출용)",
+   "200905162": "덱시로그펜정(덱시부프로펜디.씨)(수출용)"
+  },
+  "age": null,
+  "target_finding_id": "contraindication:200100710|200905162",
+  "n_findings": 1,
+  "finding_ids": [
+   "contraindication:200100710|200905162"
+  ],
+  "risk_types": [
+   "contraindication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 1,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "EC001",
+  "risk_type": "elderly_caution",
+  "items": [
+   "200700501"
+  ],
+  "names": {
+   "200700501": "바리움정5밀리그람(디아제팜)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:200700501",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:200700501"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC002",
+  "risk_type": "elderly_caution",
+  "items": [
+   "198500628"
+  ],
+  "names": {
+   "198500628": "명인이미프라민염산염정"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:198500628",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:198500628"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC003",
+  "risk_type": "elderly_caution",
+  "items": [
+   "201200277"
+  ],
+  "names": {
+   "201200277": "리스피돈오디정1밀리그램(리스페리돈)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:201200277",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:201200277"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC004",
+  "risk_type": "elderly_caution",
+  "items": [
+   "201905300"
+  ],
+  "names": {
+   "201905300": "록소핀정(록소프로펜나트륨)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:201905300",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:201905300"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC005",
+  "risk_type": "elderly_caution",
+  "items": [
+   "201801829"
+  ],
+  "names": {
+   "201801829": "유프베린정(프로피베린염산염)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:201801829",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:201801829"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC006",
+  "risk_type": "elderly_caution",
+  "items": [
+   "199703357"
+  ],
+  "names": {
+   "199703357": "코러스이부프로펜정400밀리그람"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:199703357",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:199703357"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC007",
+  "risk_type": "elderly_caution",
+  "items": [
+   "201606264"
+  ],
+  "names": {
+   "201606264": "크록쎈연질캡슐(클로닉신리시네이트)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:201606264",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:201606264"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC008",
+  "risk_type": "elderly_caution",
+  "items": [
+   "200402711"
+  ],
+  "names": {
+   "200402711": "케펜겔(케토프로펜)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:200402711",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:200402711"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC009",
+  "risk_type": "elderly_caution",
+  "items": [
+   "199102275"
+  ],
+  "names": {
+   "199102275": "포린피아정(독시라민숙신산염)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:199102275",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:199102275"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "EC010",
+  "risk_type": "elderly_caution",
+  "items": [
+   "201700622"
+  ],
+  "names": {
+   "201700622": "솔페신정5밀리그램(솔리페나신숙신산염)"
+  },
+  "age": 70,
+  "target_finding_id": "elderly_caution:201700622",
+  "n_findings": 1,
+  "finding_ids": [
+   "elderly_caution:201700622"
+  ],
+  "risk_types": [
+   "elderly_caution"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 1,
+   "therapeutic_duplication_count": 0,
+   "elderly_check_status": "evaluated"
+  }
+ },
+ {
+  "case_id": "TD001",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "201701834",
+   "201902533"
+  ],
+  "names": {
+   "201701834": "네오투스서방정(레보드로프로피진)",
+   "201902533": "인티진정(레보세티리진염산염)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:호흡기관용약:201701834|201902533",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:호흡기관용약:201701834|201902533"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD002",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200808340",
+   "201404016"
+  ],
+  "names": {
+   "200808340": "바로디핀정5밀리그램(암로디핀베실산염)",
+   "201404016": "노바젠정5밀리그램(암로디핀베실산염)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:혈압강하작용의약품:200808340|201404016",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:혈압강하작용의약품:200808340|201404016"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD003",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "202002179",
+   "202008747"
+  ],
+  "names": {
+   "202002179": "조스정3밀리그램(에스조피클론)",
+   "202008747": "영진조피클론정2밀리그램(에스조피클론)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:최면진정제:202002179|202008747",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:최면진정제:202002179|202008747"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD004",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200303280",
+   "200703229"
+  ],
+  "names": {
+   "200303280": "제뉴원글리메피리드정",
+   "200703229": "피오렉스정(피오글리타존염산염)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:당뇨병용제:200303280|200703229",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:당뇨병용제:200303280|200703229"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD005",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200706536",
+   "200803246"
+  ],
+  "names": {
+   "200706536": "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+   "200803246": "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:지질저하제:200706536|200803246",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:지질저하제:200706536|200803246"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD006",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "201400641",
+   "201604156"
+  ],
+  "names": {
+   "201400641": "인스타닐나잘스프레이50마이크로그램(펜타닐시트르산염)",
+   "201604156": "엠피돈서방정40mg(옥시코돈염산염)(수출용)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:마약류 아편유사제:201400641|201604156",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:마약류 아편유사제:201400641|201604156"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD007",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200900196",
+   "201603488"
+  ],
+  "names": {
+   "200900196": "모니트정350밀리그램(모니플루메이트)",
+   "201603488": "메로시캡슐7.5밀리그램(멜록시캄)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:해열진통소염제:200900196|201603488",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:해열진통소염제:200900196|201603488"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD008",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200009027",
+   "201506737"
+  ],
+  "names": {
+   "200009027": "넥시움정20밀리그램(에스오메프라졸마그네슘)",
+   "201506737": "넥소메정40밀리그램(에스오메프라졸마그네슘삼수화물)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:소화성궤양용제:200009027|201506737",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:소화성궤양용제:200009027|201506737"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD009",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "201402238",
+   "201907842"
+  ],
+  "names": {
+   "201402238": "드록틴캡슐60밀리그램(둘록세틴염산염)",
+   "201907842": "아도페정10밀리그램(도네페질염산염수화물)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:정신신경용제:201402238|201907842",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:정신신경용제:201402238|201907842"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ },
+ {
+  "case_id": "TD010",
+  "risk_type": "therapeutic_duplication",
+  "items": [
+   "200600821",
+   "201201017"
+  ],
+  "names": {
+   "200600821": "록프로정(록소프로펜나트륨수화물)",
+   "201201017": "피로브이주(피록시캄칼륨)(수출용)"
+  },
+  "age": null,
+  "target_finding_id": "therapeutic_duplication:해열진통소염제:200600821|201201017",
+  "n_findings": 1,
+  "finding_ids": [
+   "therapeutic_duplication:해열진통소염제:200600821|201201017"
+  ],
+  "risk_types": [
+   "therapeutic_duplication"
+  ],
+  "summary": {
+   "total_signals": 1,
+   "contraindication_count": 0,
+   "elderly_caution_count": 0,
+   "therapeutic_duplication_count": 1,
+   "elderly_check_status": "not_evaluated_age_missing"
+  }
+ }
+]

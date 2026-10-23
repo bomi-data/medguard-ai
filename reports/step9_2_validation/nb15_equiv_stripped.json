@@ -1,0 +1,1756 @@
+{
+ "CE001": {
+  "check": {
+   "consistency": true,
+   "findings": [],
+   "pairs": [
+    {
+     "a": "198902802",
+     "b": "201907819",
+     "n_candidates": 0,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "B",
+     "types": [
+      "TYPE_E"
+     ]
+    }
+   ],
+   "status": "NO_CANDIDATE_FOUND"
+  },
+  "result": {
+   "dur_part": null,
+   "ing_part": null,
+   "result": {
+    "dur_screening": {
+     "contraindications": [
+      {
+       "evidence_id": "EV-001",
+       "involved_ingredients": [],
+       "involved_item_names": [
+        "졸민정0.25밀리그램(트리아졸람)",
+        "대원바이오텍플루코나졸캡슐50mg(플루코나졸)"
+       ],
+       "involved_item_seqs": [
+        "198902802",
+        "201907819"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "dur_seqs": [
+         "85",
+         "86"
+        ],
+        "evidence_count": 2,
+        "evidence_ids": [
+         "48543",
+         "49446"
+        ],
+        "has_evidence": true,
+        "texts": [
+         "triazolam 의 약리학적 효과 및 작용증가"
+        ]
+       },
+       "rule_id": "198902802|201907819",
+       "rule_type": "CONTRAINDICATION",
+       "screening_status": "MATCHED",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 병용금기"
+       }
+      }
+     ],
+     "elderly_cautions": [],
+     "elderly_check_status": "not_evaluated_age_missing",
+     "engine": {
+      "data_snapshot": {
+       "contraindication_evidence_rows": 796668,
+       "contraindication_pairs": 322816,
+       "elderly_caution_rules_dedup": 1980,
+       "therapeutic_lookup_rows": 7056
+      },
+      "method": "deterministic_rule_match",
+      "name": "structured_dur_screening",
+      "version": "0.1.0"
+     },
+     "not_found_in_dur_tables": [],
+     "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+     "status": "MATCHED",
+     "therapeutic_duplicates": []
+    },
+    "evidence": [
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-001",
+      "evidence_ids_from_engine": [
+       "48543",
+       "49446"
+      ],
+      "involved_ingredients": [],
+      "involved_item_seqs": [
+       "198902802",
+       "201907819"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": "198902802|201907819",
+      "rule_type": "CONTRAINDICATION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 병용금기"
+      }
+     }
+    ],
+    "ingredient_screening": {
+     "duplicate_candidates": [],
+     "pair_results": [
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "198902802",
+        "201907819"
+       ],
+       "types": [
+        "TYPE_E"
+       ]
+      }
+     ],
+     "rule_origin": "15번 screen_pair()/screen_list() 재사용 + 16번 라벨링",
+     "status": "NO_CANDIDATE_FOUND",
+     "unresolved_ingredients": [],
+     "verification_status_policy": "모든 후보는 UNVERIFIED_CANDIDATE (공식 동일성 검증 NO-GO 유지)"
+    },
+    "input": {
+     "item_seqs": [
+      "198902802",
+      "201907819"
+     ],
+     "patient_age": null
+    },
+    "input_validation": {
+     "duplicate_inputs": [],
+     "errors": [],
+     "invalid_inputs": [],
+     "ok": true,
+     "warnings": [
+      {
+       "code": "PATIENT_AGE_MISSING",
+       "detail": "노인주의는 평가하지 않음(임의 확정 안 함)"
+      }
+     ]
+    },
+    "limitations": [
+     "이 결과는 임상적 안전성 판단이 아닙니다. overall_status는 시스템 탐지 범위 안의 처리 상태일 뿐 위험도가 아닙니다.",
+     "DUR Screening(공식 DUR 규칙 매칭)과 Ingredient Screening(성분 중복 후보)은 서로 다른 판단 체계이며 합산·점수화하지 않았습니다.",
+     "성분 중복 후보는 공식 DUR 병용금기가 아니며 약학적 동일성·임상 위험을 확정하지 않습니다(전 후보 UNVERIFIED_CANDIDATE).",
+     "공식 성분 동일성 검증은 NO-GO 상태로 유지됩니다(임상 검증 상태: NOT_VALIDATED).",
+     "DUR D코드와 제품 허가정보 M코드 사이에 공식 매핑이 없으며 이 모듈은 둘을 연결하지 않습니다(Coverage Audit 한계 유지).",
+     "DUR 규칙에 매칭되지 않았다는 사실이 안전하다는 뜻은 아닙니다. 매칭 없음은 현재 데이터·규칙 범위에서 찾지 못했다는 뜻입니다.",
+     "RAG/LLM은 사용하지 않았으며 이 결과에 생성 설명이 포함되어 있지 않습니다.",
+     "미평가/불완전 범위: AGE_MISSING_ELDERLY_NOT_EVALUATED"
+    ],
+    "overall_status": "REVIEW_REQUIRED",
+    "product_resolution": {
+     "resolved_products": [
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "졸민정0.25밀리그램(트리아졸람)",
+       "item_seq": "198902802"
+      },
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "대원바이오텍플루코나졸캡슐50mg(플루코나졸)",
+       "item_seq": "201907819"
+      }
+     ],
+     "status": "ALL_RESOLVED",
+     "unresolved_products": []
+    }
+   },
+   "schema_errors": [],
+   "status": "OK",
+   "technical_errors": []
+  },
+  "status": "OK"
+ },
+ "EC008": {
+  "check": {
+   "consistency": true,
+   "findings": [],
+   "pairs": [],
+   "status": "NOT_APPLICABLE_SINGLE_PRODUCT"
+  },
+  "result": {
+   "dur_part": null,
+   "ing_part": null,
+   "result": {
+    "dur_screening": {
+     "contraindications": [],
+     "elderly_cautions": [
+      {
+       "evidence_id": "EV-001",
+       "involved_ingredients": [
+        {
+         "dur_ingr_codes": [
+          "D000672"
+         ],
+         "ingredient_names": [
+          "케토프로펜"
+         ]
+        }
+       ],
+       "involved_item_names": [
+        "케펜겔(케토프로펜)"
+       ],
+       "involved_item_seqs": [
+        "200402711"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "age_threshold": 65,
+        "has_evidence": false,
+        "patient_age": 70,
+        "texts": []
+       },
+       "rule_id": null,
+       "rule_id_note": "엔진이 규칙 ID를 제공하지 않음(임의 생성 안 함)",
+       "rule_type": "ELDERLY_CAUTION",
+       "screening_status": "MATCHED_EVIDENCE_TEXT_MISSING",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 노인주의"
+       }
+      }
+     ],
+     "elderly_check_status": "evaluated",
+     "engine": {
+      "data_snapshot": {
+       "contraindication_evidence_rows": 796668,
+       "contraindication_pairs": 322816,
+       "elderly_caution_rules_dedup": 1980,
+       "therapeutic_lookup_rows": 7056
+      },
+      "method": "deterministic_rule_match",
+      "name": "structured_dur_screening",
+      "version": "0.1.0"
+     },
+     "not_found_in_dur_tables": [],
+     "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+     "status": "MATCHED",
+     "therapeutic_duplicates": []
+    },
+    "evidence": [
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-001",
+      "evidence_ids_from_engine": [],
+      "involved_ingredients": [
+       {
+        "dur_ingr_codes": [
+         "D000672"
+        ],
+        "ingredient_names": [
+         "케토프로펜"
+        ]
+       }
+      ],
+      "involved_item_seqs": [
+       "200402711"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": null,
+      "rule_type": "ELDERLY_CAUTION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 노인주의"
+      }
+     }
+    ],
+    "ingredient_screening": {
+     "duplicate_candidates": [],
+     "pair_results": [],
+     "rule_origin": "15번 screen_pair()/screen_list() 재사용 + 16번 라벨링",
+     "status": "NOT_APPLICABLE_SINGLE_PRODUCT",
+     "unresolved_ingredients": [],
+     "verification_status_policy": "모든 후보는 UNVERIFIED_CANDIDATE (공식 동일성 검증 NO-GO 유지)"
+    },
+    "input": {
+     "item_seqs": [
+      "200402711"
+     ],
+     "patient_age": 70
+    },
+    "input_validation": {
+     "duplicate_inputs": [],
+     "errors": [],
+     "invalid_inputs": [],
+     "ok": true,
+     "warnings": []
+    },
+    "limitations": [
+     "이 결과는 임상적 안전성 판단이 아닙니다. overall_status는 시스템 탐지 범위 안의 처리 상태일 뿐 위험도가 아닙니다.",
+     "DUR Screening(공식 DUR 규칙 매칭)과 Ingredient Screening(성분 중복 후보)은 서로 다른 판단 체계이며 합산·점수화하지 않았습니다.",
+     "성분 중복 후보는 공식 DUR 병용금기가 아니며 약학적 동일성·임상 위험을 확정하지 않습니다(전 후보 UNVERIFIED_CANDIDATE).",
+     "공식 성분 동일성 검증은 NO-GO 상태로 유지됩니다(임상 검증 상태: NOT_VALIDATED).",
+     "DUR D코드와 제품 허가정보 M코드 사이에 공식 매핑이 없으며 이 모듈은 둘을 연결하지 않습니다(Coverage Audit 한계 유지).",
+     "DUR 규칙에 매칭되지 않았다는 사실이 안전하다는 뜻은 아닙니다. 매칭 없음은 현재 데이터·규칙 범위에서 찾지 못했다는 뜻입니다.",
+     "RAG/LLM은 사용하지 않았으며 이 결과에 생성 설명이 포함되어 있지 않습니다.",
+     "미평가/불완전 범위: SINGLE_PRODUCT_NO_PAIR_SCREENING",
+     "일부 DUR 매칭에 엔진이 제공한 근거 텍스트가 없어 추가 확인이 필요합니다(정상으로 변환하지 않음)."
+    ],
+    "overall_status": "REVIEW_REQUIRED",
+    "product_resolution": {
+     "resolved_products": [
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "케펜겔(케토프로펜)",
+       "item_seq": "200402711"
+      }
+     ],
+     "status": "ALL_RESOLVED",
+     "unresolved_products": []
+    }
+   },
+   "schema_errors": [],
+   "status": "OK",
+   "technical_errors": []
+  },
+  "status": "OK"
+ },
+ "TD002": {
+  "check": {
+   "consistency": true,
+   "findings": [
+    {
+     "basis": "동일 M코드(M222875) + 동일 정규화 성분명",
+     "candidate_type": "TYPE_A",
+     "case": "CASE1",
+     "case_label": "① M코드와 정규화 성분명이 모두 일치",
+     "is_candidate": true,
+     "item_names": [
+      "바로디핀정5밀리그램(암로디핀베실산염)",
+      "노바젠정5밀리그램(암로디핀베실산염)"
+     ],
+     "item_seqs": [
+      "200808340",
+      "201404016"
+     ],
+     "m_codes": [
+      "M222875",
+      "M222875"
+     ],
+     "needs_review": true,
+     "needs_review_text": "추가 확인 필요 (미검증 후보)",
+     "norm_names": [
+      "암로디핀베실산염",
+      "암로디핀베실산염"
+     ],
+     "raw_names": [
+      "암로디핀베실산염",
+      "암로디핀베실산염"
+     ],
+     "verification_status": "UNVERIFIED_CANDIDATE"
+    }
+   ],
+   "pairs": [
+    {
+     "a": "200808340",
+     "b": "201404016",
+     "n_candidates": 1,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "A",
+     "types": [
+      "TYPE_A"
+     ]
+    }
+   ],
+   "status": "CANDIDATES_FOUND"
+  },
+  "result": {
+   "dur_part": null,
+   "ing_part": null,
+   "result": {
+    "dur_screening": {
+     "contraindications": [],
+     "elderly_cautions": [],
+     "elderly_check_status": "not_evaluated_age_missing",
+     "engine": {
+      "data_snapshot": {
+       "contraindication_evidence_rows": 796668,
+       "contraindication_pairs": 322816,
+       "elderly_caution_rules_dedup": 1980,
+       "therapeutic_lookup_rows": 7056
+      },
+      "method": "deterministic_rule_match",
+      "name": "structured_dur_screening",
+      "version": "0.1.0"
+     },
+     "not_found_in_dur_tables": [],
+     "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+     "status": "MATCHED",
+     "therapeutic_duplicates": [
+      {
+       "evidence_id": "EV-001",
+       "involved_ingredients": [
+        {
+         "dur_ingr_codes": [
+          "D000152"
+         ],
+         "ingredient_names": [
+          "암로디핀베실산염"
+         ]
+        },
+        {
+         "dur_ingr_codes": [
+          "D000152"
+         ],
+         "ingredient_names": [
+          "암로디핀베실산염"
+         ]
+        }
+       ],
+       "involved_item_names": [
+        "바로디핀정5밀리그램(암로디핀베실산염)",
+        "노바젠정5밀리그램(암로디핀베실산염)"
+       ],
+       "involved_item_seqs": [
+        "200808340",
+        "201404016"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "distinct_dur_ingr_code_count": 1,
+        "has_evidence": false,
+        "texts": []
+       },
+       "rule_id": null,
+       "rule_id_note": "엔진이 규칙 ID를 제공하지 않음(임의 생성 안 함)",
+       "rule_key": {
+        "effect_name": "혈압강하작용의약품"
+       },
+       "rule_type": "THERAPEUTIC_DUPLICATION",
+       "screening_status": "MATCHED_EVIDENCE_TEXT_MISSING",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 효능군중복"
+       }
+      }
+     ]
+    },
+    "evidence": [
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-001",
+      "evidence_ids_from_engine": [],
+      "involved_ingredients": [
+       {
+        "dur_ingr_codes": [
+         "D000152"
+        ],
+        "ingredient_names": [
+         "암로디핀베실산염"
+        ]
+       },
+       {
+        "dur_ingr_codes": [
+         "D000152"
+        ],
+        "ingredient_names": [
+         "암로디핀베실산염"
+        ]
+       }
+      ],
+      "involved_item_seqs": [
+       "200808340",
+       "201404016"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": null,
+      "rule_type": "THERAPEUTIC_DUPLICATION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 효능군중복"
+      }
+     },
+     {
+      "candidate_type": "TYPE_A",
+      "data_collection_date": "2026-09-26T10:40:49.434639+00:00; 2026-09-26T10:42:15.110552+00:00",
+      "evidence_id": "EV-002",
+      "involved_item_seqs": [
+       "200808340",
+       "201404016"
+      ],
+      "is_official_dur_rule": false,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "INGREDIENT_CANDIDATE_RULE",
+      "normalized_ingredient_names": [
+       "암로디핀베실산염",
+       "암로디핀베실산염"
+      ],
+      "official_source_url": null,
+      "original_ingredient_names": [
+       "암로디핀베실산염",
+       "암로디핀베실산염"
+      ],
+      "original_m_codes": [
+       "M222875",
+       "M222875"
+      ],
+      "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+      "source": {
+       "a": "drug_approval_items.parquet|ITEM_SEQ=200808340|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000026.json|page=26|retrieved=2026-09-26T10:40:49.434639+00:00",
+       "b": "drug_approval_items.parquet|ITEM_SEQ=201404016|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000038.json|page=38|retrieved=2026-09-26T10:42:15.110552+00:00",
+       "file": "drug_approval_items.parquet"
+      },
+      "verification_status": "UNVERIFIED_CANDIDATE"
+     }
+    ],
+    "ingredient_screening": {
+     "duplicate_candidates": [
+      {
+       "candidate": true,
+       "candidate_type": "TYPE_A",
+       "detection_reason": "동일 M코드(M222875) + 동일 정규화 성분명",
+       "evidence_id": "EV-002",
+       "evidence_source": {
+        "a": "drug_approval_items.parquet|ITEM_SEQ=200808340|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000026.json|page=26|retrieved=2026-09-26T10:40:49.434639+00:00",
+        "b": "drug_approval_items.parquet|ITEM_SEQ=201404016|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000038.json|page=38|retrieved=2026-09-26T10:42:15.110552+00:00",
+        "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+        "source_file": "drug_approval_items.parquet"
+       },
+       "form_markers": [
+        "SALT:베실산염",
+        "SALT:베실산염"
+       ],
+       "high_frequency": true,
+       "involved_item_seqs": [
+        "200808340",
+        "201404016"
+       ],
+       "item_names": [
+        "바로디핀정5밀리그램(암로디핀베실산염)",
+        "노바젠정5밀리그램(암로디핀베실산염)"
+       ],
+       "limitations": [
+        "동일 M코드/동일 성분명만으로 약학적 동일성·임상 위험을 확정하지 않음",
+        "공식 성분 동일성 검증 NO-GO 유지(검증 상태: UNVERIFIED_CANDIDATE)",
+        "염·수화물·에스터·입체 접두어를 제거해 합치지 않음",
+        "고빈도 성분 단위(제품 다수 공유) — 단순 표시일 뿐 제외하지 않음"
+       ],
+       "normalized_ingredient_names": [
+        "암로디핀베실산염",
+        "암로디핀베실산염"
+       ],
+       "original_ingredient_names": [
+        "암로디핀베실산염",
+        "암로디핀베실산염"
+       ],
+       "original_m_codes": [
+        "M222875",
+        "M222875"
+       ],
+       "pair_class": "SAME_MCODE_SAME_NAME",
+       "verification_status": "UNVERIFIED_CANDIDATE"
+      }
+     ],
+     "pair_results": [
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "200808340",
+        "201404016"
+       ],
+       "types": [
+        "TYPE_A"
+       ]
+      }
+     ],
+     "rule_origin": "15번 screen_pair()/screen_list() 재사용 + 16번 라벨링",
+     "status": "CANDIDATES_FOUND",
+     "unresolved_ingredients": [],
+     "verification_status_policy": "모든 후보는 UNVERIFIED_CANDIDATE (공식 동일성 검증 NO-GO 유지)"
+    },
+    "input": {
+     "item_seqs": [
+      "200808340",
+      "201404016"
+     ],
+     "patient_age": null
+    },
+    "input_validation": {
+     "duplicate_inputs": [],
+     "errors": [],
+     "invalid_inputs": [],
+     "ok": true,
+     "warnings": [
+      {
+       "code": "PATIENT_AGE_MISSING",
+       "detail": "노인주의는 평가하지 않음(임의 확정 안 함)"
+      }
+     ]
+    },
+    "limitations": [
+     "이 결과는 임상적 안전성 판단이 아닙니다. overall_status는 시스템 탐지 범위 안의 처리 상태일 뿐 위험도가 아닙니다.",
+     "DUR Screening(공식 DUR 규칙 매칭)과 Ingredient Screening(성분 중복 후보)은 서로 다른 판단 체계이며 합산·점수화하지 않았습니다.",
+     "성분 중복 후보는 공식 DUR 병용금기가 아니며 약학적 동일성·임상 위험을 확정하지 않습니다(전 후보 UNVERIFIED_CANDIDATE).",
+     "공식 성분 동일성 검증은 NO-GO 상태로 유지됩니다(임상 검증 상태: NOT_VALIDATED).",
+     "DUR D코드와 제품 허가정보 M코드 사이에 공식 매핑이 없으며 이 모듈은 둘을 연결하지 않습니다(Coverage Audit 한계 유지).",
+     "DUR 규칙에 매칭되지 않았다는 사실이 안전하다는 뜻은 아닙니다. 매칭 없음은 현재 데이터·규칙 범위에서 찾지 못했다는 뜻입니다.",
+     "RAG/LLM은 사용하지 않았으며 이 결과에 생성 설명이 포함되어 있지 않습니다.",
+     "미평가/불완전 범위: AGE_MISSING_ELDERLY_NOT_EVALUATED",
+     "일부 DUR 매칭에 엔진이 제공한 근거 텍스트가 없어 추가 확인이 필요합니다(정상으로 변환하지 않음)."
+    ],
+    "overall_status": "REVIEW_REQUIRED",
+    "product_resolution": {
+     "resolved_products": [
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "바로디핀정5밀리그램(암로디핀베실산염)",
+       "item_seq": "200808340"
+      },
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "노바젠정5밀리그램(암로디핀베실산염)",
+       "item_seq": "201404016"
+      }
+     ],
+     "status": "ALL_RESOLVED",
+     "unresolved_products": []
+    }
+   },
+   "schema_errors": [],
+   "status": "OK",
+   "technical_errors": []
+  },
+  "status": "OK"
+ },
+ "TD005": {
+  "check": {
+   "consistency": true,
+   "findings": [
+    {
+     "basis": "동일 M코드(M215219) + 동일 정규화 성분명",
+     "candidate_type": "TYPE_A",
+     "case": "CASE1",
+     "case_label": "① M코드와 정규화 성분명이 모두 일치",
+     "is_candidate": true,
+     "item_names": [
+      "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+      "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+     ],
+     "item_seqs": [
+      "200706536",
+      "200803246"
+     ],
+     "m_codes": [
+      "M215219",
+      "M215219"
+     ],
+     "needs_review": true,
+     "needs_review_text": "추가 확인 필요 (미검증 후보)",
+     "norm_names": [
+      "아토르바스타틴칼슘삼수화물",
+      "아토르바스타틴칼슘삼수화물"
+     ],
+     "raw_names": [
+      "아토르바스타틴칼슘삼수화물",
+      "아토르바스타틴칼슘삼수화물"
+     ],
+     "verification_status": "UNVERIFIED_CANDIDATE"
+    }
+   ],
+   "pairs": [
+    {
+     "a": "200706536",
+     "b": "200803246",
+     "n_candidates": 1,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "A",
+     "types": [
+      "TYPE_A"
+     ]
+    }
+   ],
+   "status": "CANDIDATES_FOUND"
+  },
+  "result": {
+   "dur_part": null,
+   "ing_part": null,
+   "result": {
+    "dur_screening": {
+     "contraindications": [],
+     "elderly_cautions": [],
+     "elderly_check_status": "not_evaluated_age_missing",
+     "engine": {
+      "data_snapshot": {
+       "contraindication_evidence_rows": 796668,
+       "contraindication_pairs": 322816,
+       "elderly_caution_rules_dedup": 1980,
+       "therapeutic_lookup_rows": 7056
+      },
+      "method": "deterministic_rule_match",
+      "name": "structured_dur_screening",
+      "version": "0.1.0"
+     },
+     "not_found_in_dur_tables": [],
+     "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+     "status": "MATCHED",
+     "therapeutic_duplicates": [
+      {
+       "evidence_id": "EV-001",
+       "involved_ingredients": [
+        {
+         "dur_ingr_codes": [
+          "D000455"
+         ],
+         "ingredient_names": [
+          "아토르바스타틴칼슘삼수화물"
+         ]
+        },
+        {
+         "dur_ingr_codes": [
+          "D000455"
+         ],
+         "ingredient_names": [
+          "아토르바스타틴칼슘삼수화물"
+         ]
+        }
+       ],
+       "involved_item_names": [
+        "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+        "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+       ],
+       "involved_item_seqs": [
+        "200706536",
+        "200803246"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "distinct_dur_ingr_code_count": 1,
+        "has_evidence": false,
+        "texts": []
+       },
+       "rule_id": null,
+       "rule_id_note": "엔진이 규칙 ID를 제공하지 않음(임의 생성 안 함)",
+       "rule_key": {
+        "effect_name": "지질저하제"
+       },
+       "rule_type": "THERAPEUTIC_DUPLICATION",
+       "screening_status": "MATCHED_EVIDENCE_TEXT_MISSING",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 효능군중복"
+       }
+      }
+     ]
+    },
+    "evidence": [
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-001",
+      "evidence_ids_from_engine": [],
+      "involved_ingredients": [
+       {
+        "dur_ingr_codes": [
+         "D000455"
+        ],
+        "ingredient_names": [
+         "아토르바스타틴칼슘삼수화물"
+        ]
+       },
+       {
+        "dur_ingr_codes": [
+         "D000455"
+        ],
+        "ingredient_names": [
+         "아토르바스타틴칼슘삼수화물"
+        ]
+       }
+      ],
+      "involved_item_seqs": [
+       "200706536",
+       "200803246"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": null,
+      "rule_type": "THERAPEUTIC_DUPLICATION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 효능군중복"
+      }
+     },
+     {
+      "candidate_type": "TYPE_A",
+      "data_collection_date": "2026-09-26T10:40:28.245942+00:00; 2026-09-26T10:40:42.491091+00:00",
+      "evidence_id": "EV-002",
+      "involved_item_seqs": [
+       "200706536",
+       "200803246"
+      ],
+      "is_official_dur_rule": false,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "INGREDIENT_CANDIDATE_RULE",
+      "normalized_ingredient_names": [
+       "아토르바스타틴칼슘삼수화물",
+       "아토르바스타틴칼슘삼수화물"
+      ],
+      "official_source_url": null,
+      "original_ingredient_names": [
+       "아토르바스타틴칼슘삼수화물",
+       "아토르바스타틴칼슘삼수화물"
+      ],
+      "original_m_codes": [
+       "M215219",
+       "M215219"
+      ],
+      "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+      "source": {
+       "a": "drug_approval_items.parquet|ITEM_SEQ=200706536|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000023.json|page=23|retrieved=2026-09-26T10:40:28.245942+00:00",
+       "b": "drug_approval_items.parquet|ITEM_SEQ=200803246|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000025.json|page=25|retrieved=2026-09-26T10:40:42.491091+00:00",
+       "file": "drug_approval_items.parquet"
+      },
+      "verification_status": "UNVERIFIED_CANDIDATE"
+     }
+    ],
+    "ingredient_screening": {
+     "duplicate_candidates": [
+      {
+       "candidate": true,
+       "candidate_type": "TYPE_A",
+       "detection_reason": "동일 M코드(M215219) + 동일 정규화 성분명",
+       "evidence_id": "EV-002",
+       "evidence_source": {
+        "a": "drug_approval_items.parquet|ITEM_SEQ=200706536|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000023.json|page=23|retrieved=2026-09-26T10:40:28.245942+00:00",
+        "b": "drug_approval_items.parquet|ITEM_SEQ=200803246|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000025.json|page=25|retrieved=2026-09-26T10:40:42.491091+00:00",
+        "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+        "source_file": "drug_approval_items.parquet"
+       },
+       "form_markers": [
+        "SALT:칼슘|HYDRATE:삼수화물",
+        "SALT:칼슘|HYDRATE:삼수화물"
+       ],
+       "high_frequency": true,
+       "involved_item_seqs": [
+        "200706536",
+        "200803246"
+       ],
+       "item_names": [
+        "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+        "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+       ],
+       "limitations": [
+        "동일 M코드/동일 성분명만으로 약학적 동일성·임상 위험을 확정하지 않음",
+        "공식 성분 동일성 검증 NO-GO 유지(검증 상태: UNVERIFIED_CANDIDATE)",
+        "염·수화물·에스터·입체 접두어를 제거해 합치지 않음",
+        "고빈도 성분 단위(제품 다수 공유) — 단순 표시일 뿐 제외하지 않음"
+       ],
+       "normalized_ingredient_names": [
+        "아토르바스타틴칼슘삼수화물",
+        "아토르바스타틴칼슘삼수화물"
+       ],
+       "original_ingredient_names": [
+        "아토르바스타틴칼슘삼수화물",
+        "아토르바스타틴칼슘삼수화물"
+       ],
+       "original_m_codes": [
+        "M215219",
+        "M215219"
+       ],
+       "pair_class": "SAME_MCODE_SAME_NAME",
+       "verification_status": "UNVERIFIED_CANDIDATE"
+      }
+     ],
+     "pair_results": [
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "200706536",
+        "200803246"
+       ],
+       "types": [
+        "TYPE_A"
+       ]
+      }
+     ],
+     "rule_origin": "15번 screen_pair()/screen_list() 재사용 + 16번 라벨링",
+     "status": "CANDIDATES_FOUND",
+     "unresolved_ingredients": [],
+     "verification_status_policy": "모든 후보는 UNVERIFIED_CANDIDATE (공식 동일성 검증 NO-GO 유지)"
+    },
+    "input": {
+     "item_seqs": [
+      "200706536",
+      "200803246"
+     ],
+     "patient_age": null
+    },
+    "input_validation": {
+     "duplicate_inputs": [],
+     "errors": [],
+     "invalid_inputs": [],
+     "ok": true,
+     "warnings": [
+      {
+       "code": "PATIENT_AGE_MISSING",
+       "detail": "노인주의는 평가하지 않음(임의 확정 안 함)"
+      }
+     ]
+    },
+    "limitations": [
+     "이 결과는 임상적 안전성 판단이 아닙니다. overall_status는 시스템 탐지 범위 안의 처리 상태일 뿐 위험도가 아닙니다.",
+     "DUR Screening(공식 DUR 규칙 매칭)과 Ingredient Screening(성분 중복 후보)은 서로 다른 판단 체계이며 합산·점수화하지 않았습니다.",
+     "성분 중복 후보는 공식 DUR 병용금기가 아니며 약학적 동일성·임상 위험을 확정하지 않습니다(전 후보 UNVERIFIED_CANDIDATE).",
+     "공식 성분 동일성 검증은 NO-GO 상태로 유지됩니다(임상 검증 상태: NOT_VALIDATED).",
+     "DUR D코드와 제품 허가정보 M코드 사이에 공식 매핑이 없으며 이 모듈은 둘을 연결하지 않습니다(Coverage Audit 한계 유지).",
+     "DUR 규칙에 매칭되지 않았다는 사실이 안전하다는 뜻은 아닙니다. 매칭 없음은 현재 데이터·규칙 범위에서 찾지 못했다는 뜻입니다.",
+     "RAG/LLM은 사용하지 않았으며 이 결과에 생성 설명이 포함되어 있지 않습니다.",
+     "미평가/불완전 범위: AGE_MISSING_ELDERLY_NOT_EVALUATED",
+     "일부 DUR 매칭에 엔진이 제공한 근거 텍스트가 없어 추가 확인이 필요합니다(정상으로 변환하지 않음)."
+    ],
+    "overall_status": "REVIEW_REQUIRED",
+    "product_resolution": {
+     "resolved_products": [
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+       "item_seq": "200706536"
+      },
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)",
+       "item_seq": "200803246"
+      }
+     ],
+     "status": "ALL_RESOLVED",
+     "unresolved_products": []
+    }
+   },
+   "schema_errors": [],
+   "status": "OK",
+   "technical_errors": []
+  },
+  "status": "OK"
+ },
+ "cell_sha": null,
+ "const": {
+  "CAND_NOTE": "후보일 뿐이며 약학적 동일성·임상 위험을 확정하지 않음 (공식 동일성 검증 NO-GO 유지)",
+  "CAND_STATUS": "UNVERIFIED_CANDIDATE",
+  "HF_THRESHOLD": "200",
+  "N_BATCH": "20",
+  "OFFICIAL_IDENTITY_STATUS": "NO-GO",
+  "SEED": "20261015"
+ },
+ "engine_ready": true,
+ "multi3": {
+  "check": {
+   "consistency": true,
+   "findings": [
+    {
+     "basis": "동일 M코드(M215219) + 동일 정규화 성분명",
+     "candidate_type": "TYPE_A",
+     "case": "CASE1",
+     "case_label": "① M코드와 정규화 성분명이 모두 일치",
+     "is_candidate": true,
+     "item_names": [
+      "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+      "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+     ],
+     "item_seqs": [
+      "200706536",
+      "200803246"
+     ],
+     "m_codes": [
+      "M215219",
+      "M215219"
+     ],
+     "needs_review": true,
+     "needs_review_text": "추가 확인 필요 (미검증 후보)",
+     "norm_names": [
+      "아토르바스타틴칼슘삼수화물",
+      "아토르바스타틴칼슘삼수화물"
+     ],
+     "raw_names": [
+      "아토르바스타틴칼슘삼수화물",
+      "아토르바스타틴칼슘삼수화물"
+     ],
+     "verification_status": "UNVERIFIED_CANDIDATE"
+    }
+   ],
+   "pairs": [
+    {
+     "a": "200706536",
+     "b": "200803246",
+     "n_candidates": 1,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "A",
+     "types": [
+      "TYPE_A"
+     ]
+    },
+    {
+     "a": "200706536",
+     "b": "200402711",
+     "n_candidates": 0,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "B",
+     "types": [
+      "TYPE_E"
+     ]
+    },
+    {
+     "a": "200803246",
+     "b": "200402711",
+     "n_candidates": 0,
+     "notes": [],
+     "pair_status": "OK",
+     "reasons": [],
+     "state": "B",
+     "types": [
+      "TYPE_E"
+     ]
+    }
+   ],
+   "status": "CANDIDATES_FOUND"
+  },
+  "result": {
+   "dur_part": null,
+   "ing_part": null,
+   "result": {
+    "dur_screening": {
+     "contraindications": [],
+     "elderly_cautions": [
+      {
+       "evidence_id": "EV-001",
+       "involved_ingredients": [
+        {
+         "dur_ingr_codes": [
+          "D000672"
+         ],
+         "ingredient_names": [
+          "케토프로펜"
+         ]
+        }
+       ],
+       "involved_item_names": [
+        "케펜겔(케토프로펜)"
+       ],
+       "involved_item_seqs": [
+        "200402711"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "age_threshold": 65,
+        "has_evidence": false,
+        "patient_age": 70,
+        "texts": []
+       },
+       "rule_id": null,
+       "rule_id_note": "엔진이 규칙 ID를 제공하지 않음(임의 생성 안 함)",
+       "rule_type": "ELDERLY_CAUTION",
+       "screening_status": "MATCHED_EVIDENCE_TEXT_MISSING",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 노인주의"
+       }
+      }
+     ],
+     "elderly_check_status": "evaluated",
+     "engine": {
+      "data_snapshot": {
+       "contraindication_evidence_rows": 796668,
+       "contraindication_pairs": 322816,
+       "elderly_caution_rules_dedup": 1980,
+       "therapeutic_lookup_rows": 7056
+      },
+      "method": "deterministic_rule_match",
+      "name": "structured_dur_screening",
+      "version": "0.1.0"
+     },
+     "not_found_in_dur_tables": [],
+     "scope_note": "이 결과는 식약처 DUR 데이터(병용금기·노인주의·효능군중복)에 대한 rule match 기반 위험 신호입니다. 처방의 적절성이나 임상적 판단을 대신하지 않으며, 신호가 없다는 것이 안전하다는 의미는 아닙니다.",
+     "status": "MATCHED",
+     "therapeutic_duplicates": [
+      {
+       "evidence_id": "EV-002",
+       "involved_ingredients": [
+        {
+         "dur_ingr_codes": [
+          "D000455"
+         ],
+         "ingredient_names": [
+          "아토르바스타틴칼슘삼수화물"
+         ]
+        },
+        {
+         "dur_ingr_codes": [
+          "D000455"
+         ],
+         "ingredient_names": [
+          "아토르바스타틴칼슘삼수화물"
+         ]
+        }
+       ],
+       "involved_item_names": [
+        "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+        "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+       ],
+       "involved_item_seqs": [
+        "200706536",
+        "200803246"
+       ],
+       "matched": true,
+       "official_evidence": {
+        "distinct_dur_ingr_code_count": 1,
+        "has_evidence": false,
+        "texts": []
+       },
+       "rule_id": null,
+       "rule_id_note": "엔진이 규칙 ID를 제공하지 않음(임의 생성 안 함)",
+       "rule_key": {
+        "effect_name": "지질저하제"
+       },
+       "rule_type": "THERAPEUTIC_DUPLICATION",
+       "screening_status": "MATCHED_EVIDENCE_TEXT_MISSING",
+       "source": {
+        "data_files": [
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 2904233
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 26197751
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 191905
+         },
+         {
+          "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+          "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+          "file_mtime_utc": "2026-10-19T11:13:40Z",
+          "size_bytes": 512860
+         }
+        ],
+        "engine": "structured_dur_screening",
+        "engine_version": "0.1.0",
+        "method": "deterministic_rule_match",
+        "official_source_url": null,
+        "rule_source": "DUR 효능군중복"
+       }
+      }
+     ]
+    },
+    "evidence": [
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-001",
+      "evidence_ids_from_engine": [],
+      "involved_ingredients": [
+       {
+        "dur_ingr_codes": [
+         "D000672"
+        ],
+        "ingredient_names": [
+         "케토프로펜"
+        ]
+       }
+      ],
+      "involved_item_seqs": [
+       "200402711"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": null,
+      "rule_type": "ELDERLY_CAUTION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 노인주의"
+      }
+     },
+     {
+      "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+      "evidence_id": "EV-002",
+      "evidence_ids_from_engine": [],
+      "involved_ingredients": [
+       {
+        "dur_ingr_codes": [
+         "D000455"
+        ],
+        "ingredient_names": [
+         "아토르바스타틴칼슘삼수화물"
+        ]
+       },
+       {
+        "dur_ingr_codes": [
+         "D000455"
+        ],
+        "ingredient_names": [
+         "아토르바스타틴칼슘삼수화물"
+        ]
+       }
+      ],
+      "involved_item_seqs": [
+       "200706536",
+       "200803246"
+      ],
+      "is_official_dur_rule": true,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "OFFICIAL_DUR_RULE_MATCH",
+      "official_source_url": null,
+      "rule_id": null,
+      "rule_type": "THERAPEUTIC_DUPLICATION",
+      "source": {
+       "data_files": [
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_pairs.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 2904233
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\contraindication_evidence.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 26197751
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\elderly_caution_rules.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 191905
+        },
+        {
+         "data_collection_date": "NOT_AVAILABLE_IN_ENGINE_OUTPUT",
+         "file": "data\\processed\\screening\\therapeutic_group_mapping.parquet",
+         "file_mtime_utc": "2026-10-19T11:13:40Z",
+         "size_bytes": 512860
+        }
+       ],
+       "engine": "structured_dur_screening",
+       "engine_version": "0.1.0",
+       "method": "deterministic_rule_match",
+       "official_source_url": null,
+       "rule_source": "DUR 효능군중복"
+      }
+     },
+     {
+      "candidate_type": "TYPE_A",
+      "data_collection_date": "2026-09-26T10:40:28.245942+00:00; 2026-09-26T10:40:42.491091+00:00",
+      "evidence_id": "EV-003",
+      "involved_item_seqs": [
+       "200706536",
+       "200803246"
+      ],
+      "is_official_dur_rule": false,
+      "is_official_identity_verification": false,
+      "is_rag_or_llm_generated": false,
+      "kind": "INGREDIENT_CANDIDATE_RULE",
+      "normalized_ingredient_names": [
+       "아토르바스타틴칼슘삼수화물",
+       "아토르바스타틴칼슘삼수화물"
+      ],
+      "official_source_url": null,
+      "original_ingredient_names": [
+       "아토르바스타틴칼슘삼수화물",
+       "아토르바스타틴칼슘삼수화물"
+      ],
+      "original_m_codes": [
+       "M215219",
+       "M215219"
+      ],
+      "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+      "source": {
+       "a": "drug_approval_items.parquet|ITEM_SEQ=200706536|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000023.json|page=23|retrieved=2026-09-26T10:40:28.245942+00:00",
+       "b": "drug_approval_items.parquet|ITEM_SEQ=200803246|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000025.json|page=25|retrieved=2026-09-26T10:40:42.491091+00:00",
+       "file": "drug_approval_items.parquet"
+      },
+      "verification_status": "UNVERIFIED_CANDIDATE"
+     }
+    ],
+    "ingredient_screening": {
+     "duplicate_candidates": [
+      {
+       "candidate": true,
+       "candidate_type": "TYPE_A",
+       "detection_reason": "동일 M코드(M215219) + 동일 정규화 성분명",
+       "evidence_id": "EV-003",
+       "evidence_source": {
+        "a": "drug_approval_items.parquet|ITEM_SEQ=200706536|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000023.json|page=23|retrieved=2026-09-26T10:40:28.245942+00:00",
+        "b": "drug_approval_items.parquet|ITEM_SEQ=200803246|col=MAIN_ITEM_INGR|raw=data/raw/drug_approval/detail/full/page_000025.json|page=25|retrieved=2026-09-26T10:40:42.491091+00:00",
+        "rule": "15:screen_pair/SAME_MCODE_SAME_NAME",
+        "source_file": "drug_approval_items.parquet"
+       },
+       "form_markers": [
+        "SALT:칼슘|HYDRATE:삼수화물",
+        "SALT:칼슘|HYDRATE:삼수화물"
+       ],
+       "high_frequency": true,
+       "involved_item_seqs": [
+        "200706536",
+        "200803246"
+       ],
+       "item_names": [
+        "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+        "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)"
+       ],
+       "limitations": [
+        "동일 M코드/동일 성분명만으로 약학적 동일성·임상 위험을 확정하지 않음",
+        "공식 성분 동일성 검증 NO-GO 유지(검증 상태: UNVERIFIED_CANDIDATE)",
+        "염·수화물·에스터·입체 접두어를 제거해 합치지 않음",
+        "고빈도 성분 단위(제품 다수 공유) — 단순 표시일 뿐 제외하지 않음"
+       ],
+       "normalized_ingredient_names": [
+        "아토르바스타틴칼슘삼수화물",
+        "아토르바스타틴칼슘삼수화물"
+       ],
+       "original_ingredient_names": [
+        "아토르바스타틴칼슘삼수화물",
+        "아토르바스타틴칼슘삼수화물"
+       ],
+       "original_m_codes": [
+        "M215219",
+        "M215219"
+       ],
+       "pair_class": "SAME_MCODE_SAME_NAME",
+       "verification_status": "UNVERIFIED_CANDIDATE"
+      }
+     ],
+     "pair_results": [
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "200706536",
+        "200803246"
+       ],
+       "types": [
+        "TYPE_A"
+       ]
+      },
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "200706536",
+        "200402711"
+       ],
+       "types": [
+        "TYPE_E"
+       ]
+      },
+      {
+       "ingredient_pair_status": "OK",
+       "pair": [
+        "200803246",
+        "200402711"
+       ],
+       "types": [
+        "TYPE_E"
+       ]
+      }
+     ],
+     "rule_origin": "15번 screen_pair()/screen_list() 재사용 + 16번 라벨링",
+     "status": "CANDIDATES_FOUND",
+     "unresolved_ingredients": [],
+     "verification_status_policy": "모든 후보는 UNVERIFIED_CANDIDATE (공식 동일성 검증 NO-GO 유지)"
+    },
+    "input": {
+     "item_seqs": [
+      "200706536",
+      "200803246",
+      "200402711"
+     ],
+     "patient_age": 70
+    },
+    "input_validation": {
+     "duplicate_inputs": [],
+     "errors": [],
+     "invalid_inputs": [],
+     "ok": true,
+     "warnings": []
+    },
+    "limitations": [
+     "이 결과는 임상적 안전성 판단이 아닙니다. overall_status는 시스템 탐지 범위 안의 처리 상태일 뿐 위험도가 아닙니다.",
+     "DUR Screening(공식 DUR 규칙 매칭)과 Ingredient Screening(성분 중복 후보)은 서로 다른 판단 체계이며 합산·점수화하지 않았습니다.",
+     "성분 중복 후보는 공식 DUR 병용금기가 아니며 약학적 동일성·임상 위험을 확정하지 않습니다(전 후보 UNVERIFIED_CANDIDATE).",
+     "공식 성분 동일성 검증은 NO-GO 상태로 유지됩니다(임상 검증 상태: NOT_VALIDATED).",
+     "DUR D코드와 제품 허가정보 M코드 사이에 공식 매핑이 없으며 이 모듈은 둘을 연결하지 않습니다(Coverage Audit 한계 유지).",
+     "DUR 규칙에 매칭되지 않았다는 사실이 안전하다는 뜻은 아닙니다. 매칭 없음은 현재 데이터·규칙 범위에서 찾지 못했다는 뜻입니다.",
+     "RAG/LLM은 사용하지 않았으며 이 결과에 생성 설명이 포함되어 있지 않습니다.",
+     "일부 DUR 매칭에 엔진이 제공한 근거 텍스트가 없어 추가 확인이 필요합니다(정상으로 변환하지 않음)."
+    ],
+    "overall_status": "REVIEW_REQUIRED",
+    "product_resolution": {
+     "resolved_products": [
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "리포메트정10밀리그램(아토르바스타틴칼슘삼수화물)",
+       "item_seq": "200706536"
+      },
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "리피로우정80밀리그램(아토르바스타틴칼슘삼수화물)",
+       "item_seq": "200803246"
+      },
+      {
+       "in_approval_data": true,
+       "in_dur_tables": true,
+       "ingredient_info_status": "SCREENABLE",
+       "item_name": "케펜겔(케토프로펜)",
+       "item_seq": "200402711"
+      }
+     ],
+     "status": "ALL_RESOLVED",
+     "unresolved_products": []
+    }
+   },
+   "schema_errors": [],
+   "status": "OK",
+   "technical_errors": []
+  },
+  "status": "OK"
+ }
+}
