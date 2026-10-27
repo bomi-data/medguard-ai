@@ -1,0 +1,154 @@
+{
+ "platform": "Windows-11-10.0.26200-SP0",
+ "python": "3.12.10",
+ "cpu_count": 16,
+ "torch_threads": 12,
+ "stages": [
+  {
+   "stage": "python_start",
+   "seconds": 0.0,
+   "rss_gb": 0.02,
+   "peak_rss_gb": 0.02,
+   "private_gb": 0.01,
+   "peak_private_gb": 0.01
+  },
+  {
+   "stage": "imports",
+   "seconds": 6.1,
+   "rss_gb": 0.17,
+   "peak_rss_gb": 0.17,
+   "private_gb": 1.08,
+   "peak_private_gb": 1.08
+  },
+  {
+   "stage": "load_resources(hash+screening+bm25+bge-m3)",
+   "seconds": 40.8,
+   "rss_gb": 2.83,
+   "peak_rss_gb": 2.87,
+   "private_gb": 5.96,
+   "peak_private_gb": 6.01
+  },
+  {
+   "stage": "ingredient_engine(second DUR copy + approval items)",
+   "seconds": 14.9,
+   "rss_gb": 3.71,
+   "peak_rss_gb": 3.71,
+   "private_gb": 6.84,
+   "peak_private_gb": 6.84
+  },
+  {
+   "stage": "first_request",
+   "seconds": 0.8,
+   "rss_gb": 4.86,
+   "peak_rss_gb": 4.86,
+   "private_gb": 6.88,
+   "peak_private_gb": 6.88
+  },
+  {
+   "stage": "6_sequential_requests",
+   "seconds": 1.7,
+   "rss_gb": 4.87,
+   "peak_rss_gb": 4.87,
+   "private_gb": 6.88,
+   "peak_private_gb": 6.88
+  },
+  {
+   "stage": "4_concurrent_requests",
+   "seconds": 0.9,
+   "rss_gb": 4.87,
+   "peak_rss_gb": 4.88,
+   "private_gb": 6.89,
+   "peak_private_gb": 6.9
+  },
+  {
+   "stage": "8_concurrent_requests",
+   "seconds": 2.2,
+   "rss_gb": 4.88,
+   "peak_rss_gb": 4.89,
+   "private_gb": 6.9,
+   "peak_private_gb": 6.92
+  }
+ ],
+ "engine_ready": true,
+ "engine_error": null,
+ "runtime_ready": true,
+ "first_request": {
+  "core_s": 0.69,
+  "integ_s": 0.04,
+  "state": "COMPLETED",
+  "n_findings": 1,
+  "integ": "OK"
+ },
+ "sequential": [
+  {
+   "core_s": 0.34,
+   "integ_s": 0.04,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.19,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.14,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.29,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 2,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.11,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.33,
+   "integ_s": 0.05,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  }
+ ],
+ "concurrent": {
+  "4": {
+   "wall_s": 0.9,
+   "per_request_core_s": [
+    0.68,
+    0.6,
+    0.56,
+    0.68
+   ],
+   "all_completed": true
+  },
+  "8": {
+   "wall_s": 2.2,
+   "per_request_core_s": [
+    1.78,
+    1.35,
+    1.14,
+    1.92,
+    1.13,
+    1.32,
+    1.51,
+    1.11
+   ],
+   "all_completed": true
+  }
+ },
+ "load_report_seconds": 40.8,
+ "dense_device": "cpu"
+}

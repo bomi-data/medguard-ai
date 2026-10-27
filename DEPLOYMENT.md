@@ -1,5 +1,9 @@
 # MEDGUARD AI — 배포 준비 가이드 (STEP 9-1)
 
+> **현재 운영 방향 (STEP 10-2, 2026-10-27): 공개 배포를 보류합니다.** 프로젝트는 GitHub 비공개 저장소와 로컬 Streamlit 데모로 유지합니다.
+> 이 문서는 향후 배포에 대비해 보존한 참고 절차이며, 지금 실행할 작업이 아닙니다. 로컬 실행 방법은 [README §8](README.md#8-실행-방법)을 따르세요.
+> Linux(WSL2) 실측값(콜드 스타트 74.9초, 서버 RSS 약 4.98 GiB, 권장 RAM 8GB)은 `reports/STEP9_3_DEPLOYMENT_ARCHITECTURE.md`에 있습니다. 아래 §1·§6의 메모리·시작 시간은 STEP 8 Windows 측정값입니다.
+
 연구·포트폴리오용 데모이며 임상 의사결정 도구가 아닙니다(`CLINICAL_VALIDATION_STATUS = NOT_VALIDATED`).
 근거와 측정값은 `reports/STEP9_1_DEPLOYMENT_READINESS.md` 를 참고하세요. 이 문서의 클라우드 관련 내용은 **실제 클라우드에서 검증되지 않았습니다.**
 
@@ -28,7 +32,7 @@ Python 3.12 권장(로컬 검증 3.12.10). 3.13 은 Linux wheel 해석만 확인
 
 ## 3. 데이터 준비 (저장소에 포함하지 않음)
 
-1. 사용자가 보관 중인 원본 사본에서 `data/processed/...` 경로 그대로 13개 파일을 배치합니다(원본을 가공하지 않음).
+1. 사용자가 보관 중인 원본 사본에서 `data_manifest.json` 에 적힌 `data/processed/...` 파일 29개(앱 필수 13개 포함)를 경로 그대로 배치합니다(원본을 가공하지 않음). 코드상 앱 실행에 쓰이는 것은 `app.py` `REQUIRED_FILES` 의 13개이며, 13개만 두면 아래 `--verify` 는 나머지 16개를 MISSING 으로 표시합니다(13개만으로 앱을 실행해 보지는 않았습니다).
 2. 확인: `python tools/fetch_runtime_data.py --verify` → 모두 `OK` 여야 합니다(앱도 시작 시 SHA256 을 검사해 불일치하면 실행을 멈춥니다).
 3. 외부 저장소를 쓰는 경우에만: `MEDGUARD_DATA_BASE_URL=<비공개 주소> python tools/fetch_runtime_data.py --fetch` (해시 불일치 파일은 버림).
    **공공데이터 재배포 조건이 NOT_VERIFIED 이므로, 공개 위치에 데이터를 올리지 마세요.**

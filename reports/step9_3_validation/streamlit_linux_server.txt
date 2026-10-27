@@ -1,0 +1,18 @@
+2026-10-24 00:01:43.519 Uvicorn server started on :::8510
+
+  You can now view your Streamlit app in your browser.
+
+
+OK      | contraindication_pairs       |   2.77 MB
+OK      | contraindication_evidence    |  24.98 MB
+OK      | elderly_caution_rules        |   0.18 MB
+OK      | therapeutic_group_mapping    |   0.49 MB
+OK      | easy_drug_canonical          |   2.08 MB
+[load] contraindication_pairs: 322,816 rows x 3 columns
+[load] elderly_caution_rules: 1,982 rows x 29 columns
+[load] therapeutic_group_mapping: 7,064 rows x 38 columns
+[load] contraindication_evidence: 796,668 rows x 10 columns
+[load] easy_drug_canonical: 4,757 rows x 2 columns
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6043.13it/s]
+※ GPU가 아닙니다. query embedding이 04(fp16)와 달라 parity check가 실패할 수 있습니다.
+  Stopping...

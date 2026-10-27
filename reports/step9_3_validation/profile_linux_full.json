@@ -1,0 +1,154 @@
+{
+ "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+ "python": "3.12.3",
+ "cpu_count": 16,
+ "torch_threads": 8,
+ "stages": [
+  {
+   "stage": "python_start",
+   "seconds": 0.0,
+   "rss_gb": 0.01,
+   "peak_rss_gb": 0.01,
+   "anon_gb": 0.01,
+   "file_gb": 0.01
+  },
+  {
+   "stage": "imports",
+   "seconds": 4.3,
+   "rss_gb": 0.2,
+   "peak_rss_gb": 0.2,
+   "anon_gb": 0.12,
+   "file_gb": 0.08
+  },
+  {
+   "stage": "load_resources(hash+screening+bm25+bge-m3)",
+   "seconds": 48.6,
+   "rss_gb": 2.94,
+   "peak_rss_gb": 2.98,
+   "anon_gb": 2.78,
+   "file_gb": 0.16
+  },
+  {
+   "stage": "ingredient_engine(second DUR copy + approval items)",
+   "seconds": 22.3,
+   "rss_gb": 3.79,
+   "peak_rss_gb": 3.79,
+   "anon_gb": 3.63,
+   "file_gb": 0.16
+  },
+  {
+   "stage": "first_request",
+   "seconds": 1.3,
+   "rss_gb": 4.95,
+   "peak_rss_gb": 4.95,
+   "anon_gb": 3.64,
+   "file_gb": 1.31
+  },
+  {
+   "stage": "6_sequential_requests",
+   "seconds": 2.9,
+   "rss_gb": 4.96,
+   "peak_rss_gb": 4.96,
+   "anon_gb": 3.64,
+   "file_gb": 1.32
+  },
+  {
+   "stage": "4_concurrent_requests",
+   "seconds": 2.4,
+   "rss_gb": 4.97,
+   "peak_rss_gb": 4.97,
+   "anon_gb": 3.65,
+   "file_gb": 1.32
+  },
+  {
+   "stage": "8_concurrent_requests",
+   "seconds": 5.2,
+   "rss_gb": 4.99,
+   "peak_rss_gb": 4.99,
+   "anon_gb": 3.67,
+   "file_gb": 1.32
+  }
+ ],
+ "engine_ready": true,
+ "engine_error": null,
+ "runtime_ready": true,
+ "first_request": {
+  "core_s": 1.13,
+  "integ_s": 0.05,
+  "state": "COMPLETED",
+  "n_findings": 1,
+  "integ": "OK"
+ },
+ "sequential": [
+  {
+   "core_s": 0.54,
+   "integ_s": 0.05,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.35,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.2,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.49,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 2,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.25,
+   "integ_s": 0.0,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  },
+  {
+   "core_s": 0.6,
+   "integ_s": 0.06,
+   "state": "COMPLETED",
+   "n_findings": 1,
+   "integ": "OK"
+  }
+ ],
+ "concurrent": {
+  "4": {
+   "wall_s": 2.4,
+   "per_request_core_s": [
+    1.91,
+    1.71,
+    1.63,
+    2.02
+   ],
+   "all_completed": true
+  },
+  "8": {
+   "wall_s": 5.2,
+   "per_request_core_s": [
+    4.49,
+    4.23,
+    3.94,
+    4.31,
+    4.27,
+    4.29,
+    4.37,
+    3.37
+   ],
+   "all_completed": true
+  }
+ },
+ "load_report_seconds": 48.6,
+ "dense_device": "cpu"
+}

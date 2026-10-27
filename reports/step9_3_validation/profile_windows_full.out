@@ -1,0 +1,22 @@
+{"stage": "python_start", "seconds": 0.0, "rss_gb": 0.02, "peak_rss_gb": 0.02, "private_gb": 0.01, "peak_private_gb": 0.01}
+{"stage": "imports", "seconds": 6.1, "rss_gb": 0.17, "peak_rss_gb": 0.17, "private_gb": 1.08, "peak_private_gb": 1.08}
+W1023 23:57:55.974000 7304 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+OK      | contraindication_pairs       |   2.77 MB
+OK      | contraindication_evidence    |  24.98 MB
+OK      | elderly_caution_rules        |   0.18 MB
+OK      | therapeutic_group_mapping    |   0.49 MB
+OK      | easy_drug_canonical          |   2.08 MB
+[load] contraindication_pairs: 322,816 rows x 3 columns
+[load] elderly_caution_rules: 1,982 rows x 29 columns
+[load] therapeutic_group_mapping: 7,064 rows x 38 columns
+[load] contraindication_evidence: 796,668 rows x 10 columns
+[load] easy_drug_canonical: 4,757 rows x 2 columns
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 37037.26it/s]
+※ GPU가 아닙니다. query embedding이 04(fp16)와 달라 parity check가 실패할 수 있습니다.
+{"stage": "load_resources(hash+screening+bm25+bge-m3)", "seconds": 40.8, "rss_gb": 2.83, "peak_rss_gb": 2.87, "private_gb": 5.96, "peak_private_gb": 6.01}
+{"stage": "ingredient_engine(second DUR copy + approval items)", "seconds": 14.9, "rss_gb": 3.71, "peak_rss_gb": 3.71, "private_gb": 6.84, "peak_private_gb": 6.84}
+{"stage": "first_request", "seconds": 0.8, "rss_gb": 4.86, "peak_rss_gb": 4.86, "private_gb": 6.88, "peak_private_gb": 6.88}
+{"stage": "6_sequential_requests", "seconds": 1.7, "rss_gb": 4.87, "peak_rss_gb": 4.87, "private_gb": 6.88, "peak_private_gb": 6.88}
+{"stage": "4_concurrent_requests", "seconds": 0.9, "rss_gb": 4.87, "peak_rss_gb": 4.88, "private_gb": 6.89, "peak_private_gb": 6.9}
+{"stage": "8_concurrent_requests", "seconds": 2.2, "rss_gb": 4.88, "peak_rss_gb": 4.89, "private_gb": 6.9, "peak_private_gb": 6.92}
+WROTE reports\step9_3_validation\profile_windows_full.json

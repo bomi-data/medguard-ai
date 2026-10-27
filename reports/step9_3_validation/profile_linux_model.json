@@ -1,0 +1,40 @@
+{
+ "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+ "python": "3.12.3",
+ "cpu_count": 16,
+ "torch_threads": 8,
+ "stages": [
+  {
+   "stage": "python_start",
+   "seconds": 0.0,
+   "rss_gb": 0.01,
+   "peak_rss_gb": 0.01,
+   "anon_gb": 0.01,
+   "file_gb": 0.01
+  },
+  {
+   "stage": "import_sentence_transformers",
+   "seconds": 10.4,
+   "rss_gb": 0.44,
+   "peak_rss_gb": 0.44,
+   "anon_gb": 0.3,
+   "file_gb": 0.14
+  },
+  {
+   "stage": "load_bge_m3_only",
+   "seconds": 4.0,
+   "rss_gb": 0.81,
+   "peak_rss_gb": 0.86,
+   "anon_gb": 0.66,
+   "file_gb": 0.15
+  },
+  {
+   "stage": "encode_1_query",
+   "seconds": 0.2,
+   "rss_gb": 1.95,
+   "peak_rss_gb": 1.95,
+   "anon_gb": 0.66,
+   "file_gb": 1.29
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{"stage": "python_start", "seconds": 0.0, "rss_gb": 0.02, "peak_rss_gb": 0.02, "private_gb": 0.01, "peak_private_gb": 0.01}
+W1023 23:54:34.503000 20576 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+{"stage": "import_sentence_transformers", "seconds": 29.6, "rss_gb": 0.39, "peak_rss_gb": 0.39, "private_gb": 1.29, "peak_private_gb": 1.29}
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 9738.67it/s]
+{"stage": "load_bge_m3_only", "seconds": 5.9, "rss_gb": 0.72, "peak_rss_gb": 0.76, "private_gb": 3.77, "peak_private_gb": 3.82}
+{"stage": "encode_1_query", "seconds": 0.7, "rss_gb": 1.85, "peak_rss_gb": 1.85, "private_gb": 3.74, "peak_private_gb": 3.82}
+WROTE reports\step9_3_validation\profile_windows_model.json
